@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Social Rede</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Sidenav -->
+    <div class="sidenav">
+      <div class="top">
+        <div class="logo">
+          <img src="./img/logo.svg" alt="">
+          <p class="f-18">Social rede</p>
+        </div>
+        <div class="close" id="close-btn">
+          <span><img src="./img/close.svg" alt="fechar"></span>
+        </div>
+      </div>
+      <div class="bg-nav">
+        <nav>
+          <ul>
+            <li><a class="active" href="#">
+                <img src="./img/feed-icon.svg" alt="Feed de noticias">
+                <h2 class="f-14 c8">Feed</h2>
+              </a>
+            </li>
+            <li><a href="#">
+                <img src="./img/explorar-icon.svg" alt="Explorar">
+                <h2 class="f-14 c8">Explorar</h2>
+              </a>
+            </li>
+            <li><a href="#">
+                <img src="./img/short-icon.svg" alt="Videos curtos">
+                <h2 class="f-14 c8">Shorts Videos</h2>
+              </a>
+            </li>
+            <li><a href="#">
+                <img src="./img/menssagem-icon.svg" alt="Mensagem">
+                <h2 class="f-14 c8">Mensagem</h2>
+              </a>
+            </li>
+            <li><a href="#">
+                <img src="./img/notificação-icon.svg" alt="Notificações">
+                <h2 class="f-14 c8">Notificação</h2>
+                <span class="notificação">5</span>
+              </a>
+            </li>
+            <li><a href="#">
+                <img src="./img/live-icon.svg" alt="live">
+                <h2 class="f-14 c8">Live</h2>
+              </a>
+            </li>
+            <span class="sep-nav"></span>
+            <li><a href="#">
+                <img src="./img/configuração-icon.svg" alt="Configuração">
+                <h2 class="f-14 c8">Configuração</h2>
+              </a>
+            </li>
+            <li><a href="#">
+                <img src="./img/login-icon.svg" alt="Login">
+                <h2 class="f-14 c8">Configuração</h2>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="perfil-sidenav">
+          <h2 class="f-18 b8">Perfil</h2>
+          <div class="bg-perfilnav">
+            <img src="./img/perfil-principal.jpg" alt="Perfil Usuario">
+            <div>
+              <h3 class="f-12 b8">Adson Santos</h3>
+              <p class="f-10 c8">on-line</p>
+            </div>
+            <a href="#"><img src="./img/seta-baixo.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main -->
+
+    <main class="content">
+
+      <div id="pesquisa">
+        <input type="text" id="pesquisa" placeholder="Pesquisar">
+      </div>
+
+      <div class="time-line-bg">
+        <div class="time-line">
+          <img class="perfil" src="./img/perfil-principal.jpg" alt="Foto perfil linha do tempo">
+          <input type="text" id="texto" placeholder="No que você esta pensando ?">
+          <div>
+            <div>
+              <a href="#">
+                <img src="./img/live-video-icon.svg" alt="Live video">
+                <p class="f-12 b3">Live Video</p>
+              </a>
+              <a href="#">
+                <img src="./img/foto-icon.svg" alt="Arquivos de foto">
+                <p class="f-12 b3">Fotos</p>
+              </a>
+              <a href="#">
+                <img src="./img/video-icon.svg" alt="Aquivos de video">
+                <p class="f-12 b3">Video</p>
+              </a>
+              <a href="#">
+                <img src="./img/grupo-icon.svg" alt="Grupos">
+                <p class="f-12 b3">Grupos</p>
+              </a>
+            </div>
+            <button class="btn-postar">Postar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="publicacao-bg">
+        <div class="publicacao-top">
+          <div class="perfil-publicacao">
+            <img class="perfil" src="./img/perfil-principal.jpg" alt="Perfil Publicação">
+            <div>
+              <h2 class="f-14 b8">Adson Santos</h2>
+              <span class="f-12 b3">15 minutos</span>
+            </div>
+          </div>
+          <div class="menu-publicacao">
+            <a href="#"><img src="./img/salvar-icon.svg" alt=""></a>
+            <a href="#"><img src="./img/menu-post.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="foto-postada"><img src="./img/perfil.jpeg" alt="Publicação Foto"></div>
+        <span class="sep-publicacao"></span>
+        <div>
+          <ul class="nav-publicacao">
+            <li>
+              <a href="#"><img src="./img/curti.svg" alt="">
+                <h2 class="f-12 b8">Curti</h2>
+              </a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/comentar.svg" alt="">
+                <h2 class="f-12 b8">Comentar</h2>
+              </a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/compartinhar.svg" alt="">
+                <h2 class="f-12 b8">Compartinhar</h2>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <span class="sep-publicacao"></span>
+        <div class="puplicacao-comentar">
+          <img class="perfil" src="./img/perfil-principal.jpg" alt="Foto perfil linha do tempo">
+          <input type="text" id="texto" placeholder="Escreva um comentário...">
+          <button class="btn"><img src="./img/enviar.svg" alt=""></button>
+        </div>
+      </div>
+
+      <div class="publicacao-bg">
+        <div class="publicacao-top">
+          <div class="perfil-publicacao">
+            <img class="perfil" src="./img/perfil-principal.jpg" alt="Perfil Publicação">
+            <div>
+              <h2 class="f-14 b8">Adson Santos</h2>
+              <span class="f-12 b3">15 minutos</span>
+            </div>
+          </div>
+          <div class="menu-publicacao">
+            <a href="#"><img src="./img/salvar-icon.svg" alt=""></a>
+            <a href="#"><img src="./img/menu-post.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="foto-postada"><img src="./img/perfil.jpeg" alt="Publicação Foto"></div>
+        <span class="sep-publicacao"></span>
+        <div>
+          <ul class="nav-publicacao">
+            <li>
+              <a href="#"><img src="./img/curti.svg" alt="">
+                <h2 class="f-12 b8">Curti</h2>
+              </a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/comentar.svg" alt="">
+                <h2 class="f-12 b8">Comentar</h2>
+              </a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/compartinhar.svg" alt="">
+                <h2 class="f-12 b8">Compartinhar</h2>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <span class="sep-publicacao"></span>
+        <div class="puplicacao-comentar">
+          <img class="perfil" src="./img/perfil-principal.jpg" alt="Foto perfil linha do tempo">
+          <input type="text" id="texto" placeholder="Escreva um comentário...">
+          <button class="btn"><img src="./img/enviar.svg" alt=""></button>
+        </div>
+      </div>
+
+      <div class="publicacao-bg">
+        <div class="publicacao-top">
+          <div class="perfil-publicacao">
+            <img class="perfil" src="./img/perfil-principal.jpg" alt="Perfil Publicação">
+            <div>
+              <h2 class="f-14 b8">Adson Santos</h2>
+              <span class="f-12 b3">15 minutos</span>
+            </div>
+          </div>
+          <div class="menu-publicacao">
+            <a href="#"><img src="./img/salvar-icon.svg" alt=""></a>
+            <a href="#"><img src="./img/menu-post.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="foto-postada"><img src="./img/perfil.jpeg" alt="Publicação Foto"></div>
+        <span class="sep-publicacao"></span>
+        <div>
+          <ul class="nav-publicacao">
+            <li>
+              <a href="#"><img src="./img/curti.svg" alt="">
+                <h2 class="f-12 b8">Curti</h2>
+              </a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/comentar.svg" alt="">
+                <h2 class="f-12 b8">Comentar</h2>
+              </a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/compartinhar.svg" alt="">
+                <h2 class="f-12 b8">Compartinhar</h2>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <span class="sep-publicacao"></span>
+        <div class="puplicacao-comentar">
+          <img class="perfil" src="./img/perfil-principal.jpg" alt="Foto perfil linha do tempo">
+          <input type="text" id="texto" placeholder="Escreva um comentário...">
+          <button class="btn"><img src="./img/enviar.svg" alt=""></button>
+        </div>
+      </div>
+
+      <div class="publicacao-bg">
+        <div class="publicacao-top">
+          <div class="perfil-publicacao">
+            <img class="perfil" src="./img/perfil-principal.jpg" alt="Perfil Publicação">
+            <div>
+              <h2 class="f-14 b8">Adson Santos</h2>
+              <span class="f-12 b3">15 minutos</span>
+            </div>
+          </div>
+          <div class="menu-publicacao">
+            <a href="#"><img src="./img/salvar-icon.svg" alt=""></a>
+            <a href="#"><img src="./img/menu-post.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="foto-postada"><img src="./img/perfil.jpeg" alt="Publicação Foto"></div>
+        <span class="sep-publicacao"></span>
+        <div>
+          <ul class="nav-publicacao">
+            <li>
+              <a href="#"><img src="./img/curti.svg" alt="">
+                <h2 class="f-12 b8">Curti</h2>
+              </a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/comentar.svg" alt="">
+                <h2 class="f-12 b8">Comentar</h2>
+              </a>
+            </li>
+            <li>
+              <a href="#"><img src="./img/compartinhar.svg" alt="">
+                <h2 class="f-12 b8">Compartinhar</h2>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <span class="sep-publicacao"></span>
+        <div class="puplicacao-comentar">
+          <img class="perfil" src="./img/perfil-principal.jpg" alt="Foto perfil linha do tempo">
+          <input type="text" id="texto" placeholder="Escreva um comentário...">
+          <button class="btn"><img src="./img/enviar.svg" alt=""></button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+
+</html>
