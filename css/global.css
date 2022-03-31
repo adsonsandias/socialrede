@@ -146,7 +146,7 @@ img {
 }
 
 .btn:hover {
-  box-shadow: var(--sobra-1);
+  box-shadow: var(--sobra-2-blue);
 }
 
 .btn-postar {
@@ -159,7 +159,7 @@ img {
 }
 
 .btn-postar:hover {
-  box-shadow: var(--sobra-1);
+  box-shadow: var(--sobra-2-blue);
 }
 
 input#texto {

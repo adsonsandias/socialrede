@@ -4,6 +4,7 @@
   flex-direction: column;
   height: 100vh;
   background: var(--cor-w);
+  overflow-y: auto;
 }
 
 .top {
@@ -41,8 +42,9 @@
   padding: 14px 12px;
   margin: 20px;
   justify-content: space-between;
-  height: 88vh;
+  height: 100%;
   position: relative;
+  overflow-y: auto;
 }
 
 .bg-nav nav ul li a {
