@@ -120,3 +120,50 @@
   border-radius: 50%;
   background: var(--cor-alerta);
 }
+
+@media (max-width: 1200px) {
+  .bg-nav nav ul li a:hover {
+    padding-left: 6px;
+  }
+  .logo p {
+    display: none;
+  }
+  .top {
+    justify-content: center;
+  }
+  .bg-nav nav ul li a h2 {
+    display: none;
+  }
+  .perfil-sidenav h2 {
+    transform: rotate(270deg);
+    letter-spacing: 4px;
+    color: var(--cor-c4);
+    text-transform: uppercase;
+  }
+  .perfil-sidenav h3 {
+    display: none;
+  }
+  .perfil-sidenav p {
+    display: none;
+  }
+  .bg-perfilnav {
+    gap: 0px;
+    padding: 5px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .perfil-sidenav a {
+    padding: 10px;
+  }
+  .notificação {
+    position: absolute;
+    top: 0;
+    right: 2px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidenav {
+    display: none;
+  }
+}

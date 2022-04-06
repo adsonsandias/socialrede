@@ -187,3 +187,42 @@ input::placeholder {
 .perfil {
   border-radius: 50%;
 }
+
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: 7.25rem auto 17.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 7.25rem auto;
+    grid-template-areas:
+      "sidenav content"
+      "sidenav content"
+      "sidenav content"
+      "sidenav content";
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "content"
+      "content"
+      "content";
+  }
+  input::placeholder {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 330px) {
+  input#texto {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
