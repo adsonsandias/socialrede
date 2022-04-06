@@ -15,8 +15,10 @@
     grid-area: content;
     padding-top: 20px;
     padding-bottom: 10px;
-    /* background: linear-gradient(180deg, rgba(246, 249, 255, 0) 0%, #d9e2f6 100%); */
     grid-row: 4;
+    justify-self: center;
+    bottom: 10px;
+    position: absolute;
   }
 
   .navigation {
