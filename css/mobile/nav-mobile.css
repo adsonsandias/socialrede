@@ -1,5 +1,16 @@
 @import url("https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css");
+
+.navigation {
+  display: none;
+}
+.list {
+  display: none;
+}
+
 @media (max-width: 600px) {
+  .list {
+    display: block;
+  }
   .container-nav-mobile {
     grid-area: content;
     padding-top: 20px;
