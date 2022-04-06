@@ -3,12 +3,12 @@
 .navigation {
   display: none;
 }
-.list {
+.list a {
   display: none;
 }
 
 @media (max-width: 600px) {
-  .list {
+  .list a {
     display: block;
   }
   .container-nav-mobile {
