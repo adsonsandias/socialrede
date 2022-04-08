@@ -173,9 +173,9 @@
   }
   .navigation ul li.active .indicator {
     border: 4px solid var(--cor-c1);
-    transform: translateY(-30px);
-    width: 54px;
-    height: 54px;
+    transform: translateY(-29px);
+    width: 51px;
+    height: 51px;
   }
   .navigation ul li.active .indicator::before {
     right: -8px;

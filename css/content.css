@@ -74,6 +74,8 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #pesquisa {
@@ -369,7 +371,6 @@ input#pesquisa:focus {
   }
   .time-line-bg {
     max-width: 500px;
-    margin-bottom: 0px;
   }
   .time-line div a p {
     display: none;
@@ -383,6 +384,9 @@ input#pesquisa:focus {
   .modo-noturno a:nth-child(3) {
     display: block;
     background: transparent;
+  }
+  .time-line-bg {
+    margin-bottom: 0px;
   }
 }
 
