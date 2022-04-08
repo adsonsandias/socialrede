@@ -8,20 +8,58 @@
 
 /* Menu-mobile */
 
+.close {
+  transition: all 300ms ease-in-out;
+}
+.close {
+  display: flex;
+}
+
+.close i {
+  display: flex;
+  font-size: 16px;
+  color: var(--cor-b5);
+}
+
+.close span {
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 7px;
+  border-radius: 50%;
+  transition: all 300ms ease;
+  background: transparent;
+  transition: all 300ms ease;
+}
+.close span:hover {
+  background: var(--cor-b1);
+}
+
 .menu {
   display: none;
   gap: 8px;
   padding-right: 16px;
+  transition: all 300ms ease-in-out;
 }
+
 .menu a {
   padding: 10px;
   border-radius: 50%;
   transition: all 300ms ease;
   background: transparent;
   transition: all 300ms ease;
+  max-width: 40px;
+  max-height: 40px;
 }
 .menu a:hover {
   background: var(--cor-b1);
+}
+.menu a i {
+  font-size: 20px;
+  color: var(--cor-b5);
+  width: 20px;
+  height: 20px;
 }
 .menu a img {
   max-width: 20px;
@@ -60,7 +98,6 @@ input#pesquisa::placeholder {
   padding-left: 20px;
   color: var(--cor-b4);
   font-family: "Montserrat", sans-serif;
-  background: url("../img/pesquisa.svg") no-repeat left;
 }
 
 input#pesquisa:focus {
@@ -106,12 +143,30 @@ input#pesquisa:focus {
 .modo-noturno a:nth-child(3):hover {
   background: var(--cor-b1);
 }
-.modo-noturno a.on-modo {
+.modo-noturno a {
+  display: flex;
+  background: var(--cor-c2);
+  color: var(--cor-b5);
+  max-width: 40px;
+  max-height: 40px;
+}
+.modo-noturno a.on-modo:nth-child(1) {
   background: var(--cor-c2);
 }
-.modo-noturno a img {
-  max-width: 20px;
-  min-width: 16px;
+.modo-noturno a.on-modo:nth-child(2) {
+  background: var(--cor-b1);
+}
+.modo-noturno a i {
+  font-size: 20px;
+  color: var(--cor-b5);
+  width: 20px;
+  height: 20px;
+}
+.modo-noturno a i.fi-rr-sun {
+  font-size: 20px;
+  color: var(--cor-c5);
+  width: 20px;
+  height: 20px;
 }
 
 /* linha do tempo */
@@ -162,6 +217,18 @@ input#pesquisa:focus {
   border-radius: 10px;
 }
 
+.time-line div div a i {
+  font-size: 16px;
+  color: var(--cor-b5);
+  height: 16px;
+}
+
+.time-line div div a p {
+  color: var();
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .time-line div a img {
   max-width: 16px;
 }
@@ -204,6 +271,12 @@ input#pesquisa:focus {
   gap: 4px;
 }
 
+.menu-publicacao a i {
+  font-size: 20px;
+  color: var(--cor-b8);
+  height: 20px;
+}
+
 .foto-postada img {
   margin-top: 14px;
   max-width: 547px;
@@ -233,11 +306,30 @@ input#pesquisa:focus {
   display: flex;
   gap: 8px;
   align-items: center;
+  transition: all 300ms ease-in-out;
+}
+/* Curti icone */
+.nav-publicacao li a svg path {
+  fill: var(--cor-b8);
+  transition: all 300ms ease-in-out;
 }
 
-.nav-publicacao li a img {
-  max-width: 20px;
+.nav-publicacao li a.btn-p-ative svg path {
+  fill: url(#paint0_linear_41_5452);
+  transition: all 300ms ease-in;
 }
+
+.nav-publicacao li a:hover svg path {
+  fill: url(#paint0_linear_41_5452);
+}
+
+/* icone */
+.nav-publicacao li a i {
+  font-size: 20px;
+  color: var(--cor-b8);
+  height: 20px;
+}
+/* icone  */
 
 .puplicacao-comentar {
   display: grid;
@@ -246,9 +338,24 @@ input#pesquisa:focus {
   margin-top: 16px;
 }
 
+.puplicacao-comentar button i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--cor-b4t);
+  height: 16px;
+}
+
 @media (max-width: 1200px) {
+  .close {
+    display: flex;
+  }
   .content {
     padding: 30px;
+  }
+  .menu {
+    display: flex;
   }
 }
 

@@ -1,5 +1,96 @@
-:root {
-  /* Cores geral */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Cores geral */
+    --cor-b0: #f7f9ff;
+    --cor-b1: #d9e2f7;
+    --cor-b2: #b7c9ef;
+    --cor-b3: #98b1e7;
+    --cor-b4: #7596dc;
+    --cor-b5: #5b86e5;
+    --cor-b6: #225fe5;
+    --cor-b7: #1d4fbf;
+    --cor-b8: #03163f;
+    --cor-c1: #f7feff;
+    --cor-c2: #d9f5f7;
+    --cor-c3: #b7ebef;
+    --cor-c4: #98e1e7;
+    --cor-c5: #75d5dc;
+    --cor-c6: #36d1dc;
+    --cor-c7: #3abcc6;
+    --cor-c8: #149aa4;
+    --cor-c8t: #149aa4;
+    --cor-w: #ffffff;
+    --cor-b4t: #f7f9ff;
+    --cor-alerta: #c63a3a;
+    /* Gradientes */
+    --cor-gradiente: linear-gradient(127deg, #36d1dc -19.65%, #5b86e5 131.71%);
+    /* Sobras light */
+    --sobra-1: 0px -2px 5px rgba(183, 201, 239, 0.25),
+      0px 4px 8px rgba(183, 201, 239, 0.3),
+      0px 10px 20px rgba(183, 201, 239, 0.3);
+    --sobra-1-verde: 0px -2px 5px rgba(217, 245, 246, 0.25),
+      0px 4px 8px rgba(217, 245, 246, 0.3),
+      0px 10px 20px rgba(217, 245, 246, 0.3);
+    --sobra-1-blue: 0px -2px 5px rgba(91, 134, 229, 0.25),
+      0px 4px 8px rgba(91, 134, 229, 0.3), 2px 10px 20px rgba(91, 134, 229, 0.3);
+    --sobra-2-blue: 0px -2px 5px rgba(91, 134, 229, 0.3),
+      0px 4px 8px rgba(91, 134, 229, 0.45),
+      0px 10px 20px rgba(91, 134, 229, 0.45);
+    --sobra-3: 0px -2px 5px rgba(183, 201, 239, 0.25),
+      0px 4px 8px rgba(183, 201, 239, 0.4),
+      0px 10px 20px rgba(183, 201, 239, 0.5);
+  }
+  .light-logo {
+    display: block;
+  }
+  .dark-logo {
+    display: none;
+  }
+  input#pesquisa::placeholder {
+    background: url("../img/pesquisa.svg") no-repeat left;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-gradiente: linear-gradient(97.27deg, #35383d 0%, #454d5b 100%);
+    --sobra-3: 0px -2px 5px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.4),
+      2px 10px 20px rgba(0, 0, 0, 0.5);
+    --cor-b0: #1a1b1c;
+    --cor-b1: #252627;
+    --cor-b2: #464d5c;
+    --cor-b3: #35383d;
+    --cor-b8: #d9e2f6;
+    --cor-b4: #35383d;
+    --cor-b5: #464d5c;
+    --cor-b4t: #b7c9ef;
+    --cor-w: #212122;
+    --cor-c1: #1a1b1c;
+    --cor-c2: #252627;
+    --cor-c7: #3abcc6;
+    --cor-c8: #35383d;
+    --cor-c8t: #b7c9ef;
+    --cor-alerta: #c63a3a;
+    --sobra-1: 0px -2px 5px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0.3),
+      2px 10px 20px rgba(0, 0, 0, 0.3);
+    --sobra-2-blue: 0px -2px 5px rgba(0, 0, 0, 0.25),
+      0px 4px 8px rgba(0, 0, 0, 0.3), 2px 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  .light-logo {
+    display: none;
+  }
+  .dark-logo {
+    display: block;
+  }
+  .bg-nav nav ul li a:hover {
+    box-shadow: var(--sobra-1);
+  }
+  input#pesquisa::placeholder {
+    background: url("../img/pesquisa-dark.svg") no-repeat left;
+  }
+}
+/* LightMode Btn */
+.light {
   --cor-b0: #f7f9ff;
   --cor-b1: #d9e2f7;
   --cor-b2: #b7c9ef;
@@ -17,13 +108,9 @@
   --cor-c6: #36d1dc;
   --cor-c7: #3abcc6;
   --cor-c8: #149aa4;
+  --cor-c8t: #149aa4;
   --cor-w: #ffffff;
-  /* Cores Dark */
-  --cor-p1: #464d5c;
-  --cor-p2: #35383d;
-  --cor-p3: #252627;
-  --cor-p4: #212122;
-  --cor-p5: #1a1b1c;
+  --cor-b4t: #f7f9ff;
   --cor-alerta: #c63a3a;
   /* Gradientes */
   --cor-gradiente: linear-gradient(127deg, #36d1dc -19.65%, #5b86e5 131.71%);
@@ -38,6 +125,53 @@
     0px 4px 8px rgba(91, 134, 229, 0.45), 0px 10px 20px rgba(91, 134, 229, 0.45);
   --sobra-3: 0px -2px 5px rgba(183, 201, 239, 0.25),
     0px 4px 8px rgba(183, 201, 239, 0.4), 0px 10px 20px rgba(183, 201, 239, 0.5);
+}
+.body.light .light-logo {
+  display: block;
+}
+.body.light .dark-logo {
+  display: none;
+}
+.body.light input#pesquisa::placeholder {
+  background: url("../img/pesquisa.svg") no-repeat left;
+}
+
+/* DarkMode Btn */
+.dark {
+  --cor-gradiente: linear-gradient(97.27deg, #35383d 0%, #454d5b 100%);
+  --sobra-3: 0px -2px 5px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.4),
+    2px 10px 20px rgba(0, 0, 0, 0.5);
+  --cor-b0: #1a1b1c;
+  --cor-b1: #252627;
+  --cor-b2: #464d5c;
+  --cor-b3: #35383d;
+  --cor-b8: #d9e2f6;
+  --cor-b4: #35383d;
+  --cor-b5: #464d5c;
+  --cor-b4t: #b7c9ef;
+  --cor-w: #212122;
+  --cor-c1: #1a1b1c;
+  --cor-c2: #252627;
+  --cor-c7: #3abcc6;
+  --cor-c8: #35383d;
+  --cor-c8t: #b7c9ef;
+  --cor-alerta: #c63a3a;
+  --sobra-1: 0px -2px 5px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0.3),
+    2px 10px 20px rgba(0, 0, 0, 0.3);
+  --sobra-2-blue: 0px -2px 5px rgba(0, 0, 0, 0.25),
+    0px 4px 8px rgba(0, 0, 0, 0.3), 2px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.body.dark .light-logo {
+  display: none;
+}
+.body.dark .dark-logo {
+  display: block;
+}
+.body.dark .bg-nav nav ul li a:hover {
+  box-shadow: var(--sobra-1);
+}
+.body.dark input#pesquisa::placeholder {
+  background: url("../img/pesquisa-dark.svg") no-repeat left;
 }
 
 .b0 {
@@ -150,8 +284,9 @@ img {
 }
 
 .btn-postar {
+  text-transform: uppercase;
   background: var(--cor-gradiente);
-  color: var(--cor-b0);
+  color: var(--cor-b4t);
   padding: 7px 13px;
   border-radius: 10px;
   cursor: pointer;
@@ -165,7 +300,7 @@ img {
 input#texto {
   padding-left: 16px;
   background: transparent;
-  border: 1px solid var(--cor-b4);
+  border: 1px solid var(--cor-b5);
   max-width: 579px;
   border-radius: 10px;
   transition: all 300ms ease;
@@ -194,7 +329,7 @@ input::placeholder {
   }
 }
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
   .container {
     grid-template-columns: 7.25rem auto;
     grid-template-areas:
@@ -203,9 +338,9 @@ input::placeholder {
       "sidenav content"
       "sidenav content";
   }
-}
+} */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .container {
     grid-template-columns: 1fr;
     grid-template-areas:

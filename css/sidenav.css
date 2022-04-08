@@ -5,6 +5,16 @@
   height: 100vh;
   background: var(--cor-w);
   overflow-y: auto;
+  position: fixed;
+  left: -100%;
+  z-index: 4;
+  animation: aniMenu 400ms ease forwards;
+}
+
+@keyframes aniMenu {
+  to {
+    left: 0;
+  }
 }
 
 .top {
@@ -19,7 +29,6 @@
 
 .close {
   display: none;
-  padding: 5px;
 }
 
 .logo {
@@ -45,6 +54,7 @@
   height: 100%;
   position: relative;
   overflow-y: auto;
+  animation: all 400ms ease-in-out;
 }
 
 .bg-nav nav ul li a {
@@ -63,10 +73,22 @@
   padding-left: 12px;
 }
 
+.bg-nav nav ul li a i {
+  font-size: 24px;
+  color: var(--cor-c8);
+  height: 24px;
+}
+
 .active-sidenav {
   background: var(--cor-c2);
   border-radius: 5px;
   padding-left: 12px;
+}
+.active-sidenav h2 {
+  color: var(--cor-c8t);
+}
+.bg-nav nav ul li a.active-sidenav i {
+  color: var(--cor-c8t);
 }
 
 .bg-nav nav ul li a img {
@@ -103,19 +125,27 @@
 }
 
 .perfil-sidenav a {
-  padding: 5px;
+  padding: 4px;
+  height: 24px;
+}
+
+.perfil-sidenav a i {
+  font-size: 16px;
+  color: var(--cor-c7);
+  height: 16px;
 }
 
 .bg-perfilnav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   padding: 10px;
   background: var(--cor-c2);
   border-radius: 15px;
 }
 
 .notificação {
+  text-align: center;
   padding: 1px 5px;
   color: var(--cor-w);
   border-radius: 50%;
@@ -123,6 +153,48 @@
 }
 
 @media (max-width: 1200px) {
+  @keyframes opc {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 0.05;
+    }
+    10% {
+      opacity: 0.08;
+    }
+    15% {
+      opacity: 0.1;
+    }
+    20% {
+      opacity: 0.2;
+    }
+    30% {
+      opacity: 0.3;
+    }
+    40% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    60% {
+      opacity: 0.6;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    80% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .bg-nav {
+    align-items: center;
+  }
+
   .bg-nav nav ul li a:hover {
     padding-left: 6px;
   }
@@ -136,10 +208,7 @@
     display: none;
   }
   .perfil-sidenav h2 {
-    transform: rotate(270deg);
-    letter-spacing: 4px;
-    color: var(--cor-c4);
-    text-transform: uppercase;
+    display: none;
   }
   .perfil-sidenav h3 {
     display: none;
@@ -152,10 +221,10 @@
     padding: 5px;
     justify-content: center;
     margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
   }
-  .perfil-sidenav a {
-    padding: 10px;
-  }
+
   .notificação {
     position: absolute;
     top: 0;
@@ -164,7 +233,43 @@
 }
 
 @media (max-width: 600px) {
-  .sidenav {
-    display: none;
+  .bg-nav {
+    align-items: initial;
+  }
+
+  .bg-nav nav ul li a:hover {
+    padding-left: 12px;
+  }
+  .logo p {
+    display: block;
+  }
+  .top {
+    justify-content: space-between;
+  }
+  .bg-nav nav ul li a h2 {
+    display: block;
+  }
+  .perfil-sidenav h2 {
+    display: block;
+  }
+  .perfil-sidenav h3 {
+    display: block;
+  }
+  .perfil-sidenav p {
+    display: block;
+  }
+  .bg-perfilnav {
+    gap: 8px;
+    padding: 10px;
+    justify-content: flex-start;
+    margin-top: 10px;
+    flex-direction: row;
+    align-items: initial;
+  }
+
+  .notificação {
+    position: absolute;
+    top: 0;
+    right: 2px;
   }
 }
