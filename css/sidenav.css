@@ -203,6 +203,7 @@
   }
   .top {
     justify-content: center;
+    gap: 8px;
   }
   .bg-nav nav ul li a h2 {
     display: none;
@@ -235,6 +236,7 @@
 @media (max-width: 600px) {
   .bg-nav {
     align-items: initial;
+    padding: 16px 20px;
   }
 
   .bg-nav nav ul li a:hover {
@@ -245,12 +247,14 @@
   }
   .top {
     justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 0px;
   }
   .bg-nav nav ul li a h2 {
     display: block;
   }
   .perfil-sidenav h2 {
-    display: block;
+    display: none;
   }
   .perfil-sidenav h3 {
     display: block;
@@ -259,12 +263,7 @@
     display: block;
   }
   .bg-perfilnav {
-    gap: 8px;
-    padding: 10px;
-    justify-content: flex-start;
-    margin-top: 10px;
-    flex-direction: row;
-    align-items: initial;
+    display: none;
   }
 
   .notificação {

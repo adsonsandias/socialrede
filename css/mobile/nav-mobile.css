@@ -7,6 +7,10 @@
   display: none;
 }
 
+.list a:active {
+  display: none;
+}
+
 @media (max-width: 600px) {
   .list a {
     display: block;
@@ -18,7 +22,7 @@
     grid-row: 4;
     justify-self: center;
     bottom: -4px;
-    position: absolute;
+    position: fixed;
   }
 
   .navigation {
@@ -100,15 +104,15 @@
     height: 50px;
     background: var(--cor-c4);
     border-radius: 50%;
-    border: 6px solid transparent;
+    border: 6px solid var(--cor-c4);
     z-index: -1;
-    transition: all 300ms ease-in;
+    transition: all 300ms ease-in-out;
+    transform: translateY(0px);
   }
 
   .navigation ul li.active .indicator {
     position: absolute;
     transform: translateY(-43px);
-    /* top: -34px; */
     left: 0;
     width: 65px;
     height: 65px;
@@ -140,5 +144,45 @@
     background: transparent;
     border-bottom-right-radius: 19px;
     box-shadow: 1px 3px 0 0 var(--cor-c1);
+  }
+}
+@media (max-width: 380px) {
+  .navigation {
+    width: 300px;
+    height: 54px;
+  }
+  .navigation ul {
+    width: 260px;
+  }
+  .navigation ul li {
+    width: 54px;
+    height: 54px;
+  }
+  .indicator {
+    width: 44px;
+    height: 44px;
+    top: 5px;
+    left: 4px;
+    border: 4px solid var(--cor-c4);
+  }
+  .navigation ul li a .icon {
+    line-height: 60px;
+  }
+  .navigation ul li.active a .icon {
+    transform: translateY(-25px);
+  }
+  .navigation ul li.active .indicator {
+    border: 4px solid var(--cor-c1);
+    transform: translateY(-30px);
+    width: 54px;
+    height: 54px;
+  }
+  .navigation ul li.active .indicator::before {
+    right: -8px;
+    bottom: 25px;
+  }
+  .navigation ul li.active .indicator::after {
+    left: -8px;
+    bottom: 25px;
   }
 }
