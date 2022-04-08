@@ -179,6 +179,7 @@ input#pesquisa:focus {
   border-radius: 15px;
   box-shadow: var(--sobra-1);
   margin-top: 26px;
+  margin-bottom: 26px;
 }
 
 .time-line-bg:hover {
@@ -242,7 +243,7 @@ input#pesquisa:focus {
   margin: 0 auto;
   border-radius: 15px;
   padding: 16px;
-  margin-top: 26px;
+  margin-bottom: 26px;
   transition: all 300ms ease-in;
 }
 
@@ -368,6 +369,7 @@ input#pesquisa:focus {
   }
   .time-line-bg {
     max-width: 500px;
+    margin-bottom: 0px;
   }
   .time-line div a p {
     display: none;
@@ -386,7 +388,7 @@ input#pesquisa:focus {
 
 @media (max-width: 600px) {
   #pesquisa {
-    height: 30px;
+    height: 36px;
   }
   input#pesquisa {
     border-radius: 10px;
@@ -401,13 +403,13 @@ input#pesquisa:focus {
     margin-top: 14px;
   }
   .time-line > img {
-    max-width: 30px;
+    max-width: 36px;
   }
   .time-line div div a {
     padding: 6px;
   }
   .publicacao-bg {
-    margin-top: 16px;
+    margin-top: 0px;
   }
 }
 

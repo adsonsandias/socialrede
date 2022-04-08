@@ -1,0 +1,35 @@
+.s-mobile {
+  display: none;
+}
+@media (max-width: 800px) {
+  .story-mobile {
+    grid-area: content;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .s-mobile {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 16px 0px 26px 16px;
+    gap: 16px;
+  }
+
+  .s-mobile li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--cor-gradiente);
+    box-shadow: var(--sobra-2-blue);
+    width: 60px;
+    transition: all 300ms ease-in;
+  }
+
+  .s-mobile a img {
+    padding: 3px;
+    max-width: 60px;
+  }
+}
