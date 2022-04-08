@@ -179,10 +179,10 @@
   }
   .navigation ul li.active .indicator::before {
     right: -8px;
-    bottom: 25px;
+    bottom: 23px;
   }
   .navigation ul li.active .indicator::after {
     left: -8px;
-    bottom: 25px;
+    bottom: 23px;
   }
 }
