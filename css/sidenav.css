@@ -234,6 +234,9 @@
 }
 
 @media (max-width: 600px) {
+  .sidenav {
+    display: none;
+  }
   .bg-nav {
     align-items: initial;
     padding: 16px 20px;

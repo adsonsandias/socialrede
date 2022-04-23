@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <title>Social Rede</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Sidenav -->
+    <div class="sidenav">
+      <div class="top">
+        <div class="logo">
+          <img class="light-logo" src="./img/logo.svg" alt="">
+          <img class="dark-logo" src="./img/logo-dark.svg" alt="">
+          <p class="f-18 b8">Social rede</p>
+        </div>
+        <div class="close" id="close-btn">
+          <span><i class="fi fi-rr-cross"></i></span>
+        </div>
+      </div>
+      <div class="bg-nav">
+        <nav>
+          <ul>
+            <li><a href="./index.html">
+                <i class="fi fi-rr-layout-fluid"></i>
+                <h2 class="f-14 c8">Feed</h2>
+              </a>
+            </li>
+            <li><a class="active-sidenav" href="./explorar.html">
+                <i class="fi fi-rr-navigation"></i>
+                <h2 class="f-14 c8">Explorar</h2>
+              </a>
+            </li>
+            <li><a href="#">
+                <i class="fi fi-rr-play-alt"></i>
+                <h2 class="f-14 c8">Shorts</h2>
+              </a>
+            </li>
+            <li><a href="#">
+                <i class="fi fi-rr-comments"></i>
+                <h2 class="f-14 c8">Mensagem</h2>
+              </a>
+            </li>
+            <li><a href="#">
+                <i class="fi fi-rr-bell"></i>
+                <h2 class="f-14 c8">Notificação</h2>
+                <span class="notificação f-12">5</span>
+              </a>
+            </li>
+            <li><a href="#">
+                <i class="fi fi-rr-camera"></i>
+                <h2 class="f-14 c8">Live</h2>
+              </a>
+            </li>
+            <span class="sep-nav"></span>
+            <li><a href="#">
+                <i class="fi fi-rr-settings"></i>
+                <h2 class="f-14 c8">Configuração</h2>
+              </a>
+            </li>
+            <li><a href="#">
+                <i class="fi fi-rr-sign-out-alt"></i>
+                <h2 class="f-14 c8">login</h2>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="perfil-sidenav">
+          <h2 class="f-18 b8">Perfil</h2>
+          <div class="bg-perfilnav">
+            <img src="./img/perfil-principal.jpg" alt="Perfil Usuario">
+            <div>
+              <h3 class="f-12 b8">Adson Santos</h3>
+              <p class="f-10 c7">on-line</p>
+            </div>
+            <a href="#"><i class="fi fi-rr-caret-down"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Main -->
+
+    <main class="content" id="explorar">
+
+      <div>
+        <div class="pesquisa-cotainer">
+          <div class="menu">
+            <a href="#"><i class="fi fi-rr-menu-burger"></i></a>
+          </div>
+          <div id="pesquisa">
+            <input type="text" id="pesquisa" placeholder="Pesquisar">
+          </div>
+          <div class="modo-noturno">
+            <a class="light" href="#"><i class="fi fi-rr-sun"></i></a>
+            <a class="dark" href="#"><i class="fi fi-rr-moon"></i></a>
+            <a href="#"><i class="fi fi-rr-comments"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- StoryMobile -->
+      <div class="story-mobile">
+        <ul class="s-mobile">
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story10.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story1.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story2.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story3.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story4.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story5.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story6.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story7.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story8.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story9.jpg" alt=""></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="publicacao-bg">
+        <div class="explorar-container">
+          <a class="video-explorar" href=""><img src="./img/explorar/video-1.jpg" alt="Grau de motocross"></a>
+          <a href=""><img src="./img/explorar/foto-3.jpg" alt="Picina no alto de predio"></a>
+          <a href=""><img src="./img/explorar/foto-8.jpg" alt="Carro na estrada"></a>
+          <a href=""><img src="./img/explorar/foto-4.jpg" alt="Taxi na cidade"></a>
+          <a class="video-explorar" href=""><img src="./img/explorar/video.jpg" alt=""></a>
+          <a href=""><img src="./img/explorar/foto.jpg" alt=""></a>
+          <a href=""><img src="./img/explorar/foto-5.jpg" alt="Moto estacionada"></a>
+          <a href=""><img src="./img/explorar/foto-1.jpg" alt="Sobremesa gourmet na mesa"></a>
+          <a href=""><img src="./img/explorar/foto-6.jpg" alt="Prato gourmet com vinho"></a>
+          <a href=""><img src="./img/explorar/foto-9.jpg" alt="Piloto de motocross parado"></a>
+          <a href=""><img src="./img/explorar/foto-2.jpg" alt="Paisagem do mar"></a>
+          <a href=""><img src="./img/explorar/foto-7.jpg" alt="Floresta verde"></a>
+          <a href=""><img src="./img/explorar/foto-10.jpg" alt="Mulher com por do sol"></a>
+          <a href=""><img src="./img/explorar/foto-1.jpg" alt="Sobremesa gourmet na mesa"></a>
+          <a href=""><img src="./img/explorar/foto-6.jpg" alt="Prato gourmet com vinho"></a>
+          <a href=""><img src="./img/explorar/foto-9.jpg" alt="Piloto de motocross parado"></a>
+          <a href=""><img src="./img/explorar/foto-2.jpg" alt="Paisagem do mar"></a>
+          <a href=""><img src="./img/explorar/foto-7.jpg" alt="Floresta verde"></a>
+          <a href=""><img src="./img/explorar/foto-10.jpg" alt="Mulher com por do sol"></a>
+          <a href=""><img src="./img/explorar/foto-1.jpg" alt="Sobremesa gourmet na mesa"></a>
+          <a href=""><img src="./img/explorar/foto-6.jpg" alt="Prato gourmet com vinho"></a>
+          <a href=""><img src="./img/explorar/foto-9.jpg" alt="Piloto de motocross parado"></a>
+          <a href=""><img src="./img/explorar/foto-2.jpg" alt="Paisagem do mar"></a>
+          <a class="video-explorar" href=""><img src="./img/explorar/video-1.jpg" alt="Grau de motocross"></a>
+          <a href=""><img src="./img/explorar/foto-3.jpg" alt="Picina no alto de predio"></a>
+          <a href=""><img src="./img/explorar/foto-8.jpg" alt="Carro na estrada"></a>
+          <a href=""><img src="./img/explorar/foto-4.jpg" alt="Taxi na cidade"></a>
+          <a class="video-explorar" href=""><img src="./img/explorar/video.jpg" alt=""></a>
+          <a href=""><img src="./img/explorar/foto-7.jpg" alt="Floresta verde"></a>
+          <a href=""><img src="./img/explorar/foto-10.jpg" alt="Mulher com por do sol"></a>
+          <a href=""><img src="./img/explorar/foto-1.jpg" alt="Sobremesa gourmet na mesa"></a>
+          <a href=""><img src="./img/explorar/foto-6.jpg" alt="Prato gourmet com vinho"></a>
+          <a href=""><img src="./img/explorar/foto-9.jpg" alt="Piloto de motocross parado"></a>
+          <a href=""><img src="./img/explorar/foto-2.jpg" alt="Paisagem do mar"></a>
+          <a href=""><img src="./img/explorar/foto-7.jpg" alt="Floresta verde"></a>
+          <a href=""><img src="./img/explorar/foto-10.jpg" alt="Mulher com por do sol"></a>
+          <a class="video-explorar" href=""><img src="./img/explorar/video-1.jpg" alt="Grau de motocross"></a>
+          <a href=""><img src="./img/explorar/foto-3.jpg" alt="Picina no alto de predio"></a>
+          <a href=""><img src="./img/explorar/foto-8.jpg" alt="Carro na estrada"></a>
+          <a href=""><img src="./img/explorar/foto-4.jpg" alt="Taxi na cidade"></a>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Nav-mobile -->
+    <div class="container-nav-mobile">
+      <div class="navigation">
+        <ul>
+          <li class="list">
+            <a href="./index.html">
+              <span class="icon">
+                <i class="fi fi-rr-layout-fluid"></i>
+              </span>
+              <span class="text">Feed</span>
+            </a>
+            <div class="indicator"></div>
+          </li>
+          <li class="list active">
+            <a href="./explorar.html">
+              <span class="icon">
+                <i class="fi fi-rr-navigation"></i>
+              </span>
+              <span class="text">Explo</span>
+            </a>
+            <div class="indicator"></div>
+          </li>
+          <li class="list">
+            <a href="#">
+              <span class="icon">
+                <i class="fi fi-rr-play-alt"></i>
+              </span>
+              <span class="text">Short</span>
+            </a>
+            <div class="indicator"></div>
+          </li>
+          <li class="list">
+
+            <a href="#">
+              <span class="icon">
+                <i class="fi fi-rr-bell"></i>
+              </span>
+              <span class="text">Noti</span>
+            </a>
+            <div class="indicator"></div>
+          </li>
+          <li class="list">
+            <a href="#">
+              <span class="icon">
+                <i class="fi fi-rr-user"></i>
+              </span>
+              <span class="text">User</span>
+            </a>
+            <div class="indicator"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Notificação -->
+
+    <div class="barra-lateral">
+      <!-- Storys -->
+      <div class="storys">
+        <h2 class="f-14 b8">Story</h2>
+        <ul class="storys-lista">
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story10.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story1.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story2.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story3.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story4.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story5.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story6.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story7.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story8.jpg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img class="perfil" src="./img/story/story9.jpg" alt=""></a>
+          </li>
+        </ul>
+      </div>
+      <!-- Publicação recente -->
+      <div class="publicacao-recente">
+        <h2 class="f-14 b8">Publicação Recente</h2>
+        <div class="publicacao-recente-bg">
+          <div class="publicacao-recente-bg-interna">
+            <div class="publicacao-recente-perfil">
+              <img class="perfil" src="./img/pl-recente/foto-perfil.png" alt="foto de perfil kauan">
+            </div>
+            <div class="publicacao-recente-texto">
+              <h3 class="f-12 b8">Kauan</h3>
+              <span class="f-10-s b5">Adionou bruno na sua lista de amigos</span>
+            </div>
+            <div class="publicacao-recente-previo">
+              <img src="./img/pl-recente/foto.jpg" alt="Previo foto bruno">
+            </div>
+          </div>
+          <div class="publicacao-recente-bg-interna">
+            <div class="publicacao-recente-perfil">
+              <img class="perfil" src="./img/pl-recente/foto-perfil2.png" alt="foto de perfil Claudia">
+            </div>
+            <div class="publicacao-recente-texto">
+              <h3 class="f-12 b8">Claudia</h3>
+              <span class="f-10-s b5">Adionou bruno na sua lista de amigos</span>
+            </div>
+            <div class="publicacao-recente-previo">
+              <img src="./img/pl-recente/foto.jpg" alt="Previo foto bruno">
+            </div>
+          </div>
+          <div class="publicacao-recente-bg-interna">
+            <div class="publicacao-recente-perfil">
+              <img class="perfil" src="./img/pl-recente/foto-perfil3.png" alt="foto de perfil Ana Paula">
+            </div>
+            <div class="publicacao-recente-texto">
+              <h3 class="f-12 b8">Ana Paula</h3>
+              <span class="f-10-s b5">Adionou bruno na sua lista de amigos</span>
+            </div>
+            <div class="publicacao-recente-previo">
+              <img src="./img/pl-recente/foto.jpg" alt="Previo foto bruno">
+            </div>
+          </div>
+          <div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Mensagem -->
+      <div>
+        <h2 class="f-14 b8 titulo-mensagem">Mensagem</h2>
+        <div class="mensagem">
+          <ul>
+            <li>
+              <a href="#">
+                <img class="perfil" src="./img/story/story.jpg" alt="foto perfil mensagem">
+                <div>
+                  <h2 class="f-18 b8">Felipe</h2>
+                  <span class="f-12 c7">on-line</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img class="perfil" src="./img/story/story1.jpg" alt="foto perfil mensagem">
+                <div>
+                  <h2 class="f-18 b8">Wendel</h2>
+                  <span class="f-12 c7">on-line</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img class="perfil" src="./img/story/story2.jpg" alt="foto perfil mensagem">
+                <div>
+                  <h2 class="f-18 b8">Ana Paula</h2>
+                  <span class="f-12 c7">on-line</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img class="perfil" src="./img/story/story4.jpg" alt="foto perfil mensagem">
+                <div>
+                  <h2 class="f-18 b8">Kauan</h2>
+                  <span class="f-12 c7">on-line</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img class="perfil" src="./img/story/story5.jpg" alt="foto perfil mensagem">
+                <div>
+                  <h2 class="f-18 b8">Andresa</h2>
+                  <span class="f-12 b2">offline</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img class="perfil" src="./img/story/story6.jpg" alt="foto perfil mensagem">
+                <div>
+                  <h2 class="f-18 b8">Claudia</h2>
+                  <span class="f-12 c7">on-line</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img class="perfil" src="./img/story/story7.jpg" alt="foto perfil mensagem">
+                <div>
+                  <h2 class="f-18 b8">Melissa</h2>
+                  <span class="f-12 b2">offline</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img class="perfil" src="./img/story/story.jpg" alt="foto perfil mensagem">
+                <div>
+                  <h2 class="f-18 b8">Felipe</h2>
+                  <span class="f-12 c7">on-line</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Shorts -->
+      <div class="shorts">
+        <h2 class="f-14 b8">Short</h2>
+        <div class="shorts-bg">
+          <div class="shorts-container">
+            <div class="novos-shorts">
+              <div class="texto-short">
+                <h2 class="f-14 b8">Novo</h2>
+                <a class="b5" href="#">ver mais</a>
+              </div>
+              <ul class="short-previu">
+                <li>
+                  <a href="#">
+                    <img src="./img/short/short1.jpg" alt="Short novo 1">
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./img/short/short2.jpg" alt="Short novo 2">
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./img/short/short3.jpg" alt="Short novo 3">
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./img/short/short4.jpg" alt="Short novo 4">
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./img/short/short5.jpg" alt="Short novo 5">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="novos-shorts">
+              <div class="texto-short">
+                <h2 class="f-14 b8">Alta</h2>
+                <a class="b5" href="#">ver mais</a>
+              </div>
+              <ul class="short-previu">
+                <li>
+                  <a href="#">
+                    <img src="./img/short/short6.jpg" alt="Short novo 6">
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./img/short/short7.jpg" alt="Short novo 7">
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./img/short/short1.jpg" alt="Short novo 1">
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./img/short/short5.jpg" alt="Short novo 5">
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./img/short/short3.jpg" alt="Short novo 3">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="./js/script.js"></script>
+  <script src="./js/nav-mobile.js"></script>
+</body>
+
+</html>

@@ -7,9 +7,9 @@
   display: none;
 }
 
-.list a:active {
+/* .list a:active {
   display: none;
-}
+} */
 
 @media (max-width: 600px) {
   .list a {

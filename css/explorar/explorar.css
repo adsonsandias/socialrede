@@ -1,0 +1,34 @@
+#explorar .publicacao-bg {
+  margin: 26px auto;
+}
+
+.explorar-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(75px, 1fr));
+  gap: 8px;
+}
+
+.explorar-container a img {
+  border-radius: 10px;
+}
+
+.video-explorar {
+  grid-row: span 2;
+}
+
+@media (max-width: 980px) {
+  #explorar .pesquisa-cotainer {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  #explorar .publicacao-bg {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  #explorar .story-mobile {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
