@@ -1,5 +1,11 @@
+#explorar .content {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
 #explorar .publicacao-bg {
   margin: 26px auto;
+  max-width: 1000px;
 }
 
 .explorar-container {
@@ -23,6 +29,10 @@
 }
 
 @media (max-width: 800px) {
+  #explorar .content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   #explorar .publicacao-bg {
     max-width: 100%;
     margin: 0 auto;
