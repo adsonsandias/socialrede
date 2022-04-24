@@ -53,12 +53,15 @@
   #configuracao .pesquisa-cotainer {
     max-width: 100%;
   }
+  #configuracao .publicacao-bg {
+    padding: 16px;
+  }
 }
 
 @media (max-width: 800px) {
   #configuracao .content {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   #configuracao .publicacao-bg {
     max-width: 100%;
