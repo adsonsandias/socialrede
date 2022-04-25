@@ -144,19 +144,22 @@
   cursor: pointer;
 }
 .btn-c {
-  background: var(--cor-b5);
+  background: var(--cor-gradiente);
   color: var(--cor-w);
-  transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in;
 }
 .btn-c:hover {
-  box-shadow: var(--sobra-1);
+  box-shadow: var(--sobra-2-blue);
+  transform: scale(1.1);
 }
 .btn-e {
   background: var(--cor-w);
   color: var(--cor-b8);
+  transition: all 200ms ease-in;
 }
 .btn-e:hover {
   box-shadow: var(--sobra-1);
+  transform: scale(1.1);
 }
 
 @media (max-width: 1300px) {
