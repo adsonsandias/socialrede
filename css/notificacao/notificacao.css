@@ -4,8 +4,14 @@
 }
 
 #notificacao .publicacao-bg {
+  padding: 0px;
   margin: 26px auto;
   max-width: 1000px;
+}
+
+#notificacao .container-notificacao,
+#notificacao .container-notificacao-s {
+  padding: 16px;
 }
 
 .topo-notificacao {
@@ -79,34 +85,35 @@
 /* Solicitação */
 
 .topo-solicitacao {
+  padding-left: 16px;
   margin-top: 26px;
 }
 
 .solicitacoes {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 16px;
 }
 .bg-solicitacao {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  padding: 9px;
+  padding: 9px 9px 0 9px;
   background: var(--cor-b0);
   box-shadow: var(--sobra-1);
   border-radius: 15px;
   position: relative;
   transition: all 300ms ease-in-out;
-  cursor: pointer;
   min-width: 180px;
-}
-
-.bg-solicitacao:hover {
-  box-shadow: none;
+  max-width: 274px;
 }
 
 .bg-solicitacao img {
-  border-radius: 10px;
+  object-fit: cover;
+  object-position: top center;
+  max-height: 100px;
+  border-radius: 10px 10px 0 0;
 }
 
 .bg-confirmacao {
@@ -116,16 +123,17 @@
   padding: 8px;
   border-radius: 10px;
   gap: 8px;
-  position: absolute;
+  top: -9px;
+  position: relative;
   min-width: 164px;
   height: 88px;
-  margin: 0px 10px;
 }
 .bg-confirmacao p {
   grid-column: 1 /-1;
   font-size: 0.775rem;
   font-family: "Roboto", sans-serif;
   max-width: 40ch;
+  min-height: 36px;
 }
 
 .bg-confirmacao button {
@@ -141,7 +149,6 @@
   transition: all 300ms ease-in-out;
 }
 .btn-c:hover {
-  background: var(--cor-b6);
   box-shadow: var(--sobra-1);
 }
 .btn-e {
@@ -178,15 +185,40 @@
   }
   #notificacao .publicacao-bg {
     max-width: 100%;
-    margin: 20px;
+    margin: 16px 10px;
+  }
+  .solicitacoes {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+@media (max-width: 660px) {
+  .solicitacoes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 480px) {
+  .topo-notificacao {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+  }
+  #notificacao .container-notificacao {
+    padding: 8px;
+  }
+  #notificacao .container-notificacao-s {
+    padding: 0px;
+  }
   .notificacao-container {
     padding: 8px;
   }
   .solicitacoes {
+    display: flex;
+    overflow: auto;
     grid-template-columns: 1fr;
+    padding-left: 16px;
+    padding-bottom: 36px;
   }
   .previo-notificacao {
     max-width: 70px;

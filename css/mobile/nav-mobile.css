@@ -7,9 +7,16 @@
   display: none;
 }
 
-/* .list a:active {
-  display: none;
-} */
+.list:active,
+.list a:active,
+.list.active:active,
+.list.active a:active,
+.list a span:active,
+.list a span.text:active,
+.list a span i:active {
+  background: transparent;
+  color: transparent;
+}
 
 @media (max-width: 600px) {
   .list a {

@@ -35,6 +35,12 @@
   }
   #explorar .publicacao-bg {
     max-width: 100%;
-    margin: 20px;
+    margin: 16px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #explorar .publicacao-bg {
+    padding: 8px;
   }
 }
