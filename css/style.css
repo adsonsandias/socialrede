@@ -2,10 +2,11 @@
 @import url("./sidenav.css");
 @import url("./font.css");
 @import url("./content.css");
-@import url("./notificacao.css");
+@import url("./barralateral.css");
 @import url("./mobile/nav-mobile.css");
 @import url("./mobile/story.css");
 @import url("./explorar/explorar.css");
 @import url("./short/short.css");
 @import url("./configuracao/configuracao.css");
 @import url("./notificacao/notificacao.css");
+@import url("./mensagem/mensagem.css");

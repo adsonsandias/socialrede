@@ -22,7 +22,7 @@
   flex-wrap: nowrap;
   overflow-x: auto;
   padding: 16px 0px 26px 16px;
-  gap: 16px;
+  gap: 8px;
 }
 
 .storys-lista li a {
@@ -32,7 +32,7 @@
   border-radius: 50%;
   background: var(--cor-gradiente);
   box-shadow: var(--sobra-2-blue);
-  width: 60px;
+  width: 50px;
   transition: all 300ms ease-in;
 }
 
@@ -73,6 +73,7 @@
   border-radius: 10px;
   transition: all 300ms ease-in;
   cursor: pointer;
+  align-items: center;
 }
 
 .publicacao-recente-bg-interna:hover {
@@ -80,11 +81,15 @@
 }
 
 .publicacao-recente-perfil img {
-  width: 24px;
+  width: 34px;
 }
 
 .publicacao-recente-texto {
   padding-left: 8px;
+}
+
+.publicacao-recente-texto span {
+  font-size: 0.85rem;
 }
 
 .publicacao-recente-previo img {
@@ -127,11 +132,83 @@
   border-radius: 15px;
 }
 
-.mensagem ul li a h2 {
-  flex: 1;
-}
 .mensagem ul li a img {
-  max-width: 40px;
+  width: 40px;
+}
+
+.info-mensagem-barra {
+  break-inside: avoid-column;
+}
+
+.top-mensagem-barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-mensagem-barra p {
+  color: var(--cor-b4);
+  font-weight: 500;
+}
+
+.mensagem-visto-barra {
+  display: flex;
+  max-width: 200px;
+  gap: 8px;
+}
+
+.mensagem-visto-barra span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.visto-mensagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+}
+
+.visto-mensagem i {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+}
+
+.visto-mensagem i:last-child {
+  color: var(--cor-c6);
+}
+
+.online {
+  position: relative;
+}
+
+.online::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: var(--cor-c6);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+}
+.offline {
+  position: relative;
+}
+
+.offline::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: var(--cor-b2);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 5px;
 }
 
 /* Short */
@@ -230,6 +307,9 @@
   }
   .mensagem ul li a h2 {
     font-size: 0.875rem;
+  }
+  .mensagem-visto-barra {
+    max-width: 140px;
   }
 }
 

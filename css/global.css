@@ -10,6 +10,7 @@
     --cor-b6: #225fe5;
     --cor-b7: #1d4fbf;
     --cor-b8: #03163f;
+    --cor-b8-2: #7b859b;
     --cor-c1: #f7feff;
     --cor-c2: #d9f5f7;
     --cor-c3: #b7ebef;
@@ -63,6 +64,7 @@
     --cor-b2: #464d5c;
     --cor-b3: #35383d;
     --cor-b8: #d9e2f6;
+    --cor-b8-2: #7b859b;
     --cor-b4: #35383d;
     --cor-b5: #464d5c;
     --cor-b4t: #b7c9ef;
@@ -103,6 +105,7 @@
   --cor-b6: #225fe5;
   --cor-b7: #1d4fbf;
   --cor-b8: #03163f;
+  --cor-b8-2: #7b859b;
   --cor-c1: #f7feff;
   --cor-c2: #d9f5f7;
   --cor-c3: #b7ebef;
@@ -150,6 +153,7 @@
   --cor-b2: #464d5c;
   --cor-b3: #35383d;
   --cor-b8: #d9e2f6;
+  --cor-b8-2: #7b859b;
   --cor-b4: #35383d;
   --cor-b5: #464d5c;
   --cor-b4t: #b7c9ef;
@@ -208,6 +212,9 @@
 .b8 {
   color: var(--cor-b8);
 }
+.b8-2 {
+  color: var(--cor-b8-2);
+}
 .c1 {
   color: var(--cor-c1);
 }
@@ -244,14 +251,13 @@
 }
 
 html {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 body {
   width: 100vw;
   height: 100vh;
   font-family: "Montserrat", sans-serif;
-  font-size: 0.875rem;
   background: var(--cor-b0);
   user-select: none;
   overflow-x: hidden;
