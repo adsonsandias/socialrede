@@ -313,7 +313,7 @@ input#item-check:checked + .search-conversa {
 }
 
 .visto-mensagem-aberta i:last-child {
-  color: var(--cor-c8);
+  color: var(--cor-c6);
 }
 
 .mensagem-recebida {
@@ -505,7 +505,7 @@ input#item-check:checked + .search-conversa {
   input#item-check:checked + .search-conversa {
     max-width: 46vw;
   }
-  #mensagem .modo-noturno {
+  #mensagem .pesquisa-conversas .modo-noturno {
     position: absolute;
     top: 5px;
     right: 0;
