@@ -12,17 +12,29 @@ function activeCurti() {
 }
 bntCurti.forEach((item) => item.addEventListener("click", activeCurti));
 
-const choseBtn = document.querySelector(".close");
+const choseBtn = document.querySelectorAll(".close");
 const sideNav = document.querySelector(".sidenav");
-const menu = document.querySelector(".menu");
+const menu = document.querySelectorAll(".menu");
 
-choseBtn.addEventListener("click", () => {
-  sideNav.style.display = "none";
+choseBtn.forEach((item) => {
+  item.addEventListener("click", () => {
+    sideNav.style.display = "none";
+  });
 });
 
-menu.addEventListener("click", () => {
-  sideNav.style.display = "flex";
+menu.forEach((item) => {
+  item.addEventListener("click", () => {
+    sideNav.style.display = "flex";
+  });
 });
+
+// choseBtn.addEventListener("click", () => {
+//   sideNav.style.display = "none";
+// });
+
+// menu.addEventListener("click", () => {
+//   sideNav.style.display = "flex";
+// });
 
 const bntModoLight = document.querySelectorAll(".modo-noturno a.light");
 const bntModoDark = document.querySelectorAll(".modo-noturno a.dark");
@@ -51,3 +63,29 @@ function activeModoDark() {
   logoLight.forEach((item) => (item.style.display = "none"));
 }
 bntModoDark.forEach((item) => item.addEventListener("click", activeModoDark));
+
+const mensagemAberta = document.querySelector(".mensagem-aberta-bg");
+const mensagemHome = document.querySelector(".mensagem-pagina");
+const mensagemGrid = document.querySelector(".pagina-inicial-mensagem");
+const btnMensagemInternaDesk = document.querySelector(
+  ".volta-mensagem-desktop"
+);
+const btnMensagemHome = document.querySelector(".mensagem-btn-abrir");
+const navMobileInterna = document.querySelector(
+  "#mensagem .container-nav-mobile"
+);
+
+function voltarAbrir() {
+  mensagemHome.classList.toggle("ativo");
+  mensagemGrid.classList.toggle("ativo");
+  navMobileInterna.style.display = "none";
+}
+
+function voltarMensagemDeck() {
+  mensagemHome.classList.toggle("ativo");
+  mensagemGrid.classList.toggle("ativo");
+  navMobileInterna.style.display = "flex";
+}
+
+btnMensagemInternaDesk.addEventListener("click", voltarMensagemDeck);
+btnMensagemHome.addEventListener("click", voltarAbrir);
