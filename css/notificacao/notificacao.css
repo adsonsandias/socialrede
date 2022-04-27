@@ -189,6 +189,7 @@
   #notificacao .publicacao-bg {
     max-width: 100%;
     margin: 16px 10px;
+    padding-bottom: 40px;
   }
   .solicitacoes {
     grid-template-columns: 1fr 1fr 1fr;

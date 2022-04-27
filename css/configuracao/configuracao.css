@@ -66,6 +66,7 @@
   #configuracao .publicacao-bg {
     max-width: 100%;
     margin: 16px 10px;
+    padding-bottom: 40px;
   }
   #configuracao .story-mobile {
     max-width: 100%;

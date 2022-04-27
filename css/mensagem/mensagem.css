@@ -135,7 +135,13 @@ input#item-check:checked + .search-conversa input#search {
 
 input#item-check:checked + .search-conversa {
   max-width: 100%;
+  /* border-radius: 15px; */
 }
+
+/* input#item-check:checked + .search-conversa label {
+  border-radius: 15px;
+  background: var(--cor-b0);
+} */
 
 .mensagem-bloco {
   display: grid;
@@ -483,17 +489,37 @@ input#item-check:checked + .search-conversa {
     padding-top: 8px;
   }
   .search-conversa label {
-    min-width: 30px;
-    min-height: 30px;
+    min-width: 36px;
+    min-height: 36px;
   }
 
   #mensagem .publicacao-bg {
     padding: 8px;
   }
   input#item-check:checked + .search-conversa input#search {
-    max-width: 35vw;
+    max-width: 30vw;
   }
   .search-conversa {
-    max-width: 11vw;
+    max-width: 13vw;
+  }
+  input#item-check:checked + .search-conversa {
+    max-width: 46vw;
+  }
+  #mensagem .modo-noturno {
+    position: absolute;
+    top: 5px;
+    right: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  input#item-check:checked + .search-conversa input#search {
+    max-width: 30vw;
+  }
+  .search-conversa {
+    max-width: 13vw;
+  }
+  input#item-check:checked + .search-conversa {
+    max-width: 46vw;
   }
 }
