@@ -236,10 +236,6 @@ input#item-check:checked + .search-conversa {
   display: flex;
 }
 
-.volta-mensagem-container a.volta-mensagem-mobile {
-  display: none;
-}
-
 .menu-mensagem a {
   display: flex;
   align-items: center;
@@ -248,6 +244,19 @@ input#item-check:checked + .search-conversa {
   height: 34px;
   border-radius: 50%;
   transition: all 300ms ease-in;
+}
+
+.pagina-inicial-mensagem.ativo
+  .volta-mensagem-container
+  a.volta-mensagem-desktop
+  i {
+  transform: rotate(180deg);
+  transition: all 300ms ease;
+}
+
+.pagina-inicial-mensagem .volta-mensagem-container a.volta-mensagem-desktop i {
+  transform: rotate(0deg);
+  transition: all 300ms ease;
 }
 
 .menu-mensagem a:hover {
@@ -274,7 +283,7 @@ input#item-check:checked + .search-conversa {
 .resposta-recebida {
   padding: 8px;
   border-radius: 15px;
-  max-width: 200px;
+  max-width: 350px;
 }
 
 .resposta {
@@ -336,7 +345,6 @@ input#item-check:checked + .search-conversa {
   align-items: center;
   background: var(--cor-w);
   border-radius: 15px;
-  /* max-width: 272px; */
   max-height: 45px;
   margin: 0 auto;
   padding: 13px;
@@ -451,6 +459,12 @@ input#item-check:checked + .search-conversa {
   #mensagem .menu {
     display: flex;
   }
+  .resposta,
+  .resposta-recebida {
+    padding: 8px;
+    border-radius: 15px;
+    max-width: 200px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -482,6 +496,11 @@ input#item-check:checked + .search-conversa {
   }
   .modo-noturno.interna-modo-n {
     display: flex;
+  }
+  .pagina-inicial-mensagem.ativo
+    .volta-mensagem-container
+    a.volta-mensagem-desktop {
+    transform: rotate(180deg);
   }
 }
 

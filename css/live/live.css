@@ -1,0 +1,364 @@
+#live .content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#live .publicacao-bg {
+  padding: 0px;
+  margin: 26px auto;
+  max-width: 1000px;
+}
+
+.container-live {
+  display: flex;
+  flex-direction: column;
+}
+
+.live-on {
+  margin: 16px;
+  padding: 8px;
+  background: var(--cor-b0);
+  box-shadow: var(--sobra-1);
+  border-radius: 15px;
+}
+
+.live {
+  position: relative;
+}
+
+.live img {
+  border-radius: 10px 10px 0 0;
+}
+
+.btn-live {
+  position: absolute;
+  display: flex;
+  border-radius: 50%;
+  padding: 8px;
+  background: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(7px);
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.btn-live:hover {
+  border-radius: 10px;
+  transform: scale(1.1);
+}
+
+.btn-live i {
+  color: var(--cor-w-2);
+  opacity: 0.7;
+  width: 20px;
+  height: 20px;
+}
+
+.live i {
+  font-size: 20px;
+}
+
+.player-live {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  gap: 8px;
+  background: var(--blur);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(7px);
+  position: absolute;
+  min-width: 100%;
+  bottom: 0;
+}
+
+.play-pause-volume,
+.config-redimencionar-expandir {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.player-live span {
+  display: flex;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 300ms ease;
+  background: transparent;
+}
+
+.player-live span:hover {
+  border-radius: 15px;
+  transform: scale(1.1);
+  backdrop-filter: blur(7px);
+}
+
+.player-live span i {
+  color: var(--cor-w-2);
+  opacity: 0.7;
+  height: 20px;
+  width: 20px;
+}
+
+/* Infor live */
+.infor-live {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+}
+
+.perfil-live {
+  display: flex;
+  gap: 8px;
+}
+
+.perfil-ao-vivo {
+  background: var(--cor-gradiente-live);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 3px;
+  box-shadow: var(--sobra-1-vermelho);
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.perfil-ao-vivo span {
+  background: var(--cor-gradiente-live);
+  padding: 2px 8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: var(--cor-w-2);
+  font-size: 0.85rem;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -10px;
+  box-shadow: var(--sobra-1-vermelho);
+}
+
+.perfil-info-live {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hashtags-live {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hashtags-live span {
+  background: var(--cor-b1);
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.inscricao {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-inscrever-se {
+  display: flex;
+  gap: 8px;
+  padding-bottom: 8px;
+}
+
+.btn-inscrever-se button {
+  text-transform: uppercase;
+  padding: 8px 16px;
+  color: var(--cor-w-2);
+  background: var(--cor-gradiente);
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: all 300ms ease;
+}
+
+.btn-inscrever-se button:hover {
+  transform: scale(1.1);
+  box-shadow: var(--sobra-2-blue);
+}
+
+.btn-inscrever-se button:last-child:hover {
+  transform: scale(1.1);
+  box-shadow: var(--sobra-1);
+}
+
+.btn-inscrever-se button:last-child {
+  color: var(--cor-b0);
+  background: var(--cor-b8-2);
+}
+
+.pessoas-vendo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.pessoas-vendo span:nth-child(1n + 2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  padding: 4px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 300ms ease;
+}
+.pessoas-vendo span:nth-child(1n + 2):hover {
+  border-radius: 10px;
+  transform: scale(1.1);
+  background: var(--cor-b1);
+}
+
+.pessoas-vendo i {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+/* sobre perfil */
+.sobre-perfil {
+  padding: 16px;
+  max-height: 15vh;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.sobre-perfil h2 {
+  padding-bottom: 8px;
+}
+
+.sobre-perfil p {
+  padding-left: 8px;
+  max-width: 60ch;
+  padding-bottom: 16px;
+}
+
+input#sobre-perfil-live {
+  display: none;
+}
+
+input#sobre-perfil-live:checked + .sobre-perfil {
+  max-height: 100vh;
+}
+
+input#sobre-perfil-live:checked + .sobre-perfil label i {
+  transform: rotate(180deg);
+}
+
+.sobre-perfil label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(7px);
+  padding: 8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 8px;
+  right: 50%;
+  z-index: 2;
+  cursor: pointer;
+  transition: all 300ms ease;
+  animation: loop-btn 500ms alternate infinite;
+}
+
+@keyframes loop-btn {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.sobre-perfil label:hover {
+  box-shadow: var(--sobra-2-blue);
+  background: var(--cor-gradiente);
+  border-radius: 10px;
+}
+
+.sobre-perfil label:hover i {
+  color: var(--cor-b0);
+}
+
+.sobre-perfil label i {
+  color: var(--cor-b8);
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+/* live recomendada */
+.live-recomendado h2 {
+  padding-left: 16px;
+}
+
+.container-recomendado-live ul {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  padding: 16px;
+}
+
+.container-recomendado-live a {
+  max-width: 200px;
+  min-width: 150px;
+  position: relative;
+}
+
+.container-recomendado-live a img {
+  max-width: 180px;
+  border-radius: 15px;
+}
+
+.container-recomendado-live a div {
+  background: var(--cor-gradiente-live);
+  padding: 3px;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 50px;
+  box-shadow: var(--sobra-1-vermelho);
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.container-recomendado-live a div img {
+  max-width: 40px;
+}
+
+@media (max-width: 800px) {
+  #live .content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #live .publicacao-bg {
+    max-width: 100%;
+    margin: 16px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #live .publicacao-bg {
+    padding: 8px;
+  }
+}
