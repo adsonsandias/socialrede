@@ -466,6 +466,10 @@ input::placeholder {
 }
 
 @media (max-width: 800px) {
+  .pesquisa-cotainer {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .container {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -476,6 +480,12 @@ input::placeholder {
   }
   input::placeholder {
     font-size: 12px;
+  }
+  .modo-noturno {
+    padding-left: 0px;
+  }
+  .menu {
+    padding-right: 8px;
   }
 }
 

@@ -22,16 +22,10 @@
   grid-row: span 2;
 }
 
-@media (max-width: 980px) {
-  #explorar .pesquisa-cotainer {
-    max-width: 100%;
-  }
-}
-
 @media (max-width: 800px) {
   #explorar .content {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   #explorar .publicacao-bg {
     max-width: 100%;

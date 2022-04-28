@@ -64,9 +64,10 @@
   align-items: center;
   justify-content: space-between;
   position: sticky;
-  top: 0;
+  top: -3px;
   background: var(--cor-w);
   padding-bottom: 8px;
+  padding-top: 8px;
 }
 
 .lista-conversa-home {

@@ -175,20 +175,14 @@
   }
 }
 
-@media (max-width: 980px) {
-  #notificacao .pesquisa-cotainer {
-    max-width: 100%;
-  }
-}
-
 @media (max-width: 800px) {
   #notificacao .content {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   #notificacao .publicacao-bg {
     max-width: 100%;
-    margin: 16px 10px;
+    margin: 16px 0px;
     padding-bottom: 40px;
   }
   .solicitacoes {
