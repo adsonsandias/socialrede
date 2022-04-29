@@ -382,6 +382,7 @@ input#item-check:checked + .search-conversa {
   border: none;
   padding: 8px;
   background: var(--cor-w);
+  color: var(--b8);
   max-width: 100px;
 }
 

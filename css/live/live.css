@@ -165,6 +165,13 @@
   transform: scale(1.1);
 }
 
+.pesquisa-live-interna {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  max-height: 40px;
+}
+
 /* .menu.btn-menu-live:hover::before {
   content: "Abrir Menu";
   display: flex;

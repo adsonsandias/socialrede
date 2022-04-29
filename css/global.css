@@ -82,6 +82,12 @@
     --cor-c8: #35383d;
     --cor-c8t: #b7c9ef;
     --cor-alerta: #c63a3a;
+    --cor-live: #c63a3a;
+    --cor-gradiente-live: linear-gradient(
+      127deg,
+      #ff6363 -19.65%,
+      #c63a3a 131.71%
+    );
     --sobra-1: 0px -2px 5px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0.3),
       2px 10px 20px rgba(0, 0, 0, 0.3);
     --sobra-2-blue: 0px -2px 5px rgba(0, 0, 0, 0.25),
@@ -123,6 +129,12 @@
   --cor-w-2: #ffffff;
   --cor-b4t: #f7f9ff;
   --cor-alerta: #c63a3a;
+  --cor-live: #c63a3a;
+  --cor-gradiente-live: linear-gradient(
+    127deg,
+    #ff6363 -19.65%,
+    #c63a3a 131.71%
+  );
   /* Gradientes */
   --cor-gradiente: linear-gradient(127deg, #36d1dc -19.65%, #5b86e5 131.71%);
   /* Sobras light */
@@ -169,6 +181,12 @@
   --cor-c8: #35383d;
   --cor-c8t: #b7c9ef;
   --cor-alerta: #c63a3a;
+  --cor-live: #c63a3a;
+  --cor-gradiente-live: linear-gradient(
+    127deg,
+    #ff6363 -19.65%,
+    #c63a3a 131.71%
+  );
   --sobra-1: 0px -2px 5px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0.3),
     2px 10px 20px rgba(0, 0, 0, 0.3);
   --sobra-2-blue: 0px -2px 5px rgba(0, 0, 0, 0.25),
