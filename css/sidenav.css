@@ -191,41 +191,6 @@
       opacity: 1;
     }
   }
-  .bg-nav {
-    align-items: center;
-  }
-
-  .bg-nav nav ul li a:hover {
-    padding-left: 6px;
-  }
-  .logo p {
-    display: none;
-  }
-  .top {
-    justify-content: center;
-    gap: 8px;
-  }
-  .bg-nav nav ul li a h2 {
-    display: none;
-  }
-  .perfil-sidenav h2 {
-    display: none;
-  }
-  .perfil-sidenav h3 {
-    display: none;
-  }
-  .perfil-sidenav p {
-    display: none;
-  }
-  .bg-perfilnav {
-    gap: 0px;
-    padding: 5px;
-    justify-content: center;
-    margin-top: 10px;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .notificação {
     position: absolute;
     top: 0;

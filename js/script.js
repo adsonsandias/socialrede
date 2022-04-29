@@ -28,14 +28,6 @@ menu.forEach((item) => {
   });
 });
 
-// choseBtn.addEventListener("click", () => {
-//   sideNav.style.display = "none";
-// });
-
-// menu.addEventListener("click", () => {
-//   sideNav.style.display = "flex";
-// });
-
 const bntModoLight = document.querySelectorAll(".modo-noturno a.light");
 const bntModoDark = document.querySelectorAll(".modo-noturno a.dark");
 const logoDark = document.querySelectorAll(".dark-logo");
@@ -64,28 +56,43 @@ function activeModoDark() {
 }
 bntModoDark.forEach((item) => item.addEventListener("click", activeModoDark));
 
-const mensagemAberta = document.querySelector(".mensagem-aberta-bg");
-const mensagemHome = document.querySelector(".mensagem-pagina");
-const mensagemGrid = document.querySelector(".pagina-inicial-mensagem");
-const btnMensagemInternaDesk = document.querySelector(
-  ".volta-mensagem-desktop"
-);
-const btnMensagemHome = document.querySelector(".mensagem-btn-abrir");
-const navMobileInterna = document.querySelector(
-  "#mensagem .container-nav-mobile"
-);
+// live js
+const btnAbrirChat = document.querySelector(".btn-live");
+const btnFechaChat = document.querySelector(".chat-btn-titulo span");
+const chatBarra = document.querySelector(".chat");
+const chatGrid = document.querySelector(".container#live.ativo");
 
-function voltarAbrir() {
-  mensagemHome.classList.toggle("ativo");
-  mensagemGrid.classList.toggle("ativo");
-  navMobileInterna.style.display = "none";
+function abrirChat() {
+  chatBarra.style.display = "flex";
+  btnAbrirChat.style.display = "none";
+  chatGrid.classList.add("ativo");
 }
 
-function voltarMensagemDeck() {
-  mensagemHome.classList.toggle("ativo");
-  mensagemGrid.classList.toggle("ativo");
-  navMobileInterna.style.display = "flex";
+function abrirFechar() {
+  chatBarra.style.display = "none";
+  btnAbrirChat.style.display = "flex";
+  chatGrid.classList.remove("ativo");
 }
 
-btnMensagemInternaDesk.addEventListener("click", voltarMensagemDeck);
-btnMensagemHome.addEventListener("click", voltarAbrir);
+btnAbrirChat.addEventListener("click", abrirChat);
+btnFechaChat.addEventListener("click", abrirFechar);
+
+// canais
+const btnCanais = document.querySelector(".canais span");
+const canalRecomendado = document.querySelector(".canal-recomendado");
+
+function ativaCanais() {
+  canalRecomendado.classList.toggle("ativo");
+}
+
+btnCanais.addEventListener("click", ativaCanais);
+
+// redimencionar
+const btnRedimendionarTela = document.querySelector(".redimencionar");
+const resizeGrid = document.querySelector(".container");
+
+function resizeTela() {
+  resizeGrid.classList.toggle("resize");
+}
+
+btnRedimendionarTela.addEventListener("click", resizeTela);
