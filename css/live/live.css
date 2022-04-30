@@ -171,23 +171,6 @@
   left: 60px;
   max-height: 40px;
 }
-
-/* .menu.btn-menu-live:hover::before {
-  content: "Abrir Menu";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  font-size: 12px;
-  width: 70px;
-  top: 30%;
-  left: 50px;
-  color: var(--cor-b8);
-  border-radius: 5px;
-  opacity: 0.5;
-  background: var(--cor-b0);
-  animation: delayL 1.1s forwards;
-} */
 .menu.btn-menu-live i {
   color: var(--cor-w-2);
   opacity: 0.7;
@@ -828,13 +811,45 @@ input#sobre-perfil-live:checked + .sobre-perfil label i {
     max-width: 100%;
     margin: 0px 0px;
     border-radius: 0px;
+    padding-bottom: 90px;
   }
   .btn-inscrever-se {
     justify-content: flex-start;
   }
+  .live-on {
+    margin: 0;
+    border-radius: 0px;
+  }
+  .live-recomendado {
+    padding-top: 26px;
+  }
 }
 
 @media (max-width: 600px) {
+  .container.resize#live {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "content"
+      "content"
+      "content";
+  }
+  .container.ativo#live {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "content"
+      "content"
+      "content";
+  }
+  .container#live {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "content"
+      "content"
+      "content";
+  }
   .inscricao {
     flex-direction: column;
   }
@@ -844,10 +859,80 @@ input#sobre-perfil-live:checked + .sobre-perfil label i {
   .infor-live {
     flex-direction: column-reverse;
   }
+  .canal-recomendado {
+    display: none;
+  }
+  .chat {
+    top: 38vh;
+    width: 100vw;
+    height: 62vh;
+    z-index: 2;
+    max-width: 100%;
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 480px) {
-  #live .publicacao-bg {
-    padding: 8px;
+  .perfil-ao-vivo {
+    max-width: 40px;
+    max-height: 40px;
+    padding: 2px;
+  }
+  .perfil-ao-vivo span {
+    font-size: 0.6rem;
+    padding: 2px 4px;
+  }
+  .perfil-info-live h2 {
+    font-size: 1rem;
+  }
+  .perfil-info-live p {
+    font-size: 0.75rem;
+  }
+  .hashtags-live span {
+    font-size: 0.6rem;
+    padding: 2px 4px;
+  }
+  .inscricao {
+    flex-direction: row;
+  }
+  .btn-inscrever-se {
+    padding-bottom: 0px;
+    align-items: center;
+  }
+  .btn-inscrever-se button {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 5px;
+  }
+  .pessoas-vendo {
+    flex-direction: row;
+  }
+  .pessoas-vendo span:nth-child(1n + 2) {
+    padding: 4px;
+    width: 26px;
+    height: 26px;
+  }
+  .infor-live {
+    flex-direction: column;
+  }
+  .player-live {
+    padding: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .player-live span i {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+  }
+  .play-pause-volume .volume {
+    display: none;
+  }
+  .config-redimencionar-expandir .redimencionar {
+    display: none;
+  }
+  .search-box:hover > .search-input,
+  .search-input:focus {
+    max-width: 100px;
   }
 }

@@ -93,6 +93,12 @@ const resizeGrid = document.querySelector(".container");
 
 function resizeTela() {
   resizeGrid.classList.toggle("resize");
+  if (sideNav.style.display === "flex") {
+    sideNav.style.display = "none";
+  }
+  if (chatBarra.style.display === "flex") {
+    chatBarra.style.display = "none";
+  }
 }
 
 btnRedimendionarTela.addEventListener("click", resizeTela);

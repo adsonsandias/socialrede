@@ -228,6 +228,7 @@
   }
   .pesquisa-cotainer {
     max-width: 500px;
+    position: relative;
   }
   .time-line-bg {
     max-width: 500px;

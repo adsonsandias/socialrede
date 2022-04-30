@@ -506,8 +506,15 @@ input#item-check:checked + .search-conversa {
 }
 
 @media (max-width: 480px) {
+  .pesquisa-conversas {
+    top: -17px;
+  }
+  .container-mensagem {
+    height: 100vh;
+  }
   #mensagem .content {
-    padding-top: 8px;
+    padding: 0px;
+    margin: 0px;
   }
   .search-conversa label {
     min-width: 36px;
@@ -515,21 +522,33 @@ input#item-check:checked + .search-conversa {
   }
 
   #mensagem .publicacao-bg {
-    padding: 8px;
+    padding: 0px;
+    margin: 0;
+    border-radius: 0;
   }
   input#item-check:checked + .search-conversa input#search {
     max-width: 30vw;
   }
   .search-conversa {
     max-width: 13vw;
+    position: absolute;
+    left: 50px;
   }
   input#item-check:checked + .search-conversa {
     max-width: 46vw;
   }
-  #mensagem .pesquisa-conversas .modo-noturno {
-    position: absolute;
-    top: 5px;
-    right: 0;
+  .mensagem-pagina {
+    height: 100vh;
+    padding-bottom: 60px;
+    padding: 16px;
+  }
+  .mensagem-aberta-bg {
+    padding: 0;
+    border-radius: 0;
+  }
+  .mesagem-aberta {
+    border-radius: 0;
+    height: 100vh;
   }
 }
 
