@@ -1,3 +1,8 @@
+video {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
 .container.ativo#live {
   display: grid;
   grid-template-columns: 17.25rem auto 22.625rem 5rem;
@@ -64,63 +69,6 @@
   box-shadow: var(--sobra-3);
 }
 
-/* sideve pesquisa
-.search-box { */
-/* position: absolute; */
-/* display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 8px;
-  left: 20px;
-  background: var(--cor-b0);
-  line-height: 10px;
-  border-radius: 60px;
-  border: 2px solid var(--cor-b1);
-  cursor: pointer;
-} */
-/* .search-input {
-  background: var(--cor-b0);
-  color: var(--cor-b8);
-  outline: none;
-  border: none;
-  line-height: 40px;
-  border-radius: 50px;
-  width: 0px;
-  float: left;
-  font-size: 1rem;
-  transition: 0.7s ease;
-  opacity: 0;
-} */
-/* .search-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  background: var(--cor-b0);
-  padding: 12px;
-  border-radius: 50%;
-  float: right;
-  color: var(--cor-b4);
-  transition: 0.4s ease;
-} */
-/* .search-box:hover > .search-input,
-.search-input:focus {
-  width: 145px;
-  padding-left: 8px;
-  background: var(--cor-b0);
-  opacity: 1;
-}
-.search-box:hover > .search-btn,
-.search-input:focus + .search-btn {
-  background: var(--cor-b1);
-  color: var(--cor-b8);
-} */
-
-/* .container-chat-canal {
-  display: grid;
-  grid-template-columns: 1fr auto;
-} */
-
 .container-live {
   display: flex;
   flex-direction: column;
@@ -128,9 +76,12 @@
 
 .live-on {
   margin: 16px;
+  display: flex;
+  flex-direction: column;
   background: var(--cor-b0);
   box-shadow: var(--sobra-1);
   border-radius: 15px;
+  transition: all 300ms ease;
 }
 
 .live {
@@ -158,11 +109,13 @@
   left: 10px;
   cursor: pointer;
   transition: all 300ms ease;
+  z-index: 1;
 }
 
 .menu.btn-menu-live:hover {
   border-radius: 10px;
   transform: scale(1.1);
+  background: var(--blur);
 }
 
 .pesquisa-live-interna {
@@ -178,6 +131,52 @@
   height: 20px;
 }
 
+/* redimencionar */
+.redimencionar {
+  position: absolute;
+  display: flex;
+  border-radius: 50%;
+  padding: 8px;
+  background: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(7px);
+  top: 58px;
+  right: 10px;
+  cursor: pointer;
+  transition: all 300ms ease;
+  z-index: 1;
+}
+
+.redimencionar:hover {
+  border-radius: 10px;
+  transform: scale(1.1);
+  background: var(--blur);
+}
+
+.redimencionar i {
+  color: var(--cor-w-2);
+  opacity: 0.7;
+  width: 20px;
+  height: 20px;
+}
+
+.redimencionar:hover::before {
+  content: "Redimencionar";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 12px;
+  width: 100px;
+  top: 30%;
+  right: 50px;
+  color: var(--cor-b8);
+  border-radius: 5px;
+  opacity: 0.5;
+  background: var(--cor-b0);
+  animation: delay 1.1s forwards;
+}
+
 /* btn chat live */
 .btn-live {
   position: absolute;
@@ -191,11 +190,13 @@
   right: 10px;
   cursor: pointer;
   transition: all 300ms ease;
+  z-index: 1;
 }
 
 .btn-live:hover {
   border-radius: 10px;
   transform: scale(1.1);
+  background: var(--blur);
 }
 
 .btn-live:hover::before {
@@ -243,26 +244,9 @@
     transform: translateX(0);
   }
 }
-/* delay left */
-@keyframes delayL {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-    transform: translateX(-50%);
-  }
-  80% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
+/* Minha Play 'Desativado' */
 .player-live {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
   padding: 8px;
@@ -274,7 +258,7 @@
   backdrop-filter: blur(7px);
   position: absolute;
   min-width: 100%;
-  bottom: 0;
+  bottom: 4px;
   opacity: 0;
   transition: all 300ms ease;
 }
@@ -447,7 +431,31 @@
   max-height: 15vh;
   overflow: hidden;
   position: relative;
-  padding-bottom: 40px;
+}
+
+.live-on.expan .sobre-perfil {
+  max-height: 100%;
+}
+
+.sobre-perfil::before {
+  display: block;
+  content: "";
+  height: 1px;
+  max-width: 100%;
+  background: var(--cor-b1);
+  position: relative;
+  top: -10px;
+}
+
+.sobre-perfil::after {
+  display: block;
+  content: "";
+  height: 1px;
+  left: 0;
+  width: 100%;
+  background: var(--cor-b1);
+  position: absolute;
+  bottom: 0px;
 }
 
 .sobre-perfil h2 {
@@ -460,38 +468,6 @@
   padding-bottom: 16px;
 }
 
-input#sobre-perfil-live {
-  display: none;
-}
-
-input#sobre-perfil-live:checked + .sobre-perfil {
-  max-height: 100vh;
-}
-
-input#sobre-perfil-live:checked + .sobre-perfil label i {
-  transform: rotate(180deg);
-}
-
-.sobre-perfil label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(7px);
-  padding: 8px;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 8px;
-  right: 50%;
-  z-index: 2;
-  cursor: pointer;
-  transition: all 300ms ease;
-  animation: loop-btn 500ms alternate infinite;
-}
-
 @keyframes loop-btn {
   0% {
     transform: translateY(-10px);
@@ -501,21 +477,36 @@ input#sobre-perfil-live:checked + .sobre-perfil label i {
   }
 }
 
-.sobre-perfil label:hover {
-  box-shadow: var(--sobra-2-blue);
-  background: var(--cor-gradiente);
+.btn-texto-expandir {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  align-self: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  transition: all 300ms ease;
+  animation: loop-btn 500ms alternate infinite;
+  cursor: pointer;
+}
+
+.btn-texto-expandir:hover {
   border-radius: 10px;
+  background: var(--cor-b1);
 }
 
-.sobre-perfil label:hover i {
-  color: var(--cor-b0);
-}
-
-.sobre-perfil label i {
+.btn-texto-expandir i {
   color: var(--cor-b8);
   font-size: 16px;
   width: 16px;
   height: 16px;
+}
+
+.live-on.expan .btn-texto-expandir i {
+  transform: rotate(180deg);
 }
 
 /* live recomendada */
@@ -531,17 +522,32 @@ input#sobre-perfil-live:checked + .sobre-perfil label i {
 }
 
 .container-recomendado-live a {
-  max-width: 200px;
-  min-width: 150px;
+  width: 150px;
+  height: 150px;
   position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.container-recomendado-live a:hover img {
+  transform: scale(1.1);
 }
 
 .container-recomendado-live a img {
   max-width: 180px;
-  border-radius: 15px;
+  /* border-radius: 15px; */
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease;
 }
 
 .container-recomendado-live a div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--cor-gradiente-live);
   padding: 3px;
   max-width: 40px;
@@ -554,7 +560,9 @@ input#sobre-perfil-live:checked + .sobre-perfil label i {
 }
 
 .container-recomendado-live a div img {
-  max-width: 40px;
+  max-width: 38px;
+  max-height: 38px;
+  position: relative;
 }
 
 /* Barra lateral */
@@ -570,6 +578,7 @@ input#sobre-perfil-live:checked + .sobre-perfil label i {
   margin-right: 5rem;
   background: var(--cor-w);
   box-shadow: var(--sobra-3);
+  z-index: 2;
 }
 .chat-btn-titulo {
   position: relative;
@@ -656,6 +665,7 @@ input#sobre-perfil-live:checked + .sobre-perfil label i {
   height: 100vh;
   box-shadow: var(--sobra-3);
   padding-top: 25px;
+  z-index: 2;
 }
 .canais {
   position: relative;
@@ -717,7 +727,24 @@ input#sobre-perfil-live:checked + .sobre-perfil label i {
 .canais-aovivo a:hover {
   color: var(--cor-w);
   background: var(--cor-gradiente-live);
-  transform: translateX(-10px);
+  transform: translateX(-8px);
+}
+
+.canais-aovivo a:hover p::after {
+  content: "ao vivo";
+  display: inline-block;
+  background: var(--cor-b0);
+  height: 14px;
+  color: var(--cor-b8);
+  padding: 2px 6px;
+  margin-left: 8px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+}
+
+.canais-aovivo a p {
+  display: flex;
+  align-items: center;
 }
 
 .canal-on {
@@ -750,6 +777,9 @@ input#sobre-perfil-live:checked + .sobre-perfil label i {
 }
 
 @media (max-width: 1200px) {
+  #live .sidenav {
+    display: none;
+  }
   .container.ativo#live {
     display: grid;
     grid-template-columns: auto auto 5rem;
@@ -823,9 +853,20 @@ input#sobre-perfil-live:checked + .sobre-perfil label i {
   .live-recomendado {
     padding-top: 26px;
   }
+  .live img {
+    border-radius: 0;
+  }
+  video {
+    border-radius: 0;
+  }
 }
 
 @media (max-width: 600px) {
+  #live .close {
+    position: absolute;
+    right: 20px;
+    z-index: 4;
+  }
   .container.resize#live {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -850,25 +891,22 @@ input#sobre-perfil-live:checked + .sobre-perfil label i {
       "content"
       "content";
   }
-  .inscricao {
-    flex-direction: column;
-  }
-  .pessoas-vendo {
-    flex-direction: row-reverse;
-  }
-  .infor-live {
-    flex-direction: column-reverse;
+  .container-recomendado-live a div {
+    padding: 2px;
   }
   .canal-recomendado {
     display: none;
   }
   .chat {
-    top: 38vh;
+    top: 40vh;
     width: 100vw;
-    height: 62vh;
+    height: 60%;
     z-index: 2;
     max-width: 100%;
     margin-right: 0;
+  }
+  .sobre-perfil {
+    max-height: 8vh;
   }
 }
 
@@ -914,6 +952,10 @@ input#sobre-perfil-live:checked + .sobre-perfil label i {
   }
   .infor-live {
     flex-direction: column;
+    padding: 8px;
+  }
+  .sobre-perfil {
+    padding: 10px;
   }
   .player-live {
     padding: 4px;
@@ -934,5 +976,18 @@ input#sobre-perfil-live:checked + .sobre-perfil label i {
   .search-box:hover > .search-input,
   .search-input:focus {
     max-width: 100px;
+  }
+  .btn-texto-expandir {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .btn-texto-expandir:hover {
+    background: transparent;
+  }
+  .live-recomendado {
+    padding-top: 16px;
+  }
+  .live-recomendado h2 {
+    padding-left: 8px;
   }
 }

@@ -102,3 +102,13 @@ function resizeTela() {
 }
 
 btnRedimendionarTela.addEventListener("click", resizeTela);
+
+// expandir texto live
+const btntextoExpan = document.querySelector(".btn-texto-expandir");
+const textoExpan = document.querySelector(".live-on");
+
+function expanTextolive() {
+  textoExpan.classList.toggle("expan");
+}
+
+btntextoExpan.addEventListener("click", expanTextolive);
