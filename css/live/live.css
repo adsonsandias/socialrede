@@ -900,7 +900,7 @@ video {
   .chat {
     top: 40vh;
     width: 100vw;
-    height: 60%;
+    height: 60vh;
     z-index: 2;
     max-width: 100%;
     margin-right: 0;

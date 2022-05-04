@@ -69,6 +69,13 @@
   .dark-logo {
     display: none;
   }
+  .img-login {
+    background: linear-gradient(
+      335.56deg,
+      rgba(82, 152, 227, 0.6) 17.84%,
+      rgba(60, 197, 222, 0.6) 97.71%
+    );
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -125,6 +132,13 @@
   }
   .bg-nav nav ul li a:hover {
     box-shadow: var(--sobra-1);
+  }
+  .img-login {
+    background: linear-gradient(
+      335.56deg,
+      rgba(53, 56, 61, 1) 17.84%,
+      rgba(69, 77, 91, 1) 97.71%
+    );
   }
 }
 /* LightMode Btn */
@@ -185,6 +199,13 @@
     0px 4px 8px rgba(183, 201, 239, 0.4), 0px 10px 20px rgba(183, 201, 239, 0.5);
   --blur: rgba(255, 255, 255, 0.25);
 }
+.img-login {
+  background: linear-gradient(
+    335.56deg,
+    rgba(82, 152, 227, 0.6) 17.84%,
+    rgba(60, 197, 222, 0.6) 97.71%
+  );
+}
 .body.light .light-logo {
   display: block;
 }
@@ -239,6 +260,13 @@
   --sobra-2-blue: 0px -2px 5px rgba(0, 0, 0, 0.25),
     0px 4px 8px rgba(0, 0, 0, 0.3), 2px 10px 20px rgba(0, 0, 0, 0.3);
   --blur: rgba(0, 0, 0, 0.25);
+}
+.img-login {
+  background: linear-gradient(
+    335.56deg,
+    rgba(53, 56, 61, 1) 17.84%,
+    rgba(69, 77, 91, 1) 97.71%
+  );
 }
 .body.dark .light-logo {
   display: none;
