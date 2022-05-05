@@ -30,6 +30,7 @@
     justify-self: center;
     bottom: -4px;
     position: fixed;
+    z-index: 2;
   }
 
   .navigation {

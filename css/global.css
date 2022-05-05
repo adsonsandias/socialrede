@@ -415,6 +415,7 @@ img {
     "sidenav content barra";
 }
 
+/* btn */
 .btn {
   background: var(--cor-gradiente);
   color: var(--cor-b0);
@@ -440,6 +441,37 @@ img {
 
 .btn-postar:hover {
   box-shadow: var(--sobra-2-blue);
+}
+
+/* btn blur */
+.btn-blur {
+  position: absolute;
+  display: flex;
+  border-radius: 50%;
+  padding: 8px;
+  background: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(7px);
+  cursor: pointer;
+  transition: all 300ms ease;
+  z-index: 1;
+}
+
+.btn-blur:hover {
+  border-radius: 10px;
+  transform: scale(1.1);
+  background: var(--blur);
+}
+
+.btn-blur i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--cor-w-2);
+  font-size: 16px;
+  opacity: 0.7;
+  width: 20px;
+  height: 20px;
 }
 
 input#texto {
