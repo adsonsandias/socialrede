@@ -33,5 +33,4 @@ export default function initMensagem() {
     btnMensagemInternaDesk.addEventListener("click", voltarMensagemDeck);
     btnMensagemHome.addEventListener("click", voltarAbrir);
   }
-  console.log(btnMensagemHome);
 }
