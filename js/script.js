@@ -1,57 +1,19 @@
-const sidenav = document.querySelectorAll(".bg-nav nav ul li a");
-function activeLink() {
-  sidenav.forEach((item) => item.classList.remove("active-sidenav"));
-  this.classList.add("active-sidenav");
-}
-sidenav.forEach((item) => item.addEventListener("click", activeLink));
+import initHomeOne from "./modules/home-one.js";
+import initGeral from "./modules/geral.js";
+import initLive from "./modules/live.js";
+import initMensagem from "./modules/mensagem.js";
+import initNavMobile from "./modules/nav-mobile.js";
+import initPerfil from "./modules/perfil.js";
+import initModoDark from "./modules/mododark.js";
+import initSideNavChose from "./modules/side-nav-chose.js";
+import initCurti from "./modules/curti.js";
 
-const bntCurti = document.querySelectorAll(".nav-publicacao li a");
-function activeCurti() {
-  bntCurti.forEach((item) => item.classList.remove("btn-p-ative"));
-  this.classList.add("btn-p-ative");
-}
-bntCurti.forEach((item) => item.addEventListener("click", activeCurti));
-
-const choseBtn = document.querySelectorAll(".close");
-const sideNav = document.querySelector(".sidenav");
-const menu = document.querySelectorAll(".menu");
-
-choseBtn.forEach((item) => {
-  item.addEventListener("click", () => {
-    sideNav.style.display = "none";
-  });
-});
-
-menu.forEach((item) => {
-  item.addEventListener("click", () => {
-    sideNav.style.display = "flex";
-  });
-});
-
-const bntModoLight = document.querySelectorAll(".btn-light");
-const bntModoDark = document.querySelectorAll(".btn-dark");
-const logoDark = document.querySelectorAll(".dark-logo");
-const logoLight = document.querySelectorAll(".light-logo");
-const placeHoder = document.querySelector("input#pesquisa::placeholder");
-
-function activeModoLight() {
-  bntModoLight.forEach((item) => item.classList.remove("on-modo"));
-  this.classList.add("on-modo");
-  document.body.classList.add("light");
-  document.body.classList.remove("dark");
-  bntModoDark.forEach((item) => item.classList.remove("on-modo"));
-  logoDark.forEach((item) => (item.style.display = "none"));
-  logoLight.forEach((item) => (item.style.display = "block"));
-}
-bntModoLight.forEach((item) => item.addEventListener("click", activeModoLight));
-
-function activeModoDark() {
-  bntModoDark.forEach((item) => item.classList.remove("on-modo"));
-  this.classList.add("on-modo");
-  document.body.classList.add("dark");
-  document.body.classList.remove("light");
-  bntModoLight.forEach((item) => item.classList.remove("on-modo"));
-  logoDark.forEach((item) => (item.style.display = "block"));
-  logoLight.forEach((item) => (item.style.display = "none"));
-}
-bntModoDark.forEach((item) => item.addEventListener("click", activeModoDark));
+initHomeOne();
+initGeral();
+initLive();
+initMensagem();
+initNavMobile();
+initPerfil();
+initModoDark();
+initSideNavChose();
+initCurti();
