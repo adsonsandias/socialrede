@@ -11,7 +11,13 @@ export default function initMensagem() {
     "#mensagem .container-nav-mobile"
   );
 
-  if (mensagemHome && mensagemGrid && btnMensagemInternaDesk) {
+  if (
+    mensagemHome &&
+    mensagemGrid &&
+    btnMensagemInternaDesk &&
+    btnMensagemHome &&
+    navMobileInterna
+  ) {
     function voltarAbrir() {
       mensagemHome.classList.toggle("ativo");
       mensagemGrid.classList.toggle("ativo");
@@ -27,4 +33,5 @@ export default function initMensagem() {
     btnMensagemInternaDesk.addEventListener("click", voltarMensagemDeck);
     btnMensagemHome.addEventListener("click", voltarAbrir);
   }
+  console.log(btnMensagemHome);
 }
