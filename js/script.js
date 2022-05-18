@@ -1,4 +1,4 @@
-import initHomeOne from "./modules/home-one.js";
+// import initHomeOne from "./modules/home-one.js";
 import initGeral from "./modules/geral.js";
 import initLive from "./modules/live.js";
 import initMensagem from "./modules/mensagem.js";
@@ -7,8 +7,9 @@ import initPerfil from "./modules/perfil.js";
 import initModoDark from "./modules/mododark.js";
 import initSideNavChose from "./modules/side-nav-chose.js";
 import initCurti from "./modules/curti.js";
+import initLoad from "./modules/load.js";
 
-initHomeOne();
+// initHomeOne();
 initGeral();
 initLive();
 initMensagem();
@@ -17,3 +18,4 @@ initPerfil();
 initModoDark();
 initSideNavChose();
 initCurti();
+initLoad();

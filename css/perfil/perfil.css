@@ -77,7 +77,7 @@
 }
 
 .add-publicacao-aberto ul li:hover {
-  background: var(--blur);
+  background: var(--cor-b1);
 }
 
 .add-publicacao-aberto h1 {
@@ -123,8 +123,16 @@ input[type="checkbox"]#checkbox-add-publicacao:checked
 }
 
 input[type="checkbox"]#checkbox-add-publicacao:checked
+  + .add-publicacao.btn-blur
+  label
+  i {
+  color: var(--cor-b8);
+}
+
+input[type="checkbox"]#checkbox-add-publicacao:checked
   + .add-publicacao.btn-blur {
   border-radius: 10px;
+  background: var(--cor-w);
   z-index: 2;
 }
 
@@ -132,6 +140,15 @@ input[type="checkbox"]#checkbox-add-publicacao:checked
   + .add-publicacao.btn-blur
   .add-publicacao-aberto {
   display: block;
+}
+
+input[type="checkbox"]#checkbox-add-publicacao:checked
+  + .add-publicacao.btn-blur
+  h1,
+input[type="checkbox"]#checkbox-add-publicacao:checked
+  + .add-publicacao.btn-blur
+  h2 {
+  color: var(--cor-b8);
 }
 
 #perfil-home .configuracao-perfil {
@@ -322,6 +339,9 @@ input[type="checkbox"]#checkbox-add-publicacao:checked
   background: var(--cor-b0);
   border-radius: 50%;
   transition: all 300ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sobre-user-home ul li a:hover {
@@ -330,9 +350,6 @@ input[type="checkbox"]#checkbox-add-publicacao:checked
   border-radius: 10px;
 }
 
-.sobre-user-home img {
-  max-width: 20px;
-}
 /* Sugestao */
 .sugestao-de-amizade.ativo {
   display: flex;
