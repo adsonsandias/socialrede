@@ -1,0 +1,186 @@
+@mixin cores-light {
+  --cor-b0: #f7f9ff;
+  --cor-b1: #d9e2f7;
+  --cor-b2: #b7c9ef;
+  --cor-b3: #98b1e7;
+  --cor-b4: #7596dc;
+  --cor-b5: #5b86e5;
+  --cor-b6: #225fe5;
+  --cor-b7: #1d4fbf;
+  --cor-b8: #03163f;
+  --cor-b8-2: #7b859b;
+  --cor-c1: #f7feff;
+  --cor-c2: #d9f5f7;
+  --cor-c3: #b7ebef;
+  --cor-c4: #98e1e7;
+  --cor-c5: #75d5dc;
+  --cor-c6: #36d1dc;
+  --cor-c7: #3abcc6;
+  --cor-c8: #149aa4;
+  --cor-c8t: #149aa4;
+  --cor-w: #ffffff;
+  --cor-w-2: #ffffff;
+  --cor-b4t: #f7f9ff;
+  --cor-alerta: #c63a3a;
+  --cor-l1: #3d2c8d;
+  --cor-l2: #916bbf;
+  --cor-l3: #4e9f3d;
+  --cor-l4: #e63e6d;
+  --cor-l5: #ff4c29;
+  --cor-l6: #1597bb;
+  --cor-l7: #03c4a1;
+  --cor-l8: #537ec5;
+  --cor-l9: #2666cf;
+  --cor-l10: #ff7272;
+  --cor-l11: #ffaa4c;
+  --cor-l12: #519872;
+}
+
+@mixin gradiente-light {
+  --cor-gradiente: linear-gradient(127deg, #36d1dc -19.65%, #5b86e5 131.71%);
+  --cor-gradiente-live: linear-gradient(127deg, #ff6363 -19.65%,#c63a3a 131.71%);
+}
+
+@mixin sobras-light {
+  --sobra-1: 0px -2px 5px rgba(183, 201, 239, 0.25), 0px 4px 8px rgba(183, 201, 239, 0.3), 0px 10px 20px rgba(183, 201, 239, 0.3);
+
+  --sobra-1-vermelho: 0px -2px 5px rgba(255, 99, 99, 0.25), 0px 4px 8px rgba(255, 99, 99, 0.3), 2px 10px 20px rgba(255, 99, 99, 0.3);
+
+  --sobra-1-verde: 0px -2px 5px rgba(217, 245, 246, 0.25), 0px 4px 8px rgba(217, 245, 246, 0.3), 0px 10px 20px rgba(217, 245, 246, 0.3);
+
+  --sobra-1-blue: 0px -2px 5px rgba(91, 134, 229, 0.25), 0px 4px 8px rgba(91, 134, 229, 0.3), 2px 10px 20px rgba(91, 134, 229, 0.3);
+
+  --sobra-2-blue: 0px -2px 5px rgba(91, 134, 229, 0.3), 0px 4px 8px rgba(91, 134, 229, 0.45), 0px 10px 20px rgba(91, 134, 229, 0.45);
+
+  --sobra-3: 0px -2px 5px rgba(183, 201, 239, 0.25), 0px 4px 8px rgba(183, 201, 239, 0.4), 0px 10px 20px rgba(183, 201, 239, 0.5);
+
+  --blur: rgba(255, 255, 255, 0.25);
+}
+
+@mixin logo-light {
+  .light-logo {
+    display: block;
+  }
+  .dark-logo {
+    display: none;
+  }
+  .img-login {
+    background: linear-gradient(335.56deg,rgba(82, 152, 227, 0.6) 17.84%,rgba(60, 197, 222, 0.6) 97.71%);
+  }
+}
+
+/* --------------- Cores Darck ----------------- */ 
+
+@mixin cores-dark {
+  --cor-b0: #1a1b1c;
+  --cor-b1: #252627;
+  --cor-b2: #464d5c;
+  --cor-b3: #35383d;
+  --cor-b8: #d9e2f6;
+  --cor-b8-2: #7b859b;
+  --cor-b4: #35383d;
+  --cor-b5: #464d5c;
+  --cor-b4t: #b7c9ef;
+  --cor-w: #212122;
+  --cor-w-2: #d9e2f6;
+  --cor-c1: #1a1b1c;
+  --cor-c2: #252627;
+  --cor-c7: #3abcc6;
+  --cor-c8: #35383d;
+  --cor-c8t: #b7c9ef;
+  --cor-alerta: #c63a3a;
+  --cor-live: #c63a3a;
+  --cor-l1: #3d2c8d;
+  --cor-l2: #916bbf;
+  --cor-l3: #4e9f3d;
+  --cor-l4: #e63e6d;
+  --cor-l5: #ff4c29;
+  --cor-l6: #1597bb;
+  --cor-l7: #03c4a1;
+  --cor-l8: #537ec5;
+  --cor-l9: #2666cf;
+  --cor-l10: #ff7272;
+  --cor-l11: #ffaa4c;
+  --cor-l12: #519872;
+}
+
+@mixin gradiente-dark {
+  --cor-gradiente: linear-gradient(97.27deg, #35383d 0%, #454d5b 100%);
+  --cor-gradiente-live: linear-gradient(127deg,#ff6363 -19.65%,#c63a3a 131.71%);
+}
+
+@mixin sobras-dark {
+  --sobra-1: 0px -2px 5px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0.3), 2px 10px 20px rgba(0, 0, 0, 0.3);
+
+  --sobra-2-blue: 0px -2px 5px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0.3), 2px 10px 20px rgba(0, 0, 0, 0.3);
+
+  --sobra-3: 0px -2px 5px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.4), 2px 10px 20px rgba(0, 0, 0, 0.5);
+
+  --blur: rgba(0, 0, 0, 0.25);
+}
+
+@mixin logo-dark {
+  .light-logo {
+    display: none;
+  }
+  .dark-logo {
+    display: block;
+  }
+  .img-login {
+    background: linear-gradient(335.56deg,rgba(53, 56, 61, 1) 17.84%,rgba(69, 77, 91, 1) 97.71%);
+  }
+}
+
+@mixin nav-dark-hover {
+  .bg-nav nav ul li a:hover {
+    box-shadow: var(--sobra-1);
+  }
+}
+
+/* Modos ativos */ 
+
+@mixin light {
+  @include cores-light;
+  @include gradiente-light;
+  @include sobras-light;
+  @include logo-light;
+}
+
+@mixin dark {
+  @include cores-dark;
+  @include gradiente-dark;
+  @include sobras-dark;    
+  @include logo-dark;
+  @include nav-dark-hover;
+}
+
+/************** Função Cores *************/ 
+
+// Cores B 'Blue'
+@for $i from 0 through 8 {
+  .b#{$i} {
+    color: var(--cor-b#{$i})
+  }
+}
+
+.b8-2 {
+  color: var(--cor-b8-2);
+}
+
+// Cores C 'Ciano'
+@for $i from 1 through 8 {
+  .c#{$i} {
+    color: var(--cor-c#{$i})
+  }
+}
+
+.c8t {
+  color: var(--cor-c8t);
+}
+
+// Cores L 'Chat Live'
+@for $i from 1 through 12 {
+  .l#{$i} {
+    color: var(--cor-l#{$i})
+  }
+}
