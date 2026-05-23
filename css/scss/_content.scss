@@ -1,9 +1,9 @@
 .content {
   grid-area: content;
-  padding-top: 30px;
-  padding-bottom: 60px;
-  height: 100vh;
-  overflow-y: auto;
+  padding: 0;
+  height: auto;
+  overflow: visible;
+  min-width: 0;
 }
 
 /* linha do tempo */
@@ -11,16 +11,17 @@
 .time-line-bg {
   max-width: 700px;
   margin: 0 auto;
-  background: var(--cor-w);
-  padding: 16px;
-  border-radius: 15px;
-  box-shadow: var(--sobra-1);
-  margin-top: 26px;
-  margin-bottom: 26px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-soft);
+  padding: 16px 20px;
+  border-radius: var(--radius-lg);
+  box-shadow: none;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-6);
 }
 
 .time-line-bg:hover {
-  box-shadow: none;
+  border-color: var(--border-medium);
 }
 
 .time-line {
@@ -46,13 +47,14 @@
   gap: 8px;
   align-items: center;
   padding: 8px;
-  border-radius: 10px;
-  transition: all 300ms ease;
+  border-radius: var(--radius-md);
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
 }
 
 .time-line div div a:hover {
-  background: var(--cor-b1);
-  border-radius: 10px;
+  background: var(--bg-surface-soft);
 }
 
 .time-line div div a i {
@@ -63,7 +65,7 @@
 
 .time-line div div a p {
   font-weight: 500;
-  text-transform: uppercase;
+  letter-spacing: -0.01em;
 }
 
 .time-line div a img {
@@ -73,18 +75,26 @@
 /* Publicação */
 
 .publicacao-bg {
-  background: var(--cor-w);
-  box-shadow: var(--sobra-3);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--sobra-1);
   max-width: 700px;
   margin: 0 auto;
-  border-radius: 15px;
-  padding: 16px;
-  margin-bottom: 26px;
-  transition: all 300ms ease-in;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: var(--space-6);
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
 }
 
 .publicacao-bg:hover {
-  box-shadow: none;
+  border-color: var(--border-medium);
+  box-shadow:
+    0 2px 4px rgba(15, 23, 42, 0.04),
+    0 12px 28px rgba(15, 23, 42, 0.07);
+  transform: translateY(-1px);
 }
 
 .publicacao-top {
@@ -115,7 +125,7 @@
 
 .menu-publicacao a i {
   font-size: 20px;
-  color: var(--cor-b8);
+  color: var(--text-muted);
   height: 20px;
 }
 
@@ -124,7 +134,7 @@
   max-width: 100%;
   max-height: 570px;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 14px;
 }
 
 .sep-publicacao {
@@ -132,8 +142,8 @@
   content: "";
   height: 1px;
   max-width: 100%;
-  background-color: var(--cor-b1);
-  margin: 6px;
+  background-color: var(--border-soft);
+  margin: var(--space-3) 0;
 }
 
 .nav-publicacao {
@@ -148,7 +158,18 @@
   display: flex;
   gap: 8px;
   align-items: center;
-  transition: all 300ms ease-in-out;
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: var(--text-secondary);
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.nav-publicacao li a:hover {
+  background: var(--bg-surface-soft);
+  color: var(--brand-blue-deep);
 }
 
 .nav-publicacao li a h2 {
@@ -158,13 +179,13 @@
 
 /* Curti icone */
 .nav-publicacao li a svg path {
-  fill: var(--cor-b8);
-  transition: all 300ms ease-in-out;
+  fill: var(--text-secondary);
+  transition: fill var(--transition-base);
 }
 
 .nav-publicacao li a.btn-p-ative svg path {
   fill: url(#paint0_linear_41_5452);
-  transition: all 300ms ease-in;
+  transition: fill var(--transition-fast);
 }
 
 .nav-publicacao li a:hover svg path {
@@ -174,7 +195,7 @@
 /* icone */
 .nav-publicacao li a i {
   font-size: 20px;
-  color: var(--cor-b8);
+  color: var(--text-secondary);
   height: 20px;
 }
 /* icone  */
@@ -213,9 +234,6 @@
 @media (max-width: 1200px) {
   .close {
     display: flex;
-  }
-  .content {
-    padding: 30px;
   }
   .menu {
     display: flex;

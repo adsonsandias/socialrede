@@ -2,27 +2,29 @@
   grid-area: barra;
   display: flex;
   flex-direction: column;
-  background: var(--cor-w);
-  height: 100vh;
-  position: relative;
+  background: transparent;
+  position: sticky;
+  top: 24px;
+  max-height: calc(100dvh - 48px);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .storys {
-  margin-top: 30px;
+  margin-top: var(--space-7);
 }
 
 .storys h2 {
-  text-transform: uppercase;
-  padding: 0 26px;
+  padding: 0 var(--space-6);
+  letter-spacing: -0.015em;
 }
 
 .storys-lista {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  padding: 16px 0px 26px 16px;
-  gap: 8px;
+  padding: var(--space-4) 0 var(--space-6) var(--space-4);
+  gap: var(--space-3);
 }
 
 .storys-lista li a {
@@ -31,53 +33,71 @@
   justify-content: center;
   border-radius: 50%;
   background: var(--cor-gradiente);
-  box-shadow: var(--sobra-2-blue);
-  width: 50px;
-  transition: all 300ms ease-in;
+  width: 56px;
+  height: 56px;
+  padding: 2px;
+  transition:
+    transform var(--transition-base),
+    filter var(--transition-base);
 }
 
 .storys-lista li a:hover {
-  box-shadow: none;
+  transform: translateY(-1px);
+  filter: saturate(0.96);
 }
 
 .storys-lista li a img {
-  padding: 3px;
-  max-width: 60px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--bg-surface);
 }
 
 /* Publicação rencente */
 
 .publicacao-recente h2 {
-  text-transform: uppercase;
-  padding: 0 26px;
+  padding: 0 var(--space-6);
+  letter-spacing: -0.015em;
 }
 
 .publicacao-recente-bg {
-  background: var(--cor-b0);
-  padding: 10px;
-  border-radius: 15px;
-  margin: 16px;
-  box-shadow: var(--sobra-1);
-  transition: all 300ms ease-in;
-}
-
-.publicacao-recente-bg:hover {
+  background: var(--bg-panel-soft);
+  border: 1px solid var(--border-soft);
+  padding: 16px;
+  border-radius: var(--radius-lg);
+  margin: var(--space-4);
   box-shadow: none;
+  backdrop-filter: blur(10px);
+  transition:
+    border-color var(--transition-base),
+    background-color var(--transition-base);
+}
+.publicacao-recente-bg:hover {
+  border-color: var(--border-medium);
 }
 
 .publicacao-recente-bg-interna {
   display: flex;
-  margin-bottom: 10px;
-  padding: 10px;
-  background: var(--cor-w);
-  border-radius: 10px;
-  transition: all 300ms ease-in;
+  margin-bottom: 12px;
+  padding: 12px;
+  background: transparent;
+  border-radius: var(--radius-md);
+  border-bottom: 1px solid var(--border-soft);
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
   cursor: pointer;
   align-items: center;
 }
 
+.publicacao-recente-bg-interna:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
 .publicacao-recente-bg-interna:hover {
-  background: var(--cor-b1);
+  background: var(--bg-surface-soft);
 }
 
 .publicacao-recente-perfil img {
@@ -93,43 +113,48 @@
 }
 
 .publicacao-recente-previo img {
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
 }
 
 /* Mensagem */
 .titulo-mensagem {
-  text-transform: uppercase;
-  margin-left: 26px;
+  margin-left: var(--space-6);
+  letter-spacing: -0.015em;
 }
 .mensagem {
-  background: var(--cor-b0);
-  margin: 16px;
-  border-radius: 15px;
-  box-shadow: var(--sobra-1);
-  transition: all 300ms ease-in;
+  background: var(--bg-panel-soft);
+  border: 1px solid var(--border-soft);
+  margin: var(--space-4);
+  border-radius: var(--radius-lg);
+  box-shadow: none;
+  transition:
+    border-color var(--transition-base),
+    background-color var(--transition-base);
   height: 300px;
   overflow-y: auto;
+  backdrop-filter: blur(10px);
 }
 
 .mensagem:hover {
-  box-shadow: none;
+  border-color: var(--border-medium);
 }
 
 .mensagem ul {
   padding: 16px 8px;
 }
 .mensagem ul li a {
-  padding: 8px;
+  padding: 10px 12px;
   display: flex;
   gap: 8px;
   align-items: center;
-  transition: all 300ms ease-in;
-  border-radius: 15px;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
+  border-radius: var(--radius-md);
 }
 
 .mensagem ul li a:hover {
-  background: var(--cor-b1);
-  border-radius: 15px;
+  background: var(--bg-surface-soft);
 }
 
 .mensagem ul li a img {
@@ -147,7 +172,7 @@
 }
 
 .top-mensagem-barra p {
-  color: var(--cor-b4);
+  color: var(--text-muted);
   font-weight: 500;
 }
 
@@ -213,23 +238,27 @@
 
 /* Short */
 .shorts {
-  padding: 0px 20px 20px;
+  padding: 0 var(--space-6) var(--space-6);
 }
 .shorts > h2 {
-  text-transform: uppercase;
-  margin-left: 6px;
-  margin-bottom: 16px;
+  margin-left: var(--space-2);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.015em;
 }
 .shorts-bg {
   padding: 16px;
-  background: var(--cor-b0);
-  border-radius: 15px;
-  box-shadow: var(--sobra-1);
-  transition: all 300ms ease-in;
+  background: var(--bg-panel-soft);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: none;
+  transition:
+    border-color var(--transition-base),
+    background-color var(--transition-base);
+  backdrop-filter: blur(10px);
 }
 
 .shorts-bg:hover {
-  box-shadow: none;
+  border-color: var(--border-medium);
 }
 
 .shorts-container {
@@ -249,7 +278,7 @@
 }
 
 .texto-short > a {
-  transition: all 300ms ease-in;
+  transition: color var(--transition-base);
 }
 
 .texto-short > a:after {
@@ -258,7 +287,7 @@
   background: transparent;
   width: 52px;
   height: 1px;
-  transition: all 200ms ease-in;
+  transition: background-color var(--transition-fast);
 }
 
 .texto-short > a:hover::after {
@@ -275,18 +304,21 @@
 .short-previu li a {
   border: 2px solid transparent;
   background: transparent;
-  border-radius: 10px;
-  transition: all 300ms ease-in;
+  border-radius: var(--radius-md);
+  transition:
+    border-color var(--transition-base),
+    background-color var(--transition-base),
+    transform var(--transition-base);
 }
 .short-previu li a:hover {
-  border: 2px solid var(--cor-b2);
-  background: var(--cor-b2);
-  border-radius: 10px;
+  border-color: var(--border-medium);
+  background: var(--bg-surface-soft);
+  transform: translateY(-1px);
 }
 .short-previu li a img {
   width: 77px;
   height: 100%;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
 }
 
 @media (max-width: 1200px) {

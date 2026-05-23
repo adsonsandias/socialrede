@@ -1,10 +1,6 @@
 #mensagem.container {
-  grid-template-columns: 17.25rem auto;
-  grid-template-areas:
-    "sidenav content "
-    "sidenav content "
-    "sidenav content "
-    "sidenav content ";
+  grid-template-columns: 248px minmax(0, 1fr);
+  grid-template-areas: "sidenav content";
 }
 
 #mensagem .barra-lateral {
@@ -12,11 +8,8 @@
 }
 
 #mensagem .content {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  overflow-y: initial;
+  padding: 0;
+  overflow: visible;
 }
 
 #mensagem .publicacao-bg {
@@ -33,14 +26,14 @@
 }
 
 .container-mensagem {
-  height: 92vh;
+  min-height: 0;
 }
 
 .mensagem-pagina {
   display: flex;
   flex-direction: column;
-  overflow: auto;
-  height: 92vh;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .mensagem-pagina a {
@@ -65,7 +58,7 @@
   justify-content: space-between;
   position: sticky;
   top: -3px;
-  background: var(--cor-w);
+  background: transparent;
   padding-bottom: 8px;
   padding-top: 8px;
 }
@@ -75,6 +68,8 @@
   flex-direction: column;
   gap: 8px;
   padding-right: 16px;
+  overflow-y: auto;
+  min-height: 0;
 }
 
 .pesquisa-conversas input#item-check {
@@ -86,49 +81,57 @@
 
 .search-conversa {
   display: flex;
-  background: var(--cor-b0);
-  border-radius: 25px;
-  border: 2px solid var(--cor-b2);
+  background: var(--bg-surface-soft);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-soft);
   max-width: 30%;
-  transition: all 300ms ease-in-out;
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    background-color var(--transition-base);
 }
 
 .search-conversa input#search {
-  transition: all 300ms ease-in;
+  transition:
+    transform var(--transition-base),
+    opacity var(--transition-base),
+    max-width var(--transition-base);
   transform: translate(-100%);
   padding-left: 0px;
   opacity: 0;
   max-width: 0%;
   border: none;
   outline: none;
-  background: var(--cor-b0);
+  background: transparent;
 }
 
 .search-conversa label {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+  border-radius: var(--radius-pill);
   min-width: 48px;
   min-height: 48px;
   padding: 8px;
-  background: var(--cor-b1);
-  transition: all 250ms ease-in;
+  background: transparent;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
   z-index: 1;
   cursor: pointer;
 }
 
 .search-conversa label i {
-  color: var(--cor-b4);
+  color: var(--text-muted);
   font-size: 16px;
   width: 16px;
   height: 16px;
 }
 
 input#item-check:checked + .search-conversa input#search {
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   transform: translate(0%);
-  background: var(--cor-b0);
+  background: transparent;
   padding-left: 8px;
   opacity: 1;
   max-width: 100%;
@@ -176,7 +179,10 @@ input#item-check:checked + .search-conversa {
 
 .pagina-inicial-mensagem {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 20px;
+  min-height: min(72vh, calc(100dvh - 220px));
+  align-items: start;
 }
 
 .pagina-inicial-mensagem.ativo {
@@ -190,27 +196,32 @@ input#item-check:checked + .search-conversa {
 }
 
 .mensagem-visto p {
-  color: var(--cor-b4);
+  color: var(--text-muted);
   font-weight: 500;
 }
 /* Mensagem aberta */
 .mensagem-aberta-bg {
-  background: var(--cor-b1);
-  border-radius: 15px;
-  padding: 8px;
-  height: 92vh;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 12px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .mesagem-aberta {
-  background: var(--cor-b0);
-  border-radius: 10px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
   width: 100%;
-  height: 90vh;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: 16px;
   overflow-y: auto;
   position: relative;
+  flex: 1;
 }
 
 .modo-noturno.interna-modo-n {
@@ -224,7 +235,8 @@ input#item-check:checked + .search-conversa {
   gap: 6px;
   position: sticky;
   top: 0;
-  background: var(--cor-b0);
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .menu-interna-mensagem {
@@ -239,11 +251,13 @@ input#item-check:checked + .search-conversa {
 .menu-mensagem a {
   display: flex;
   align-items: center;
-  color: var(--cor-b8);
+  color: var(--text-secondary);
   padding: 8px;
   height: 34px;
-  border-radius: 50%;
-  transition: all 300ms ease-in;
+  border-radius: var(--radius-pill);
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
 }
 
 .pagina-inicial-mensagem.ativo
@@ -260,9 +274,8 @@ input#item-check:checked + .search-conversa {
 }
 
 .menu-mensagem a:hover {
-  background: var(--cor-b1);
-  transform: scale(1.1);
-  border-radius: 10px;
+  background: var(--bg-surface-soft);
+  color: var(--text-primary);
 }
 
 .menu-mensagem a i {
@@ -281,24 +294,26 @@ input#item-check:checked + .search-conversa {
 
 .resposta,
 .resposta-recebida {
-  padding: 8px;
-  border-radius: 15px;
+  padding: 10px 12px;
+  border-radius: var(--radius-lg);
   max-width: 350px;
 }
 
 .resposta {
-  background: var(--cor-b1);
+  background: var(--bg-blue-soft);
+  color: var(--text-primary);
 }
 
 .resposta-recebida {
-  background: var(--cor-c2);
+  background: var(--bg-accent-soft);
+  color: var(--text-primary);
 }
 
 .responder {
-  padding: 8px;
-  background: var(--cor-b0);
-  border-radius: 10px;
-  border-left: 2px solid var(--cor-b4);
+  padding: 10px 12px;
+  background: var(--bg-surface-soft);
+  border-radius: var(--radius-md);
+  border-left: 2px solid rgba(91, 134, 229, 0.35);
   margin-bottom: 6px;
 }
 
@@ -336,29 +351,31 @@ input#item-check:checked + .search-conversa {
 .campo-texto {
   min-width: 100%;
   position: sticky;
-  bottom: 10px;
+  bottom: 0;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .input-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--cor-w);
-  border-radius: 15px;
-  max-height: 45px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  min-height: 48px;
   margin: 0 auto;
-  padding: 13px;
-  border: 2px solid var(--cor-b4);
+  padding: 10px 12px;
+  border: 1px solid var(--border-medium);
   justify-content: space-between;
   margin-left: 8px;
   margin-right: 8px;
+  gap: 10px;
 }
 
 .input-container i {
   font-size: 20px;
   width: 20px;
   height: 20px;
-  color: var(--cor-b8);
+  color: var(--text-secondary);
   cursor: pointer;
 }
 
@@ -381,9 +398,11 @@ input#item-check:checked + .search-conversa {
   outline: none;
   border: none;
   padding: 8px;
-  background: var(--cor-w);
-  color: var(--b8);
-  max-width: 100px;
+  background: transparent;
+  color: var(--text-primary);
+  min-width: 0;
+  flex: 1;
+  max-width: none;
 }
 
 .input-container input#file {
@@ -396,14 +415,16 @@ input#item-check:checked + .search-conversa {
   border: none;
   background: transparent;
   border-radius: 50%;
-  transition: all 300ms ease-in;
+  transition:
+    background-color var(--transition-base),
+    transform var(--transition-base);
   cursor: pointer;
 }
 
 .input-container label#file:hover {
-  background: var(--cor-b1);
+  background: var(--bg-surface-soft);
   border-radius: 8px;
-  transform: scale(1.1);
+  transform: translateY(-1px);
 }
 
 .input-container button {
@@ -413,13 +434,15 @@ input#item-check:checked + .search-conversa {
   border: none;
   background: transparent;
   border-radius: 50%;
-  transition: all 300ms ease-in;
+  transition:
+    background-color var(--transition-base),
+    transform var(--transition-base);
 }
 
 .input-container button:hover {
-  background: var(--cor-b1);
+  background: var(--bg-surface-soft);
   border-radius: 8px;
-  transform: scale(1.1);
+  transform: translateY(-1px);
 }
 
 .input-container button i {
@@ -427,55 +450,10 @@ input#item-check:checked + .search-conversa {
   height: 20px;
 }
 
-@media (max-width: 1200px) {
-  #mensagem.container {
-    grid-template-columns: 7.25rem auto;
-  }
-  #mensagem #close-btn.close {
-    display: none;
-  }
-  #mensagem .menu {
-    display: none;
-  }
-}
-
-@media (max-width: 980px) {
-  #mensagem .pesquisa-cotainer {
-    max-width: 100%;
-  }
-  #mensagem.container {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "content"
-      "content"
-      "content"
-      "content";
-  }
-  #mensagem .sidenav {
-    display: none;
-  }
-  #mensagem #close-btn.close {
-    display: flex;
-  }
-  #mensagem .menu {
-    display: flex;
-  }
-  .resposta,
-  .resposta-recebida {
-    padding: 8px;
-    border-radius: 15px;
-    max-width: 200px;
-  }
-}
-
 @media (max-width: 800px) {
-  #mensagem .content {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
   #mensagem .publicacao-bg {
     max-width: 100%;
-    margin: 0px 8px;
+    margin: 0;
   }
   #mensagem .modo-noturno a:nth-child(3) {
     display: none;
@@ -506,60 +484,21 @@ input#item-check:checked + .search-conversa {
 }
 
 @media (max-width: 480px) {
-  .pesquisa-conversas {
-    top: -17px;
-  }
-  .container-mensagem {
-    height: 100vh;
-  }
-  #mensagem .content {
-    padding: 0px;
-    margin: 0px;
-  }
   .search-conversa label {
     min-width: 36px;
     min-height: 36px;
   }
 
   #mensagem .publicacao-bg {
-    padding: 0px;
-    margin: 0;
+    padding: 0;
     border-radius: 0;
   }
-  input#item-check:checked + .search-conversa input#search {
-    max-width: 30vw;
-  }
-  .search-conversa {
-    max-width: 13vw;
-    position: absolute;
-    left: 50px;
-  }
-  input#item-check:checked + .search-conversa {
-    max-width: 46vw;
-  }
-  .mensagem-pagina {
-    height: 100vh;
-    padding-bottom: 60px;
-    padding: 16px;
-  }
+
   .mensagem-aberta-bg {
     padding: 0;
     border-radius: 0;
   }
   .mesagem-aberta {
     border-radius: 0;
-    height: 100vh;
-  }
-}
-
-@media (max-width: 360px) {
-  input#item-check:checked + .search-conversa input#search {
-    max-width: 30vw;
-  }
-  .search-conversa {
-    max-width: 13vw;
-  }
-  input#item-check:checked + .search-conversa {
-    max-width: 46vw;
   }
 }

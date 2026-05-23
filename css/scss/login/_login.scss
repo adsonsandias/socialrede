@@ -1,6 +1,6 @@
 .login-bg {
-  background: var(--cor-w);
-  height: 100vh;
+  background: transparent;
+  min-height: 100dvh;
 }
 
 .container-login {
@@ -9,20 +9,16 @@
 }
 
 .img-login-home {
-  background: linear-gradient(
-    335.56deg,
-    rgba(82, 152, 227, 0.6) 17.84%,
-    rgba(60, 197, 222, 0.6) 97.71%
-  );
+  background: var(--cor-gradiente);
   position: relative;
 }
 
 .img-login-home img {
   object-fit: cover;
   object-position: center;
-  opacity: 0.6;
+  opacity: 0.25;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
 }
 
 .img-login-home::after {
@@ -30,7 +26,7 @@
   display: flex;
   height: 100%;
   width: 30px;
-  background: var(--cor-gradiente);
+  background: rgba(255, 255, 255, 0);
   position: absolute;
   top: 0;
   right: -16px;
@@ -43,7 +39,7 @@
   display: flex;
   height: 100%;
   width: 25px;
-  background: var(--cor-w);
+  background: var(--bg-surface);
   position: absolute;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -94,13 +90,18 @@
   align-items: center;
   padding: 12px 80px;
   background: transparent;
-  border-radius: 10px;
-  border: 2px solid var(--cor-b2);
-  transition: all 300ms ease;
+  border-radius: 12px;
+  border: 1px solid var(--border-medium);
+  background: var(--bg-surface);
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    transform var(--transition-base);
 }
 
 .login-rede-social a:hover {
-  background: var(--cor-b0);
+  background: var(--bg-surface-soft);
+  transform: translateY(-1px);
 }
 
 .login-rede-social a h2 {
@@ -122,26 +123,32 @@
 .form-cadastro input:nth-child(2),
 .form-cadastro input:nth-child(3) {
   line-height: 50px;
-  border: 2px solid var(--cor-b2);
-  background: transparent;
+  border: 1px solid var(--border-soft);
+  background: var(--bg-surface);
   padding-left: 8px;
-  border-radius: 10px;
-  color: var(--cor-b8);
+  border-radius: 12px;
+  color: var(--text-primary);
   font-size: 16px;
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    background-color var(--transition-base);
 }
 
 .form-cadastro input:nth-child(1)::placeholder,
 .form-cadastro input:nth-child(2)::placeholder,
 .form-cadastro input:nth-child(3)::placeholder {
-  color: var(--cor-b5);
+  color: var(--text-muted);
 }
 
 .form-cadastro input:nth-child(1):focus,
 .form-cadastro input:nth-child(2):focus,
 .form-cadastro input:nth-child(3):focus {
   outline: none;
-  background: var(--cor-b0);
-  color: var(--cor-b8);
+  background: #ffffff;
+  border-color: rgba(91, 134, 229, 0.4);
+  box-shadow: 0 0 0 3px rgba(91, 134, 229, 0.12);
+  color: var(--text-primary);
   font-size: 16px;
 }
 
@@ -156,12 +163,15 @@
   appearance: none;
   width: 20px;
   height: 20px;
-  border: 2px solid var(--cor-b2);
+  border: 1px solid var(--border-medium);
   outline: none;
   cursor: pointer;
   padding-left: 0;
   z-index: 0;
-  transition: all 300ms ease;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
 }
 
 .termos-check label {
@@ -183,7 +193,8 @@
 }
 
 input#termos:checked {
-  background: var(--cor-b2);
+  background: var(--bg-blue-soft);
+  border-color: rgba(91, 134, 229, 0.4);
 }
 
 input#termos:checked + label::before {
@@ -194,18 +205,21 @@ input[type="submit"] {
   line-height: 50px;
   background: var(--cor-gradiente);
   color: var(--cor-w-2);
-  text-transform: uppercase;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
-  letter-spacing: 0.08rem;
-  font-weight: 700;
-  border-radius: 10px;
-  transition: all 300ms ease;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  border-radius: 12px;
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    filter var(--transition-base);
 }
 
 input[type="submit"]:hover {
-  box-shadow: var(--sobra-2-blue);
-  transform: scale(1.02);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(66, 103, 216, 0.18);
+  filter: saturate(0.96);
 }
 
 .login-senha {

@@ -7,36 +7,37 @@
   display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .list a {
     display: block;
   }
   .container-nav-mobile {
     grid-area: content;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding: 0;
     grid-row: 4;
-    justify-self: center;
-    bottom: -4px;
+    left: 12px;
+    right: 12px;
+    bottom: max(12px, env(safe-area-inset-bottom));
     position: fixed;
-    z-index: 2;
+    z-index: 100;
   }
 
   .navigation {
     margin: 0 auto;
-    width: 360px;
+    width: 100%;
     height: 64px;
-    background: var(--cor-c1);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-soft);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 18px;
     position: relative;
-    box-shadow: var(--sobra-3);
+    box-shadow: var(--sobra-1);
   }
   .navigation ul {
     display: flex;
-    width: 330px;
+    width: 100%;
     align-items: center;
     flex-wrap: nowrap;
     justify-content: center;
@@ -45,8 +46,8 @@
   .navigation ul li {
     position: relative;
     list-style: none;
-    width: 70px;
-    height: 70px;
+    width: 64px;
+    height: 64px;
     z-index: 1;
   }
   .navigation ul li a {
@@ -67,30 +68,35 @@
     line-height: 76px;
     font-size: 1.875em;
     text-align: center;
-    transition: 0.5s;
-    color: var(--cor-c8);
+    transition:
+      transform var(--transition-base),
+      color var(--transition-base);
+    color: var(--text-muted);
   }
   .navigation ul li.active a .icon {
-    color: var(--cor-b8);
+    color: var(--brand-blue-deep);
   }
 
   .navigation ul li.active a .icon {
-    transform: translateY(-35px);
+    transform: translateY(-18px);
   }
 
   .navigation ul li a .text {
     position: absolute;
-    color: var(--cor-b8);
+    color: var(--text-secondary);
     font-weight: 600;
     font-size: 0.875rem;
-    transition: 0.5s;
+    transition:
+      opacity var(--transition-base),
+      transform var(--transition-base),
+      color var(--transition-base);
     opacity: 0;
     transform: translateY(20px);
   }
 
   .navigation ul li.active a .text {
     opacity: 1;
-    transform: translateY(10px);
+    transform: translateY(6px);
   }
 
   .indicator {
@@ -99,23 +105,26 @@
     left: 8px;
     width: 50px;
     height: 50px;
-    background: var(--cor-c4);
+    background: var(--bg-surface-soft);
     border-radius: 50%;
-    border: 6px solid var(--cor-c4);
+    border: 6px solid var(--bg-surface);
     z-index: -1;
-    transition: all 300ms ease-in-out;
+    transition:
+      transform var(--transition-base),
+      background-color var(--transition-base),
+      border-color var(--transition-base);
     transform: translateY(0px);
   }
 
   .navigation ul li.active .indicator {
     position: absolute;
-    transform: translateY(-43px);
+    transform: translateY(-24px);
     left: 0;
-    width: 65px;
-    height: 65px;
-    background: var(--cor-gradiente);
+    width: 58px;
+    height: 58px;
+    background: var(--bg-blue-soft);
     border-radius: 50%;
-    border: 6px solid var(--cor-c1);
+    border: 6px solid var(--bg-surface);
     z-index: -1;
   }
 
@@ -128,7 +137,7 @@
     height: 10px;
     background: transparent;
     border-bottom-left-radius: 19px;
-    box-shadow: -1px 3px 0 0 var(--cor-c1);
+    box-shadow: -1px 3px 0 0 var(--bg-surface);
   }
 
   .navigation ul li.active .indicator::after {
@@ -140,46 +149,6 @@
     height: 10px;
     background: transparent;
     border-bottom-right-radius: 19px;
-    box-shadow: 1px 3px 0 0 var(--cor-c1);
-  }
-}
-@media (max-width: 380px) {
-  .navigation {
-    width: 300px;
-    height: 54px;
-  }
-  .navigation ul {
-    width: 260px;
-  }
-  .navigation ul li {
-    width: 54px;
-    height: 54px;
-  }
-  .indicator {
-    width: 44px;
-    height: 44px;
-    top: 5px;
-    left: 4px;
-    border: 4px solid var(--cor-c4);
-  }
-  .navigation ul li a .icon {
-    line-height: 60px;
-  }
-  .navigation ul li.active a .icon {
-    transform: translateY(-25px);
-  }
-  .navigation ul li.active .indicator {
-    border: 4px solid var(--cor-c1);
-    transform: translateY(-29px);
-    width: 51px;
-    height: 51px;
-  }
-  .navigation ul li.active .indicator::before {
-    right: -8px;
-    bottom: 23px;
-  }
-  .navigation ul li.active .indicator::after {
-    left: -8px;
-    bottom: 23px;
+    box-shadow: 1px 3px 0 0 var(--bg-surface);
   }
 }

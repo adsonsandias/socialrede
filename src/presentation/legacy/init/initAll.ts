@@ -122,27 +122,65 @@ function initModoDark(): void {
   const logoDark = document.querySelectorAll<HTMLElement>(".dark-logo");
   const logoLight = document.querySelectorAll<HTMLElement>(".light-logo");
 
-  btnModoLight.forEach((btn) => {
-    bindOnce(btn, "ModoLight", "click", () => {
-      btnModoLight.forEach((item) => item.classList.remove("on-modo"));
-      btn.classList.add("on-modo");
-      document.body.classList.add("light");
-      document.body.classList.remove("dark");
-      btnModoDark.forEach((item) => item.classList.remove("on-modo"));
+  type Theme = "light" | "dark";
+
+  const applyTheme = (theme: Theme) => {
+    document.body.classList.remove("light", "dark");
+    document.body.classList.add(theme);
+
+    btnModoLight.forEach((item) => item.classList.remove("on-modo"));
+    btnModoDark.forEach((item) => item.classList.remove("on-modo"));
+
+    if (theme === "light") {
+      btnModoLight.forEach((item) => item.classList.add("on-modo"));
       logoDark.forEach((item) => (item.style.display = "none"));
       logoLight.forEach((item) => (item.style.display = "block"));
+    } else {
+      btnModoDark.forEach((item) => item.classList.add("on-modo"));
+      logoDark.forEach((item) => (item.style.display = "block"));
+      logoLight.forEach((item) => (item.style.display = "none"));
+    }
+  };
+
+  const persistTheme = (theme: Theme) => {
+    try {
+      localStorage.setItem("theme", theme);
+    } catch {
+      return;
+    }
+  };
+
+  const readStoredTheme = (): Theme | null => {
+    try {
+      const value = localStorage.getItem("theme");
+      if (value === "light" || value === "dark") return value;
+      return null;
+    } catch {
+      return null;
+    }
+  };
+
+  const inferSystemTheme = (): Theme => {
+    return window.matchMedia?.("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  };
+
+  applyTheme(readStoredTheme() ?? inferSystemTheme());
+
+  btnModoLight.forEach((btn) => {
+    bindOnce(btn, "ModoLight", "click", (event) => {
+      event.preventDefault();
+      applyTheme("light");
+      persistTheme("light");
     });
   });
 
   btnModoDark.forEach((btn) => {
-    bindOnce(btn, "ModoDark", "click", () => {
-      btnModoDark.forEach((item) => item.classList.remove("on-modo"));
-      btn.classList.add("on-modo");
-      document.body.classList.add("dark");
-      document.body.classList.remove("light");
-      btnModoLight.forEach((item) => item.classList.remove("on-modo"));
-      logoDark.forEach((item) => (item.style.display = "block"));
-      logoLight.forEach((item) => (item.style.display = "none"));
+    bindOnce(btn, "ModoDark", "click", (event) => {
+      event.preventDefault();
+      applyTheme("dark");
+      persistTheme("dark");
     });
   });
 }

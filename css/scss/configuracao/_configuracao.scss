@@ -1,6 +1,6 @@
 #configuracao .content {
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #configuracao .publicacao-bg {
@@ -10,35 +10,41 @@
 }
 
 #configuracao .publicacao-bg h2 {
-  text-transform: uppercase;
+  letter-spacing: -0.015em;
 }
 
 #configuracao .conta-bg {
   margin-top: 16px;
   margin-bottom: 26px;
   padding: 20px 16px;
-  border-radius: 15px;
-  background: var(--cor-b0);
-  box-shadow: var(--sobra-1);
-  transition: all 300ms ease-in-out;
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-soft);
+  box-shadow: none;
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
 }
 
 #configuracao .conta-bg:hover {
-  box-shadow: initial;
+  border-color: var(--border-medium);
+  box-shadow: var(--sobra-1);
 }
 
 #configuracao .conta a {
   display: flex;
   padding: 14px;
   gap: 8px;
-  border-radius: 15px;
+  border-radius: var(--radius-md);
   background: transparent;
-  transition: all 300ms ease-in-out;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base);
 }
 
 #configuracao .conta a:hover {
-  background: var(--cor-w);
-  box-shadow: var(--sobra-1);
+  background: var(--bg-surface-soft);
 }
 
 #configuracao .conta a i {

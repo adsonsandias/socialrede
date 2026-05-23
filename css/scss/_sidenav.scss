@@ -2,13 +2,12 @@
   grid-area: sidenav;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  background: var(--cor-w);
-  overflow-y: auto;
-  position: fixed;
-  left: -100%;
+  position: sticky;
+  top: 24px;
+  height: calc(100dvh - 48px);
+  background: transparent;
+  overflow: visible;
   z-index: 4;
-  animation: aniMenu 400ms ease forwards;
 }
 
 @keyframes aniMenu {
@@ -17,14 +16,20 @@
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 30px;
-  padding-bottom: 10px;
+  padding: var(--space-7) var(--space-6) var(--space-3);
 }
 
 .close {
@@ -33,7 +38,7 @@
 
 .logo {
   display: flex;
-  gap: 14px;
+  gap: var(--space-3);
   align-items: center;
   justify-content: center;
 }
@@ -45,50 +50,56 @@
 .bg-nav {
   display: flex;
   flex-direction: column;
-  background: var(--cor-c1);
-  box-shadow: var(--sobra-3);
-  border-radius: 15px;
-  padding: 14px 12px;
-  margin: 20px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--sobra-1);
+  border-radius: var(--radius-xl);
+  padding: 14px;
+  margin: var(--space-4);
   justify-content: space-between;
   height: 100%;
   position: relative;
   overflow-y: auto;
-  animation: all 400ms ease-in-out;
+  backdrop-filter: blur(12px);
+  animation: fadeIn 220ms ease-in-out;
 }
 
 .bg-nav nav ul li a {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px;
-  margin-bottom: 6px;
+  gap: 12px;
+  min-height: 44px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
   position: relative;
-  transition: all 300ms ease;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base);
 }
 
 .bg-nav nav ul li a:hover {
-  background: var(--cor-c2);
-  border-radius: 5px;
-  padding-left: 12px;
+  background: var(--bg-surface-soft);
+  color: var(--text-primary);
 }
 
 .bg-nav nav ul li a i {
   font-size: 24px;
-  color: var(--cor-c8);
+  color: var(--text-muted);
   height: 24px;
 }
 
 .active-sidenav {
-  background: var(--cor-c2);
-  border-radius: 5px;
-  padding-left: 12px;
+  background: var(--bg-blue-soft);
+  color: var(--brand-blue-deep);
+  font-weight: 600;
 }
 .active-sidenav h2 {
-  color: var(--cor-c8t);
+  color: var(--brand-blue-deep);
 }
 .bg-nav nav ul li a.active-sidenav i {
-  color: var(--cor-c8t);
+  color: var(--brand-blue-deep);
 }
 
 .bg-nav nav ul li a img {
@@ -98,9 +109,9 @@
 .sep-nav {
   content: "";
   display: block;
-  margin: 1.125rem 0.625rem;
+  margin: var(--space-6) var(--space-3);
   height: 1px;
-  background: var(--cor-c2);
+  background: var(--border-soft);
   justify-self: center;
 }
 
@@ -120,8 +131,8 @@
 }
 
 .perfil-sidenav h2 {
-  text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.015em;
 }
 
 .perfil-sidenav a {
@@ -131,24 +142,25 @@
 
 .perfil-sidenav a i {
   font-size: 16px;
-  color: var(--cor-c7);
+  color: var(--text-muted);
   height: 16px;
 }
 
 .bg-perfilnav {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  padding: 10px;
-  background: var(--cor-c2);
-  border-radius: 15px;
+  gap: var(--space-2);
+  padding: 12px;
+  background: var(--bg-surface-soft);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
 }
 
 .notificação {
   text-align: center;
   padding: 1px 5px;
   color: var(--cor-w);
-  border-radius: 50%;
+  border-radius: var(--radius-pill);
   background: var(--cor-alerta);
 }
 

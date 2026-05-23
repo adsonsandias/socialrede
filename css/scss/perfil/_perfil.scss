@@ -1,20 +1,18 @@
 .container#perfil-home {
-  grid-template-columns: 17.25rem auto;
-  grid-template-areas:
-    "sidenav content"
-    "sidenav content"
-    "sidenav content"
-    "sidenav content";
+  grid-template-columns: 248px minmax(0, 1fr);
+  grid-template-areas: "sidenav content";
 }
 
 #perfil-home .content {
   position: relative;
-  padding: 0;
+  padding: 0 24px 40px;
 }
 
 #perfil-home .content > img {
   object-fit: cover;
-  max-height: 300px;
+  width: calc(100% + 48px);
+  margin-left: -24px;
+  max-height: 280px;
   object-position: center bottom;
 }
 
@@ -46,9 +44,7 @@
 }
 
 #perfil-home .add-publicacao.btn-blur:hover {
-  border-radius: 10px;
-  transform: scale(1.02);
-  background: var(--blur);
+  transform: translateY(-1px);
 }
 
 #perfil-home .add-publicacao.btn-blur label {
@@ -72,12 +68,12 @@
   align-items: center;
   gap: 8px;
   padding: 2px 4px;
-  border-radius: 5px;
-  transition: all 300ms ease;
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-base);
 }
 
 .add-publicacao-aberto ul li:hover {
-  background: var(--cor-b1);
+  background: var(--bg-surface-soft);
 }
 
 .add-publicacao-aberto h1 {
@@ -91,7 +87,7 @@
   width: 100%;
   height: 1px;
   opacity: 0.2;
-  background: var(--cor-w-2);
+  background: var(--border-soft);
 }
 
 .add-publicacao-aberto h1::before {
@@ -108,7 +104,7 @@
 
 .add-publicacao-aberto h1,
 .add-publicacao-aberto h2 {
-  color: var(--cor-w-2);
+  color: var(--text-primary);
 }
 
 input[type="checkbox"] {
@@ -173,22 +169,22 @@ input[type="checkbox"]#checkbox-add-publicacao:checked
 /* Perfil */
 
 .perfil-home-bg {
-  max-width: 95%;
-  padding: 16px;
-  background: var(--cor-w);
-  margin: 0 auto;
   position: relative;
-  border-radius: 15px;
-  z-index: 1;
-  box-shadow: var(--sobra-3);
+  top: auto;
+  left: auto;
+  transform: none;
+  width: 100%;
+  max-width: 1120px;
+  margin: -56px auto 0;
+  padding: 24px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--sobra-1);
   display: grid;
-  grid-template-columns: 2fr 4fr;
-  overflow: auto;
-  position: absolute;
-  top: 20%;
-  max-width: 100%;
-  margin: 8px;
-  padding-bottom: 120px;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 24px;
+  overflow: visible;
 }
 
 .perfil-user-home {
@@ -220,7 +216,8 @@ input[type="checkbox"]#checkbox-add-publicacao:checked
 }
 
 .user-homer-texto h1 {
-  font-size: 1.725rem;
+  font-size: 1.5rem;
+  letter-spacing: -0.03em;
   position: relative;
   align-self: flex-start;
 }
@@ -281,8 +278,8 @@ input[type="checkbox"]#checkbox-add-publicacao:checked
 }
 
 .p-s-s-texto h2 {
-  font-size: 1.725rem;
-  font-size: 700;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 /* sobre user */
@@ -317,8 +314,10 @@ input[type="checkbox"]#checkbox-add-publicacao:checked
   padding: 8px 16px;
   background: var(--cor-gradiente);
   color: var(--cor-w);
-  border-radius: 10px;
-  transition: all 300ms ease;
+  border-radius: 12px;
+  transition:
+    box-shadow var(--transition-base),
+    filter var(--transition-base);
 }
 
 .links-perfil-home > a:hover {
@@ -336,18 +335,22 @@ input[type="checkbox"]#checkbox-add-publicacao:checked
 
 .sobre-user-home ul li a {
   padding: 8px;
-  background: var(--cor-b0);
-  border-radius: 50%;
-  transition: all 300ms ease;
+  background: var(--bg-surface-soft);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-pill);
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    transform var(--transition-base);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .sobre-user-home ul li a:hover {
-  box-shadow: var(--sobra-1);
-  transform: scale(1.1);
-  border-radius: 10px;
+  background: var(--bg-surface);
+  border-color: var(--border-medium);
+  transform: translateY(-1px);
 }
 
 /* Sugestao */
@@ -380,9 +383,10 @@ input[type="checkbox"]#checkbox-add-publicacao:checked
 /* Geleria */
 .perfil-galeria-home {
   padding: 16px;
-  background: var(--cor-b0);
-  box-shadow: var(--sobra-1);
-  border-radius: 15px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-soft);
+  box-shadow: none;
+  border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -398,22 +402,27 @@ input[type="checkbox"]#checkbox-add-publicacao:checked
 
 .selecao-perfil-home span {
   padding: 8px 16px;
-  background: var(--cor-b0);
-  border-radius: 5px;
-  text-transform: uppercase;
-  transition: all 300ms ease;
+  background: var(--bg-surface-soft);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-base);
   cursor: pointer;
 }
 
 .selecao-perfil-home span:hover {
-  transform: scale(1.1);
-  background: var(--cor-b1);
-  color: var(--cor-b8);
+  transform: translateY(-1px);
+  background: var(--bg-surface);
+  border-color: var(--border-medium);
 }
 
 .selecao-perfil-home span.ativo {
-  background: var(--cor-b1);
-  color: var(--cor-b8);
+  background: var(--bg-blue-soft);
+  border-color: transparent;
+  color: var(--brand-blue-deep);
 }
 
 .galeria-perfil-home ul {
@@ -431,12 +440,8 @@ input[type="checkbox"]#checkbox-add-publicacao:checked
 
 @media (max-width: 1200px) {
   .container#perfil-home {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "content"
-      "content"
-      "content"
-      "content";
+    grid-template-columns: 224px minmax(0, 1fr);
+    grid-template-areas: "sidenav content";
   }
 }
 
@@ -454,8 +459,19 @@ input[type="checkbox"]#checkbox-add-publicacao:checked
 }
 
 @media (max-width: 800px) {
+  #perfil-home .content {
+    padding: 0 16px 96px;
+  }
+  #perfil-home .content > img {
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    max-height: 200px;
+  }
   .perfil-home-bg {
     grid-template-columns: 1fr;
+    margin-top: -32px;
+    padding: 16px;
+    gap: 20px;
   }
   .sugestao-de-amizade {
     max-width: 90vw;
@@ -467,7 +483,7 @@ input[type="checkbox"]#checkbox-add-publicacao:checked
 
 @media (max-width: 600px) {
   .sugestao-de-amizade {
-    max-width: calc(100vw - 62px);
+    max-width: 100%;
   }
   .sugestao-de-amizade img {
     max-width: 80px;
@@ -489,17 +505,14 @@ input[type="checkbox"]#checkbox-add-publicacao:checked
     right: -18px;
   }
   .perfil-home-bg {
-    max-width: 100%;
-    padding: 0px;
-    margin: 8px;
-    padding-bottom: 120px;
+    margin-top: -32px;
   }
   .perfil-user-home-container {
     padding-right: 0;
     padding: 16px 16px 0px 16px;
   }
   .sugestao-de-amizade {
-    max-width: calc(100vw - 16px);
+    max-width: 100%;
   }
   .sugestao-de-amizade h2 {
     padding-left: 16px;
