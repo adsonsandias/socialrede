@@ -1,12 +1,430 @@
 import type { Metadata } from "next";
-
-import { LegacyHtml } from "@/presentation/legacy/LegacyHtml";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Perfil"
+  title: "Perfil",
 };
 
 export default function Page() {
-  return <LegacyHtml fileName="perfil.html" />;
-}
+  return (
+    <>
+      <div className="spinner-bg">
+        <div className="spinner"></div>
+      </div>
 
+      <div data-home="" className="container" id="perfil-home">
+        <div className="sidenav">
+          <div className="top">
+            <div className="logo">
+              <img className="light-logo" src="/img/logo.svg" alt="" />
+              <img className="dark-logo" src="/img/logo-dark.svg" alt="" />
+              <p className="f-18 b8">Social rede</p>
+            </div>
+            <div className="close" id="close-btn">
+              <span>
+                <i className="fi fi-rr-cross"></i>
+              </span>
+            </div>
+          </div>
+          <div className="bg-nav">
+            <nav>
+              <ul>
+                <li>
+                  <Link data-link="" href="/">
+                    <i className="fi fi-rr-layout-fluid"></i>
+                    <h2 className="f-14 c8">Feed</h2>
+                  </Link>
+                </li>
+                <li>
+                  <Link data-link="" href="/explorar">
+                    <i className="fi fi-rr-navigation"></i>
+                    <h2 className="f-14 c8">Explorar</h2>
+                  </Link>
+                </li>
+                <li>
+                  <Link data-link="" href="/short">
+                    <i className="fi fi-rr-play-alt"></i>
+                    <h2 className="f-14 c8">Shorts</h2>
+                  </Link>
+                </li>
+                <li>
+                  <Link data-link="" href="/mensagem">
+                    <i className="fi fi-rr-comments"></i>
+                    <h2 className="f-14 c8">Mensagem</h2>
+                  </Link>
+                </li>
+                <li>
+                  <Link data-link="" href="/notificacao">
+                    <i className="fi fi-rr-bell"></i>
+                    <h2 className="f-14 c8">Notificação</h2>
+                    <span className="notificação f-12">5</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link data-link="" href="/live">
+                    <i className="fi fi-rr-camera"></i>
+                    <h2 className="f-14 c8">Live</h2>
+                  </Link>
+                </li>
+                <span className="sep-nav"></span>
+                <li>
+                  <Link data-link="" href="/configuracao">
+                    <i className="fi fi-rr-settings"></i>
+                    <h2 className="f-14 c8">Configuração</h2>
+                  </Link>
+                </li>
+                <li>
+                  <Link data-link="" href="/login">
+                    <i className="fi fi-rr-sign-out-alt"></i>
+                    <h2 className="f-14 c8">login</h2>
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+            <div className="perfil-sidenav">
+              <h2 className="f-18 b8">Perfil</h2>
+              <div className="bg-perfilnav">
+                <img src="/img/perfil-principal.jpg" alt="Perfil Usuario" />
+                <div>
+                  <h3 className="f-12 b8">Adson Santos</h3>
+                  <p className="f-10 c7">on-line</p>
+                </div>
+                <Link data-link="" href="/perfil">
+                  <i className="fi fi-rr-caret-down"></i>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <main className="content">
+          <img src="/img/perfil/foto-de-capa.jpeg" alt="" />
+          <span className="menu btn-blur">
+            <i className="fi fi-rr-menu-burger"></i>
+          </span>
+          <input type="checkbox" id="checkbox-add-publicacao" />
+          <span className="add-publicacao btn-blur">
+            <label id="checkbox-add-publicacao" htmlFor="checkbox-add-publicacao">
+              <i className="fi fi-rr-add"></i>
+              <div className="add-publicacao-aberto">
+                <ul>
+                  <h1 className="f-16">Criar</h1>
+                  <li>
+                    <i className="fi fi-rr-apps"></i>
+                    <h2 className="f-12">Publicar</h2>
+                  </li>
+                  <li>
+                    <i className="fi fi-rr-smartphone"></i>
+                    <h2 className="f-12">Story</h2>
+                  </li>
+                  <li>
+                    <i className="fi fi-rr-play-alt"></i>
+                    <h2 className="f-12">Short</h2>
+                  </li>
+                  <li>
+                    <i className="fi fi-rr-headset"></i>
+                    <h2 className="f-12">Transmisão ao vivo</h2>
+                  </li>
+                </ul>
+              </div>
+            </label>
+          </span>
+          <span className="btn-light btn-blur">
+            <i className="fi fi-rr-sun"></i>
+          </span>
+          <span className="btn-dark btn-blur">
+            <i className="fi fi-rr-moon"></i>
+          </span>
+          <span className="configuracao-perfil btn-blur">
+            <Link href="/configuracao">
+              <i className="fi fi-rr-settings"></i>
+            </Link>
+          </span>
+
+          <div className="perfil-home-bg">
+            <div className="perfil-user-home">
+              <div className="perfil-user-home-container">
+                <div className="user-homer">
+                  <img
+                    className="perfil"
+                    src="/img/perfil/perfil.png"
+                    alt="foto de perfil do Usuario"
+                  />
+                  <div className="user-homer-texto">
+                    <h1 className="b8">Adson Santos</h1>
+                    <h2 className="b8">@adsonsandias</h2>
+                    <span className="detalhes-sobre-user b8-2">
+                      Frontend Developer | UI/UI Designer | Motion design{" "}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-s-s-texto">
+                  <ul>
+                    <li>
+                      <h2 className="b8">24</h2>
+                      <span className="f-16 b8">Publicação</span>
+                    </li>
+                    <li>
+                      <h2 className="b8">30mil</h2>
+                      <span className="f-16 b8">Seguidores</span>
+                    </li>
+                    <li>
+                      <h2 className="b8">609</h2>
+                      <span className="f-16 b8">Seguindo</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="sobre-user-home">
+                  <p className="b8-2">
+                    Quer desenvolver seu site, webapp, ou aplicativo movel, com
+                    elegrancia, design, responsividade e performace?!
+                  </p>
+                  <p className="b8-2">
+                    Então você esta no perfil certo, conheça nosso portfolio
+                    aqui, ou em nosso site oficial cliclando no link abaixo👇
+                  </p>
+                  <div className="links-perfil-home">
+                    <a href="#">adsonsandias.com</a>
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g clipPath="url(#clip0_287_1780)">
+                              <path
+                                d="M19.1685 17.9866H19.3576L18.9951 17.4383C19.2168 17.4383 19.3343 17.2974 19.336 17.1249C19.336 17.1183 19.336 17.1108 19.3351 17.1041C19.3351 16.8691 19.1935 16.7566 18.9026 16.7566H18.4326V17.9866H18.6093V17.4508H18.8268L19.1685 17.9866ZM18.8143 17.3116H18.6093V16.8958H18.8693C19.0035 16.8958 19.1568 16.9174 19.1568 17.0933C19.1568 17.2949 19.0018 17.3116 18.8135 17.3116"
+                                fill="#5B86E5"
+                              />
+                              <path
+                                d="M14.4092 15.8941H11.9033V11.97C11.9033 11.0341 11.8867 9.82997 10.6 9.82997C9.295 9.82997 9.095 10.8491 9.095 11.9025V15.8941H6.59V7.82414H8.99583V8.92664H9.02916C9.52 8.08831 10.4317 7.58747 11.4025 7.62331C13.9425 7.62331 14.41 9.29414 14.41 11.4666L14.4092 15.8941ZM3.7625 6.72081C2.95917 6.72081 2.30833 6.06997 2.30833 5.26664C2.30833 4.46331 2.95917 3.81248 3.7625 3.81248C4.56583 3.81248 5.21666 4.46331 5.21666 5.26664C5.21666 6.06997 4.56583 6.72081 3.7625 6.72081ZM5.015 15.8941H2.50667V7.82414H5.015V15.8941ZM15.6583 1.48581H1.2475C0.566666 1.47831 0.00833333 2.02414 0 2.70498V17.175C0.00833333 17.8566 0.566666 18.4025 1.2475 18.395H15.6583C16.3408 18.4033 16.9017 17.8575 16.9108 17.175V2.70414C16.9008 2.02164 16.34 1.47581 15.6583 1.48498"
+                                fill="#5B86E5"
+                              />
+                              <path
+                                d="M18.8361 16.2091C18.1994 16.2149 17.6877 16.7366 17.6944 17.3733C17.7002 18.0099 18.2219 18.5216 18.8586 18.515C19.4952 18.5091 20.0069 17.9874 20.0002 17.3508C19.9944 16.7224 19.4861 16.2149 18.8586 16.2091H18.8361ZM18.8627 18.3824C18.3044 18.3916 17.8177 17.9474 17.8086 17.3891C17.7994 16.8308 18.2444 16.3708 18.8027 16.3616C19.3611 16.3524 19.8211 16.7974 19.8302 17.3558C19.8302 17.3616 19.8302 17.3666 19.8302 17.3724C19.8419 17.9183 19.4086 18.3708 18.8627 18.3824H18.8369Z"
+                                fill="#5B86E5"
+                              />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_287_1780">
+                                <rect width="20" height="20" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g clipPath="url(#clip0_287_1787)">
+                              <path
+                                d="M17.9525 5.92004C17.9642 6.09587 17.9642 6.27254 17.9642 6.45004C17.9642 11.8725 13.8358 18.125 6.28916 18.125V18.1217C4.06 18.125 1.87667 17.4867 0 16.2825C0.324167 16.3217 0.65 16.3409 0.976666 16.3417C2.825 16.3434 4.62 15.7234 6.0725 14.5817C4.31667 14.5484 2.77667 13.4034 2.23917 11.7317C2.85417 11.85 3.4875 11.8259 4.09166 11.6617C2.17667 11.275 0.8 9.59253 0.8 7.6392C0.8 7.6217 0.8 7.6042 0.8 7.58754C1.37083 7.90587 2.00917 8.0817 2.6625 8.10087C0.859166 6.8967 0.3025 4.49837 1.39167 2.62337C3.475 5.1867 6.54916 6.74504 9.84833 6.91087C9.5175 5.48587 9.97 3.99254 11.035 2.99004C12.6875 1.43587 15.2867 1.51587 16.8408 3.16837C17.76 2.98754 18.6408 2.65004 19.4467 2.17254C19.14 3.12254 18.4992 3.92921 17.6425 4.44254C18.4567 4.34504 19.2508 4.12754 20 3.79587C19.4492 4.62004 18.7558 5.3392 17.9525 5.92004Z"
+                                fill="#5B86E5"
+                              />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_287_1787">
+                                <rect width="20" height="20" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="btn-sugestao-amizade" href="#">
+                          <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g clipPath="url(#clip0_287_1791)">
+                              <path
+                                d="M7.5 10C8.4889 10 9.4556 9.70675 10.2778 9.15735C11.1001 8.60794 11.741 7.82705 12.1194 6.91342C12.4978 5.99979 12.5968 4.99445 12.4039 4.02455C12.211 3.05464 11.7348 2.16373 11.0355 1.46447C10.3363 0.765206 9.44535 0.289002 8.47545 0.0960758C7.50554 -0.0968502 6.50021 0.00216643 5.58658 0.380604C4.67295 0.759043 3.89206 1.3999 3.34265 2.22215C2.79324 3.0444 2.5 4.01109 2.5 5C2.50132 6.32568 3.02853 7.59668 3.96593 8.53407C4.90332 9.47147 6.17432 9.99868 7.5 10ZM7.5 1.66667C8.15927 1.66667 8.80373 1.86216 9.3519 2.22844C9.90006 2.59471 10.3273 3.1153 10.5796 3.72439C10.8319 4.33348 10.8979 5.0037 10.7693 5.6503C10.6407 6.2969 10.3232 6.89085 9.85702 7.35702C9.39084 7.8232 8.7969 8.14067 8.1503 8.26928C7.50369 8.3979 6.83347 8.33189 6.22439 8.0796C5.6153 7.82731 5.0947 7.40006 4.72843 6.8519C4.36216 6.30374 4.16667 5.65927 4.16667 5C4.16667 4.11595 4.51785 3.2681 5.14298 2.64298C5.7681 2.01786 6.61594 1.66667 7.5 1.66667V1.66667Z"
+                                fill="#5B86E5"
+                              />
+                              <path
+                                d="M7.5 11.6666C5.51162 11.6691 3.60537 12.46 2.19938 13.866C0.793381 15.272 0.0024258 17.1782 0 19.1666C0 19.3876 0.0877973 19.5996 0.244078 19.7559C0.400358 19.9122 0.612319 20 0.833333 20C1.05435 20 1.26631 19.9122 1.42259 19.7559C1.57887 19.5996 1.66667 19.3876 1.66667 19.1666C1.66667 17.6195 2.28125 16.1358 3.37521 15.0418C4.46917 13.9479 5.9529 13.3333 7.5 13.3333C9.04709 13.3333 10.5308 13.9479 11.6248 15.0418C12.7187 16.1358 13.3333 17.6195 13.3333 19.1666C13.3333 19.3876 13.4211 19.5996 13.5774 19.7559C13.7337 19.9122 13.9456 20 14.1667 20C14.3877 20 14.5996 19.9122 14.7559 19.7559C14.9122 19.5996 15 19.3876 15 19.1666C14.9976 17.1782 14.2066 15.272 12.8006 13.866C11.3946 12.46 9.48837 11.6691 7.5 11.6666V11.6666Z"
+                                fill="#5B86E5"
+                              />
+                              <path
+                                d="M18.3333 6.5625C17.8696 6.5856 17.4338 6.79147 17.1215 7.13506C16.8091 7.47864 16.6456 7.93197 16.6667 8.39583C16.6877 7.93197 16.5242 7.47864 16.2119 7.13506C15.8995 6.79147 15.4638 6.5856 15 6.5625C14.5362 6.5856 14.1005 6.79147 13.7882 7.13506C13.4758 7.47864 13.3123 7.93197 13.3334 8.39583C13.3334 9.8375 15.2133 11.5267 16.15 12.2783C16.2966 12.3957 16.4788 12.4597 16.6667 12.4597C16.8545 12.4597 17.0367 12.3957 17.1833 12.2783C18.12 11.5283 20 9.8375 20 8.39583C20.0211 7.93197 19.8575 7.47864 19.5452 7.13506C19.2328 6.79147 18.7971 6.5856 18.3333 6.5625V6.5625Z"
+                                fill="#5B86E5"
+                              />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_287_1791">
+                                <rect width="20" height="20" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="sugestao-de-amizade">
+                <h2 className="b8">Sugestões de amizades</h2>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <img src="/img/perfil/sugestao.jpg" alt="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="/img/perfil/sugestao1.jpg" alt="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="/img/perfil/sugestao2.jpg" alt="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="/img/perfil/sugestao3.jpg" alt="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="/img/perfil/sugestao.jpg" alt="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="/img/perfil/sugestao1.jpg" alt="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="/img/perfil/sugestao2.jpg" alt="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="/img/perfil/sugestao3.jpg" alt="" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="perfil-galeria-home">
+              <div className="selecao-perfil-home">
+                <span className="f-12 ativo b2">foto</span>
+                <span className="f-12 b2">short</span>
+                <span className="f-12 b2">live</span>
+                <span className="f-12 b2">menção</span>
+              </div>
+              <div className="galeria-perfil-home">
+                <ul>
+                  <li>
+                    <img src="/img/perfil/foto.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="/img/perfil/foto-1.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="/img/perfil/foto-2.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="/img/perfil/foto-3.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="/img/perfil/foto-4.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="/img/perfil/foto-5.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="/img/perfil/foto-6.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="/img/perfil/foto-7.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="/img/perfil/foto-9.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="/img/perfil/foto-10.jpg" alt="" />
+                  </li>
+                  <li>
+                    <img src="/img/perfil/foto-1.jpg" alt="" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <div className="container-nav-mobile">
+          <div className="navigation">
+            <ul>
+              <li className="list">
+                <Link data-link="" href="/">
+                  <span className="icon">
+                    <i className="fi fi-rr-layout-fluid"></i>
+                  </span>
+                  <span className="text">Feed</span>
+                </Link>
+                <div className="indicator"></div>
+              </li>
+              <li className="list">
+                <Link data-link="" href="/explorar">
+                  <span className="icon">
+                    <i className="fi fi-rr-navigation"></i>
+                  </span>
+                  <span className="text">Explo</span>
+                </Link>
+                <div className="indicator"></div>
+              </li>
+              <li className="list">
+                <Link data-link="" href="/short">
+                  <span className="icon">
+                    <i className="fi fi-rr-play-alt"></i>
+                  </span>
+                  <span className="text">Short</span>
+                </Link>
+                <div className="indicator"></div>
+              </li>
+              <li className="list">
+                <Link data-link="" href="/notificacao">
+                  <span className="icon">
+                    <i className="fi fi-rr-bell"></i>
+                  </span>
+                  <span className="text">Noti</span>
+                </Link>
+                <div className="indicator"></div>
+              </li>
+              <li className="list active">
+                <Link data-link="" href="/perfil">
+                  <span className="icon">
+                    <i className="fi fi-rr-user"></i>
+                  </span>
+                  <span className="text">User</span>
+                </Link>
+                <div className="indicator"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

@@ -1,12 +1,96 @@
 import type { Metadata } from "next";
 
-import { LegacyHtml } from "@/presentation/legacy/LegacyHtml";
-
 export const metadata: Metadata = {
-  title: "Login"
+  title: "Login",
 };
 
 export default function Page() {
-  return <LegacyHtml fileName="login.html" />;
-}
+  return (
+    <>
+      <div className="spinner-bg">
+        <div className="spinner"></div>
+      </div>
 
+      <div data-home="" className="login-bg" id="login-home">
+        <div className="container-login">
+          <div className="img-login-home">
+            <img
+              src="/img/login/priscilla-du-preez-nF8xhLMmg0c-unsplash.jpeg"
+              alt=""
+            />
+          </div>
+          <div className="login-form">
+            <div className="container-form-login">
+              <div className="logo">
+                <img className="light-logo" src="/img/logo.svg" alt="" />
+                <img className="dark-logo" src="/img/logo-dark.svg" alt="" />
+                <p className="f-18 b8">Social rede</p>
+              </div>
+              <h1 className="b8">Criar conta</h1>
+              <div className="login-rede-social">
+                <a href="#">
+                  <svg
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.5326 15.4537V11.9015H25.8177C25.9377 12.5201 26 13.2524 26 14.0454C26 16.7104 25.2528 20.0059 22.8423 22.3535C20.4985 24.7314 17.5042 26 13.537 26C6.18312 26 0 20.1641 0 13C0 5.83592 6.18312 0 13.537 0C17.6054 0 20.5029 1.55567 22.68 3.58258L20.1071 6.08833C18.546 4.66158 16.4301 3.55225 13.5326 3.55225C8.16336 3.55225 3.96382 7.76858 3.96382 13C3.96382 18.2314 8.16336 22.4477 13.5326 22.4477C17.015 22.4477 18.9985 21.0849 20.2694 19.8467C21.3001 18.8424 21.9784 17.4081 22.2452 15.4494L13.5326 15.4537Z"
+                      fill="#5B86E5"
+                    />
+                  </svg>
+                  <h2 className="f-16 b5">google</h2>
+                </a>
+                <a href="#">
+                  <svg
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clipPath="url(#clip0_259_2319)">
+                      <path
+                        d="M26 13.0791C26 19.5672 21.2398 24.9459 15.0258 25.922V16.8621H18.0472L18.6225 13.1138H15.0258V10.6817C15.0258 9.65577 15.5285 8.65694 17.1383 8.65694H18.7731V5.46544C18.7731 5.46544 17.2889 5.21194 15.8708 5.21194C12.909 5.21194 10.9742 7.00702 10.9742 10.2559V13.1127H7.68192V16.861H10.9742V25.9209C4.76125 24.9438 0 19.5661 0 13.0791C0 5.89985 5.82075 0.0791016 13 0.0791016C20.1792 0.0791016 26 5.89877 26 13.0791Z"
+                        fill="#5B86E5"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_259_2319">
+                        <rect width="26" height="26" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <h2 className="f-16 b5">Facebook</h2>
+                </a>
+              </div>
+              <span className="f-18 b2">OU</span>
+              <form className="form-cadastro" action="/">
+                <input type="text" placeholder="Nome Completo" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Senha" />
+                <div className="termos-check">
+                  <input type="checkbox" name="termos" id="termos" />
+                  <label className="b8" htmlFor="termos">
+                    Termos e Privacidade
+                  </label>
+                </div>
+                <input type="submit" value="Login" />
+              </form>
+              <div className="login-senha">
+                <span>
+                  Já possui uma conta? <a href="#">Login</a>
+                </span>
+                <span>
+                  Recuperar <a href="#">Senha</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
