@@ -1,0 +1,47 @@
+.root:global(#explorar) :global(.content) {
+  min-width: 0;
+}
+
+.root:global(#explorar) :global(.publicacao-bg) {
+  margin: 26px auto;
+  width: min(100%, 980px);
+  max-width: 980px;
+}
+
+.root:global(#explorar) :global(.explorar-container) {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(75px, 1fr));
+  gap: 8px;
+}
+
+.root:global(#explorar) :global(.explorar-container a img) {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.root:global(#explorar) :global(.video-explorar) {
+  grid-row: span 2;
+}
+
+.root:global(#explorar) :global(.video-explorar img) {
+  height: 100%;
+}
+
+@media (max-width: 800px) {
+  .root:global(#explorar) :global(.content) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .root:global(#explorar) :global(.publicacao-bg) {
+    max-width: 100%;
+    width: 100%;
+    margin: 12px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .root:global(#explorar) :global(.publicacao-bg) {
+    padding: 8px;
+  }
+}

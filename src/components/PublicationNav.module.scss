@@ -1,0 +1,42 @@
+.nav_publicacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.item_button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.item_button h2 {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.item_button svg path {
+  fill: var(--cor-b8);
+  transition: all 300ms ease-in-out;
+}
+
+.item_button:hover svg path {
+  fill: url(#paint0_linear_41_5452);
+}
+
+.active svg path {
+  fill: url(#paint0_linear_41_5452);
+  transition: all 300ms ease-in;
+}
+
+.item_button i {
+  font-size: 20px;
+  color: var(--cor-b8);
+  height: 20px;
+}
+

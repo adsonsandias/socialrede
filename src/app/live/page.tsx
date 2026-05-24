@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { Sidenav } from "../../components/Sidenav";
+import { MobileNav } from "../../components/MobileNav";
+import { Spinner } from "../../components/Spinner";
+import { AppContainer } from "../../components/AppContainer";
+
+import styles from "./live.module.scss";
+
 export const metadata: Metadata = {
   title: "Live",
 };
@@ -8,101 +15,10 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <div className="spinner-bg">
-        <div className="spinner"></div>
-      </div>
+      <Spinner />
 
-      <div data-home="" className="container ativo" id="live">
-        <div className="sidenav">
-          <div className="top">
-            <div className="logo">
-              <div className="search-box">
-                <input
-                  type="text"
-                  placeholder="Pesquisar..."
-                  className="search-input"
-                />
-                <a href="#" className="search-btn">
-                  <i className="fi fi-rr-search"></i>
-                </a>
-              </div>
-            </div>
-            <div className="close" id="close-btn">
-              <span>
-                <i className="fi fi-rr-cross"></i>
-              </span>
-            </div>
-          </div>
-          <div className="bg-nav">
-            <nav>
-              <ul>
-                <li>
-                  <Link data-link="" href="/">
-                    <i className="fi fi-rr-layout-fluid"></i>
-                    <h2 className="f-14 c8">Feed</h2>
-                  </Link>
-                </li>
-                <li>
-                  <Link data-link="" href="/explorar">
-                    <i className="fi fi-rr-navigation"></i>
-                    <h2 className="f-14 c8">Explorar</h2>
-                  </Link>
-                </li>
-                <li>
-                  <Link data-link="" href="/short">
-                    <i className="fi fi-rr-play-alt"></i>
-                    <h2 className="f-14 c8">Shorts</h2>
-                  </Link>
-                </li>
-                <li>
-                  <Link data-link="" href="/mensagem">
-                    <i className="fi fi-rr-comments"></i>
-                    <h2 className="f-14 c8">Mensagem</h2>
-                  </Link>
-                </li>
-                <li>
-                  <Link data-link="" href="/notificacao">
-                    <i className="fi fi-rr-bell"></i>
-                    <h2 className="f-14 c8">Notificação</h2>
-                    <span className="notificação f-12">5</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link data-link="" className="active-sidenav" href="/live">
-                    <i className="fi fi-rr-camera"></i>
-                    <h2 className="f-14 c8">Live</h2>
-                  </Link>
-                </li>
-                <span className="sep-nav"></span>
-                <li>
-                  <Link data-link="" href="/configuracao">
-                    <i className="fi fi-rr-settings"></i>
-                    <h2 className="f-14 c8">Configuração</h2>
-                  </Link>
-                </li>
-                <li>
-                  <Link data-link="" href="/login">
-                    <i className="fi fi-rr-sign-out-alt"></i>
-                    <h2 className="f-14 c8">login</h2>
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-            <div className="perfil-sidenav">
-              <h2 className="f-18 b8">Perfil</h2>
-              <div className="bg-perfilnav">
-                <img src="/img/perfil-principal.jpg" alt="Perfil Usuario" />
-                <div>
-                  <h3 className="f-12 b8">Adson Santos</h3>
-                  <p className="f-10 c7">on-line</p>
-                </div>
-                <Link data-link="" href="/perfil">
-                  <i className="fi fi-rr-caret-down"></i>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+      <AppContainer id="live" className={`ativo ${styles.root}`}>
+        <Sidenav activeHref="/live" variant="live" />
 
         <main className="content">
           <div className="publicacao-bg">
@@ -187,28 +103,28 @@ export default function Page() {
                 <div className="sobre-perfil">
                   <h2 className="f-16 b8">Sobre PlayHard</h2>
                   <p className="b8-2">
-                    Play hard e um canal de games diversos a onde você se diverti
-                    rindo e acompanhando todas as historias e gameplay dos jogos,
-                    se inscreva para ter a maior imersão no seus jogos favoritos
-                    de um jeito unico!
+                    Play hard e um canal de games diversos a onde você se
+                    diverti rindo e acompanhando todas as historias e gameplay
+                    dos jogos, se inscreva para ter a maior imersão no seus
+                    jogos favoritos de um jeito unico!
                   </p>
                   <p className="b8-2">
-                    Play hard e um canal de games diversos a onde você se diverti
-                    rindo e acompanhando todas as historias e gameplay dos jogos,
-                    se inscreva para ter a maior imersão no seus jogos favoritos
-                    de um jeito unico!
+                    Play hard e um canal de games diversos a onde você se
+                    diverti rindo e acompanhando todas as historias e gameplay
+                    dos jogos, se inscreva para ter a maior imersão no seus
+                    jogos favoritos de um jeito unico!
                   </p>
                   <p className="b8-2">
-                    Play hard e um canal de games diversos a onde você se diverti
-                    rindo e acompanhando todas as historias e gameplay dos jogos,
-                    se inscreva para ter a maior imersão no seus jogos favoritos
-                    de um jeito unico!
+                    Play hard e um canal de games diversos a onde você se
+                    diverti rindo e acompanhando todas as historias e gameplay
+                    dos jogos, se inscreva para ter a maior imersão no seus
+                    jogos favoritos de um jeito unico!
                   </p>
                   <p className="b8-2">
-                    Play hard e um canal de games diversos a onde você se diverti
-                    rindo e acompanhando todas as historias e gameplay dos jogos,
-                    se inscreva para ter a maior imersão no seus jogos favoritos
-                    de um jeito unico!
+                    Play hard e um canal de games diversos a onde você se
+                    diverti rindo e acompanhando todas as historias e gameplay
+                    dos jogos, se inscreva para ter a maior imersão no seus
+                    jogos favoritos de um jeito unico!
                   </p>
                 </div>
                 <span className="btn-texto-expandir">
@@ -411,57 +327,7 @@ export default function Page() {
           </div>
         </main>
 
-        <div className="container-nav-mobile">
-          <div className="navigation">
-            <ul>
-              <li>
-                <Link data-link="" href="/">
-                  <span className="icon">
-                    <i className="fi fi-rr-layout-fluid"></i>
-                  </span>
-                  <span className="text">Feed</span>
-                </Link>
-                <div className="indicator"></div>
-              </li>
-              <li className="list">
-                <Link data-link="" href="/explorar">
-                  <span className="icon">
-                    <i className="fi fi-rr-navigation"></i>
-                  </span>
-                  <span className="text">Explo</span>
-                </Link>
-                <div className="indicator"></div>
-              </li>
-              <li className="list">
-                <Link data-link="" href="/short">
-                  <span className="icon">
-                    <i className="fi fi-rr-play-alt"></i>
-                  </span>
-                  <span className="text">Short</span>
-                </Link>
-                <div className="indicator"></div>
-              </li>
-              <li className="list">
-                <Link data-link="" href="/notificacao">
-                  <span className="icon">
-                    <i className="fi fi-rr-bell"></i>
-                  </span>
-                  <span className="text">Noti</span>
-                </Link>
-                <div className="indicator"></div>
-              </li>
-              <li className="list">
-                <Link data-link="" href="/perfil">
-                  <span className="icon">
-                    <i className="fi fi-rr-user"></i>
-                  </span>
-                  <span className="text">User</span>
-                </Link>
-                <div className="indicator"></div>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <MobileNav activeHref="/live" />
 
         <div className="chat">
           <div className="chat-btn-titulo">
@@ -476,12 +342,15 @@ export default function Page() {
                 <li>
                   <p className="nome-chat l1">
                     João Marinho:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l2">
-                    Pedro:<span className="b8-2">Boa tarde adson como vai?</span>
+                    Pedro:
+                    <span className="b8-2">Boa tarde adson como vai?</span>
                   </p>
                 </li>
                 <li>
@@ -493,139 +362,185 @@ export default function Page() {
                 <li>
                   <p className="nome-chat l4">
                     Paula:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l5">
                     Jooh:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l6">
                     Joshn:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l6">
                     Adilson:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l8">
                     FelipeG:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l9">
                     Junio:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l10">
                     Gerson:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l11">
                     Gulagg:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l12">
                     Pedrinho:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l6">
                     Pedro:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l4">
                     Paula:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l8">
                     Jooh:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l1">
                     João Marinho:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l9">
                     Joshn:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l5">
                     Adilson:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l9">
                     Junio:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l2">
                     Gerson:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l1">
                     JPedrinho:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l10">
                     Paula:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l2">
                     Joshn:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l3">
                     FelipeG:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l6">
                     Gulagg:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p className="nome-chat l7">
                     Pedrinho:
-                    <span className="b8-2">Boa Tarde adson a live hoje ta top</span>
+                    <span className="b8-2">
+                      Boa Tarde adson a live hoje ta top
+                    </span>
                   </p>
                 </li>
               </ul>
@@ -637,7 +552,12 @@ export default function Page() {
                     <button>
                       <i className="fi fi-rr-grin-hearts"></i>
                     </button>
-                    <input type="text" id="text" name="text" placeholder="mensagem" />
+                    <input
+                      type="text"
+                      id="text"
+                      name="text"
+                      placeholder="mensagem"
+                    />
                   </div>
                   <div className="enviar-anexo">
                     <input type="file" name="file" id="file" />
@@ -730,7 +650,7 @@ export default function Page() {
             </ul>
           </div>
         </div>
-      </div>
+      </AppContainer>
     </>
   );
 }

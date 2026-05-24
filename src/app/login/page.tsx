@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 
+import { Spinner } from "../../components/Spinner";
+
+import styles from "./login.module.scss";
+
 export const metadata: Metadata = {
   title: "Login",
 };
@@ -7,11 +11,9 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <div className="spinner-bg">
-        <div className="spinner"></div>
-      </div>
+      <Spinner />
 
-      <div data-home="" className="login-bg" id="login-home">
+      <div data-home="" className={`login-bg ${styles.root}`} id="login-home">
         <div className="container-login">
           <div className="img-login-home">
             <img

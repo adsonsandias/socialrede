@@ -1,0 +1,578 @@
+.root:global(#mensagem) {
+  grid-template-columns: 17.25rem minmax(0, 1fr);
+  grid-template-areas:
+    "sidenav content "
+    "sidenav content "
+    "sidenav content "
+    "sidenav content ";
+}
+
+.root:global(#mensagem) :global(.barra-lateral) {
+  display: none;
+}
+
+.root:global(#mensagem) :global(.content) {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow-y: initial;
+  min-width: 0;
+}
+
+.root:global(#mensagem) :global(.publicacao-bg) {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.root:global(#mensagem) :global(.pesquisa-bg) {
+  display: none;
+}
+
+.root:global(#mensagem) :global(.mensagem) {
+  height: 79vh;
+}
+
+.root:global(#mensagem) :global(.container-mensagem) {
+  height: min(820px, calc(100dvh - 40px));
+}
+
+.root:global(#mensagem) :global(.mensagem-pagina) {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100%;
+}
+
+.root:global(#mensagem) :global(.mensagem-pagina a) {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.root:global(#mensagem) :global(.pesquisa-menu-e-ps) {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.root:global(#mensagem) :global(.pesquisa-conversas) {
+  position: relative;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: -3px;
+  background: var(--cor-w);
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.root:global(#mensagem) :global(.lista-conversa-home) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 16px;
+}
+
+.root:global(#mensagem) :global(.pesquisa-conversas input#item-check) {
+  position: absolute;
+  top: 17px;
+  left: -20px;
+  display: none;
+}
+
+.root:global(#mensagem) :global(.search-conversa) {
+  display: flex;
+  background: var(--cor-b0);
+  border-radius: 25px;
+  border: 2px solid var(--cor-b2);
+  max-width: 30%;
+  transition: all 300ms ease-in-out;
+}
+
+.root:global(#mensagem) :global(.search-conversa input#search) {
+  transition: all 300ms ease-in;
+  transform: translate(-100%);
+  padding-left: 0px;
+  opacity: 0;
+  max-width: 0%;
+  border: none;
+  outline: none;
+  background: var(--cor-b0);
+}
+
+.root:global(#mensagem) :global(.search-conversa label) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 8px;
+  background: var(--cor-b1);
+  transition: all 250ms ease-in;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.root:global(#mensagem) :global(.search-conversa label i) {
+  color: var(--cor-b4);
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.root:global(#mensagem)
+  :global(input#item-check:checked + .search-conversa input#search) {
+  border-radius: 50px;
+  transform: translate(0%);
+  background: var(--cor-b0);
+  padding-left: 8px;
+  opacity: 1;
+  max-width: 100%;
+}
+
+.root:global(#mensagem) :global(input#item-check:checked + .search-conversa) {
+  max-width: 100%;
+}
+
+.root:global(#mensagem) :global(.mensagem-bloco) {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 8px;
+}
+
+.root:global(#mensagem) :global(.mensagem-bloco img) {
+  grid-row: 1/-3;
+}
+
+.root:global(#mensagem) :global(.mensagem-bloco h2) {
+  grid-column: 2/-1;
+}
+
+.root:global(#mensagem) :global(.mensagem-bloco span) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.root:global(#mensagem) :global(.mensagem-pagina.ativo) {
+  display: none;
+}
+
+.root:global(#mensagem) :global(.mensagem-pagina img) {
+  max-width: 40px;
+}
+
+.root:global(#mensagem) :global(.pagina-inicial-mensagem) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.root:global(#mensagem) :global(.pagina-inicial-mensagem.ativo) {
+  grid-template-columns: 1fr;
+}
+
+.root:global(#mensagem) :global(.informacao-masagem) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.root:global(#mensagem) :global(.mensagem-visto p) {
+  color: var(--cor-b4);
+  font-weight: 500;
+}
+
+.root:global(#mensagem) :global(.mensagem-aberta-bg) {
+  background: var(--cor-b1);
+  border-radius: 15px;
+  padding: 8px;
+  height: min(820px, calc(100dvh - 40px));
+}
+
+.root:global(#mensagem) :global(.mesagem-aberta) {
+  background: var(--cor-b0);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.root:global(#mensagem) :global(.modo-noturno.interna-modo-n) {
+  display: none;
+}
+
+.root:global(#mensagem) :global(.menu-mensagem) {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  gap: 6px;
+  position: sticky;
+  top: 0;
+  background: var(--cor-b0);
+}
+
+.root:global(#mensagem) :global(.menu-interna-mensagem) {
+  display: flex;
+  gap: 8px;
+}
+
+.root:global(#mensagem) :global(.volta-mensagem-container) {
+  display: flex;
+}
+
+.root:global(#mensagem) :global(.menu-mensagem a) {
+  display: flex;
+  align-items: center;
+  color: var(--cor-b8);
+  padding: 8px;
+  height: 34px;
+  border-radius: 50%;
+  transition: all 300ms ease-in;
+}
+
+.root:global(#mensagem)
+  :global(
+    .pagina-inicial-mensagem.ativo
+      .volta-mensagem-container
+      a.volta-mensagem-desktop
+      i
+  ) {
+  transform: rotate(180deg);
+  transition: all 300ms ease;
+}
+
+.root:global(#mensagem)
+  :global(
+    .pagina-inicial-mensagem
+      .volta-mensagem-container
+      a.volta-mensagem-desktop
+      i
+  ) {
+  transform: rotate(0deg);
+  transition: all 300ms ease;
+}
+
+.root:global(#mensagem) :global(.menu-mensagem a:hover) {
+  background: var(--cor-b1);
+  transform: scale(1.1);
+  border-radius: 10px;
+}
+
+.root:global(#mensagem) :global(.menu-mensagem a i) {
+  font-size: 18px;
+  max-width: 18px;
+  max-height: 18px;
+}
+
+.root:global(#mensagem) :global(.mensagem-enviada) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 8px;
+  gap: 16px;
+}
+
+.root:global(#mensagem) :global(.resposta),
+.root:global(#mensagem) :global(.resposta-recebida) {
+  padding: 8px;
+  border-radius: 15px;
+  max-width: 350px;
+}
+
+.root:global(#mensagem) :global(.resposta) {
+  background: var(--cor-b1);
+}
+
+.root:global(#mensagem) :global(.resposta-recebida) {
+  background: var(--cor-c2);
+}
+
+.root:global(#mensagem) :global(.responder) {
+  padding: 8px;
+  background: var(--cor-b0);
+  border-radius: 10px;
+  border-left: 2px solid var(--cor-b4);
+  margin-bottom: 6px;
+}
+
+.root:global(#mensagem) :global(.info-mensagem-aberta) {
+  margin-top: 4px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.root:global(#mensagem) :global(.visto-mensagem-aberta) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.root:global(#mensagem) :global(.visto-mensagem-aberta i) {
+  font-size: 0.75rem;
+  color: var(--cor-c5);
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.root:global(#mensagem) :global(.visto-mensagem-aberta i:last-child) {
+  color: var(--cor-c6);
+}
+
+.root:global(#mensagem) :global(.mensagem-recebida) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 8px;
+}
+
+.root:global(#mensagem) :global(.campo-texto) {
+  min-width: 100%;
+  position: sticky;
+  bottom: 10px;
+}
+
+.root:global(#mensagem) :global(.input-container) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--cor-w);
+  border-radius: 15px;
+  max-height: 45px;
+  margin: 0 auto;
+  padding: 13px;
+  border: 2px solid var(--cor-b4);
+  justify-content: space-between;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.root:global(#mensagem) :global(.input-container i) {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  color: var(--cor-b8);
+  cursor: pointer;
+}
+
+.root:global(#mensagem) :global(.input-mensagem-emoji) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.root:global(#mensagem) :global(.enviar-anexo) {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.root:global(#mensagem) :global(.input-container input#text) {
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  padding: 8px;
+  background: var(--cor-w);
+  color: var(--b8);
+  max-width: 100px;
+}
+
+.root:global(#mensagem) :global(.input-container input#file) {
+  display: none;
+}
+
+.root:global(#mensagem) :global(.input-container label#file) {
+  padding: 6px;
+  display: flex;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  transition: all 300ms ease-in;
+  cursor: pointer;
+}
+
+.root:global(#mensagem) :global(.input-container label#file:hover) {
+  background: var(--cor-b1);
+  border-radius: 8px;
+  transform: scale(1.1);
+}
+
+.root:global(#mensagem) :global(.input-container button) {
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  transition: all 300ms ease-in;
+}
+
+.root:global(#mensagem) :global(.input-container button:hover) {
+  background: var(--cor-b1);
+  border-radius: 8px;
+  transform: scale(1.1);
+}
+
+.root:global(#mensagem) :global(.input-container button i) {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1200px) {
+  .root:global(#mensagem) {
+    grid-template-columns: 5.75rem minmax(0, 1fr);
+  }
+  .root:global(#mensagem) :global(.close) {
+    display: none;
+  }
+  .root:global(#mensagem) :global(.menu) {
+    display: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .root:global(#mensagem) :global(.pesquisa-cotainer) {
+    max-width: 100%;
+  }
+  .root:global(#mensagem) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "content"
+      "content"
+      "content";
+  }
+  .root:global(#mensagem) :global(.sidenav) {
+    display: none;
+  }
+  .root:global(#mensagem) :global(.close) {
+    display: flex;
+  }
+  .root:global(#mensagem) :global(.menu) {
+    display: flex;
+  }
+  .root:global(#mensagem) :global(.resposta),
+  .root:global(#mensagem) :global(.resposta-recebida) {
+    padding: 8px;
+    border-radius: 15px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 800px) {
+  .root:global(#mensagem) :global(.content) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .root:global(#mensagem) :global(.publicacao-bg) {
+    max-width: 100%;
+    margin: 0px 8px;
+  }
+  .root:global(#mensagem) :global(.modo-noturno a:nth-child(3)) {
+    display: none;
+  }
+  .root:global(#mensagem) :global(.pagina-inicial-mensagem) {
+    grid-template-columns: 1fr;
+  }
+  .root:global(#mensagem) :global(.mensagem-aberta-bg) {
+    display: none;
+  }
+  .root:global(#mensagem) :global(.mensagem-pagina.ativo) {
+    display: flex;
+  }
+  .root:global(#mensagem)
+    :global(.pagina-inicial-mensagem.ativo .mensagem-aberta-bg) {
+    display: flex;
+  }
+  .root:global(#mensagem)
+    :global(.pagina-inicial-mensagem.ativo .mensagem-pagina) {
+    display: none;
+  }
+  .root:global(#mensagem) :global(.modo-noturno.interna-modo-n) {
+    display: flex;
+  }
+  .root:global(#mensagem)
+    :global(
+      .pagina-inicial-mensagem.ativo
+        .volta-mensagem-container
+        a.volta-mensagem-desktop
+    ) {
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .root:global(#mensagem) :global(.pesquisa-conversas) {
+    top: -17px;
+  }
+  .root:global(#mensagem) :global(.container-mensagem) {
+    height: 100dvh;
+  }
+  .root:global(#mensagem) :global(.content) {
+    padding: 0px;
+    margin: 0px;
+  }
+  .root:global(#mensagem) :global(.search-conversa label) {
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  .root:global(#mensagem) :global(.publicacao-bg) {
+    padding: 0px;
+    margin: 0;
+    border-radius: 0;
+  }
+  .root:global(#mensagem)
+    :global(input#item-check:checked + .search-conversa input#search) {
+    max-width: 30vw;
+  }
+  .root:global(#mensagem) :global(.search-conversa) {
+    max-width: 13vw;
+    position: absolute;
+    left: 50px;
+  }
+  .root:global(#mensagem) :global(input#item-check:checked + .search-conversa) {
+    max-width: 46vw;
+  }
+  .root:global(#mensagem) :global(.mensagem-pagina) {
+    height: 100dvh;
+    padding-bottom: 60px;
+    padding: 16px;
+  }
+  .root:global(#mensagem) :global(.mensagem-aberta-bg) {
+    padding: 0;
+    border-radius: 0;
+  }
+  .root:global(#mensagem) :global(.mesagem-aberta) {
+    border-radius: 0;
+    height: 100dvh;
+  }
+}
+
+@media (max-width: 360px) {
+  .root:global(#mensagem)
+    :global(input#item-check:checked + .search-conversa input#search) {
+    max-width: 30vw;
+  }
+  .root:global(#mensagem) :global(.search-conversa) {
+    max-width: 13vw;
+  }
+  .root:global(#mensagem) :global(input#item-check:checked + .search-conversa) {
+    max-width: 46vw;
+  }
+}

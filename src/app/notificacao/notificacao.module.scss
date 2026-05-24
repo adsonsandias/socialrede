@@ -1,0 +1,231 @@
+.root:global(#notificacao) :global(.content) {
+  min-width: 0;
+}
+
+.root:global(#notificacao) :global(.publicacao-bg) {
+  padding: 0px;
+  margin: 26px auto;
+  width: min(100%, 900px);
+  max-width: 900px;
+}
+
+.root:global(#notificacao) :global(.container-notificacao),
+.root:global(#notificacao) :global(.container-notificacao-s) {
+  padding: 16px;
+}
+
+.root:global(#notificacao) :global(.topo-notificacao) {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+.root:global(#notificacao) :global(.topo-notificacao h2),
+.root:global(#notificacao) :global(.topo-solicitacao h2) {
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.root:global(#notificacao) :global(.topo-notificacao i) {
+  color: var(--cor-b8);
+  font-size: 20px;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.root:global(#notificacao) :global(.notificacao-container) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 14px;
+  gap: 12px;
+  border-radius: 15px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background: var(--cor-b0);
+  transition: all 300ms ease-in-out;
+}
+
+.root:global(#notificacao) :global(.notificacao-container:hover) {
+  background: var(--cor-b1);
+}
+
+.root:global(#notificacao) :global(.info-notificacao) {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+}
+
+.root:global(#notificacao) :global(.info-notificacao > img) {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.root:global(#notificacao) :global(.info-notificacao h3) {
+  text-transform: uppercase;
+  padding-bottom: 4px;
+}
+
+.root:global(#notificacao) :global(.info-notificacao p) {
+  grid-column: 2 / 4;
+  max-width: 30ch;
+  font-family: "Roboto", sans-serif;
+  color: var(--cor-b8);
+  overflow-wrap: anywhere;
+}
+
+.root:global(#notificacao) :global(.previo-notificacao) {
+  max-width: 100px;
+  border-radius: 5px;
+}
+.root:global(#notificacao) :global(.previo-notificacao img) {
+  border-radius: 10px;
+}
+
+.root:global(#notificacao) :global(.topo-solicitacao) {
+  padding-left: 16px;
+  margin-top: 26px;
+}
+
+.root:global(#notificacao) :global(.solicitacoes) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+.root:global(#notificacao) :global(.bg-solicitacao) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 9px 9px 0 9px;
+  background: var(--cor-b0);
+  box-shadow: var(--sobra-1);
+  border-radius: 15px;
+  position: relative;
+  transition: all 300ms ease-in-out;
+  min-width: 180px;
+  max-width: 274px;
+}
+
+.root:global(#notificacao) :global(.bg-solicitacao img) {
+  object-fit: cover;
+  object-position: top center;
+  max-height: 100px;
+  border-radius: 10px 10px 0 0;
+}
+
+.root:global(#notificacao) :global(.bg-confirmacao) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--cor-b1);
+  padding: 8px;
+  border-radius: 10px;
+  gap: 8px;
+  top: -9px;
+  position: relative;
+  min-width: 164px;
+  height: 88px;
+}
+.root:global(#notificacao) :global(.bg-confirmacao p) {
+  grid-column: 1 /-1;
+  font-size: 0.775rem;
+  font-family: "Roboto", sans-serif;
+  max-width: 40ch;
+  min-height: 36px;
+}
+
+.root:global(#notificacao) :global(.bg-confirmacao button) {
+  font-size: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  cursor: pointer;
+}
+.root:global(#notificacao) :global(.btn-c) {
+  background: var(--cor-gradiente);
+  color: var(--cor-w);
+  transition: all 200ms ease-in;
+}
+.root:global(#notificacao) :global(.btn-c:hover) {
+  box-shadow: var(--sobra-2-blue);
+  transform: scale(1.1);
+}
+.root:global(#notificacao) :global(.btn-e) {
+  background: var(--cor-w);
+  color: var(--cor-b8);
+  transition: all 200ms ease-in;
+}
+.root:global(#notificacao) :global(.btn-e:hover) {
+  box-shadow: var(--sobra-1);
+  transform: scale(1.1);
+}
+
+@media (max-width: 1300px) {
+  .root:global(#notificacao) :global(.content) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .root:global(#notificacao) :global(.solicitacoes) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .root:global(#notificacao) :global(.content) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .root:global(#notificacao) :global(.publicacao-bg) {
+    max-width: 100%;
+    width: 100%;
+    margin: 16px 0px;
+    padding-bottom: 40px;
+  }
+  .root:global(#notificacao) :global(.solicitacoes) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 660px) {
+  .root:global(#notificacao) :global(.solicitacoes) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .root:global(#notificacao) :global(.topo-notificacao) {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+  }
+  .root:global(#notificacao) :global(.container-notificacao) {
+    padding: 8px;
+  }
+  .root:global(#notificacao) :global(.container-notificacao-s) {
+    padding: 0px;
+  }
+  .root:global(#notificacao) :global(.notificacao-container) {
+    padding: 8px;
+    align-items: flex-start;
+  }
+  .root:global(#notificacao) :global(.solicitacoes) {
+    display: flex;
+    overflow: auto;
+    grid-template-columns: 1fr;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 36px;
+  }
+  .root:global(#notificacao) :global(.previo-notificacao) {
+    max-width: 70px;
+  }
+  .root:global(#notificacao) :global(.info-notificacao > img) {
+    max-width: 30px;
+    max-height: 30px;
+  }
+}

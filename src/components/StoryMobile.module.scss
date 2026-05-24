@@ -1,0 +1,49 @@
+.root {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .root {
+    grid-area: content;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+  }
+
+  .root :global(.s-mobile) {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 16px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 16px 0px 26px 16px;
+    gap: 16px;
+  }
+  .root :global(.s-mobile::-webkit-scrollbar) {
+    display: none;
+  }
+
+  .root :global(.s-mobile > li) {
+    scroll-snap-align: start;
+  }
+
+  .root :global(.s-mobile li a) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--cor-gradiente);
+    box-shadow: var(--sobra-2-blue);
+    width: 60px;
+    transition: all 300ms ease-in;
+  }
+
+  .root :global(.s-mobile a img) {
+    padding: 3px;
+    max-width: 60px;
+  }
+}
+
