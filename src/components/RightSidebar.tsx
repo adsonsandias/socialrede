@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import styles from "./RightSidebar.module.scss";
 import { useDragToScroll } from "../hooks/useDragToScroll";
+import { Icon } from "./Icon";
 
 type RightSidebarVariant = "default" | "notificacao" | "mensagem";
 
@@ -96,8 +97,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                     <div className="mensagem-visto-barra">
                       <span className="b8-2">Boa tarde adson como vai as</span>
                       <div className="visto-mensagem">
-                        <i className="fi fi-rr-check"></i>
-                        <i className="fi fi-rr-check"></i>
+                        <Icon name="check" size={14} />
+                        <Icon name="check" size={14} />
                       </div>
                     </div>
                   </div>
@@ -120,8 +121,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                     <div className="mensagem-visto-barra">
                       <span className="b8-2">Boa tarde adson como vai as</span>
                       <div className="visto-mensagem">
-                        <i className="fi fi-rr-check"></i>
-                        <i className="fi fi-rr-check"></i>
+                        <Icon name="check" size={14} />
+                        <Icon name="check" size={14} />
                       </div>
                     </div>
                   </div>
@@ -144,8 +145,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                     <div className="mensagem-visto-barra">
                       <span className="b8-2">Boa tarde adson como vai as</span>
                       <div className="visto-mensagem">
-                        <i className="fi fi-rr-check"></i>
-                        <i className="fi fi-rr-check"></i>
+                        <Icon name="check" size={14} />
+                        <Icon name="check" size={14} />
                       </div>
                     </div>
                   </div>
@@ -168,8 +169,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                     <div className="mensagem-visto-barra">
                       <span className="b8-2">Boa tarde adson como vai as</span>
                       <div className="visto-mensagem">
-                        <i className="fi fi-rr-check"></i>
-                        <i className="fi fi-rr-check"></i>
+                        <Icon name="check" size={14} />
+                        <Icon name="check" size={14} />
                       </div>
                     </div>
                   </div>
@@ -192,8 +193,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                     <div className="mensagem-visto-barra">
                       <span className="b8-2">Boa tarde adson como vai as</span>
                       <div className="visto-mensagem">
-                        <i className="fi fi-rr-check"></i>
-                        <i className="fi fi-rr-check"></i>
+                        <Icon name="check" size={14} />
+                        <Icon name="check" size={14} />
                       </div>
                     </div>
                   </div>
@@ -216,8 +217,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                     <div className="mensagem-visto-barra">
                       <span className="b8-2">Boa tarde adson como vai as</span>
                       <div className="visto-mensagem">
-                        <i className="fi fi-rr-check"></i>
-                        <i className="fi fi-rr-check"></i>
+                        <Icon name="check" size={14} />
+                        <Icon name="check" size={14} />
                       </div>
                     </div>
                   </div>
@@ -240,8 +241,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                     <div className="mensagem-visto-barra">
                       <span className="b8-2">Boa tarde adson como vai as</span>
                       <div className="visto-mensagem">
-                        <i className="fi fi-rr-check"></i>
-                        <i className="fi fi-rr-check"></i>
+                        <Icon name="check" size={14} />
+                        <Icon name="check" size={14} />
                       </div>
                     </div>
                   </div>
@@ -264,8 +265,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                     <div className="mensagem-visto-barra">
                       <span className="b8-2">Boa tarde adson como vai as</span>
                       <div className="visto-mensagem">
-                        <i className="fi fi-rr-check"></i>
-                        <i className="fi fi-rr-check"></i>
+                        <Icon name="check" size={14} />
+                        <Icon name="check" size={14} />
                       </div>
                     </div>
                   </div>
@@ -436,8 +437,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                     <div className="mensagem-visto-barra">
                       <span className="b8-2">Boa tarde adson como vai as</span>
                       <div className="visto-mensagem">
-                        <i className="fi fi-rr-check"></i>
-                        <i className="fi fi-rr-check"></i>
+                        <Icon name="check" size={14} />
+                        <Icon name="check" size={14} />
                       </div>
                     </div>
                   </div>
@@ -460,8 +461,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                     <div className="mensagem-visto-barra">
                       <span className="b8-2">Boa tarde adson como vai as</span>
                       <div className="visto-mensagem">
-                        <i className="fi fi-rr-check"></i>
-                        <i className="fi fi-rr-check"></i>
+                        <Icon name="check" size={14} />
+                        <Icon name="check" size={14} />
                       </div>
                     </div>
                   </div>
@@ -618,8 +619,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                   <div className="mensagem-visto-barra">
                     <span className="b8-2">Boa tarde adson como vai as</span>
                     <div className="visto-mensagem">
-                      <i className="fi fi-rr-check"></i>
-                      <i className="fi fi-rr-check"></i>
+                      <Icon name="check" size={14} />
+                      <Icon name="check" size={14} />
                     </div>
                   </div>
                 </div>
@@ -642,8 +643,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                   <div className="mensagem-visto-barra">
                     <span className="b8-2">Boa tarde adson como vai as</span>
                     <div className="visto-mensagem">
-                      <i className="fi fi-rr-check"></i>
-                      <i className="fi fi-rr-check"></i>
+                      <Icon name="check" size={14} />
+                      <Icon name="check" size={14} />
                     </div>
                   </div>
                 </div>
@@ -666,8 +667,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                   <div className="mensagem-visto-barra">
                     <span className="b8-2">Boa tarde adson como vai as</span>
                     <div className="visto-mensagem">
-                      <i className="fi fi-rr-check"></i>
-                      <i className="fi fi-rr-check"></i>
+                      <Icon name="check" size={14} />
+                      <Icon name="check" size={14} />
                     </div>
                   </div>
                 </div>
@@ -690,8 +691,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                   <div className="mensagem-visto-barra">
                     <span className="b8-2">Boa tarde adson como vai as</span>
                     <div className="visto-mensagem">
-                      <i className="fi fi-rr-check"></i>
-                      <i className="fi fi-rr-check"></i>
+                      <Icon name="check" size={14} />
+                      <Icon name="check" size={14} />
                     </div>
                   </div>
                 </div>
@@ -714,8 +715,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                   <div className="mensagem-visto-barra">
                     <span className="b8-2">Boa tarde adson como vai as</span>
                     <div className="visto-mensagem">
-                      <i className="fi fi-rr-check"></i>
-                      <i className="fi fi-rr-check"></i>
+                      <Icon name="check" size={14} />
+                      <Icon name="check" size={14} />
                     </div>
                   </div>
                 </div>
@@ -738,8 +739,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                   <div className="mensagem-visto-barra">
                     <span className="b8-2">Boa tarde adson como vai as</span>
                     <div className="visto-mensagem">
-                      <i className="fi fi-rr-check"></i>
-                      <i className="fi fi-rr-check"></i>
+                      <Icon name="check" size={14} />
+                      <Icon name="check" size={14} />
                     </div>
                   </div>
                 </div>
@@ -762,8 +763,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                   <div className="mensagem-visto-barra">
                     <span className="b8-2">Boa tarde adson como vai as</span>
                     <div className="visto-mensagem">
-                      <i className="fi fi-rr-check"></i>
-                      <i className="fi fi-rr-check"></i>
+                      <Icon name="check" size={14} />
+                      <Icon name="check" size={14} />
                     </div>
                   </div>
                 </div>
@@ -786,8 +787,8 @@ export function RightSidebar({ variant = "default" }: RightSidebarProps) {
                   <div className="mensagem-visto-barra">
                     <span className="b8-2">Boa tarde adson como vai as</span>
                     <div className="visto-mensagem">
-                      <i className="fi fi-rr-check"></i>
-                      <i className="fi fi-rr-check"></i>
+                      <Icon name="check" size={14} />
+                      <Icon name="check" size={14} />
                     </div>
                   </div>
                 </div>

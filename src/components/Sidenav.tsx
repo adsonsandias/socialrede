@@ -3,13 +3,14 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
+import { Icon, type IconName } from "./Icon";
 import styles from "./Sidenav.module.scss";
 import { useSidenav } from "../hooks/useSidenav";
 import { useTheme } from "../hooks/useTheme";
 
 type NavItem = {
   href: string;
-  iconClassName: string;
+  icon: IconName;
   label: string;
   rightSlot?: ReactNode;
 };
@@ -20,30 +21,30 @@ type SidenavProps = {
 };
 
 const navItems: NavItem[] = [
-  { href: "/", iconClassName: "fi fi-rr-layout-fluid", label: "Feed" },
+  { href: "/", icon: "feed", label: "Feed" },
   {
     href: "/explorar",
-    iconClassName: "fi fi-rr-navigation",
+    icon: "explorar",
     label: "Explorar",
   },
-  { href: "/short", iconClassName: "fi fi-rr-play-alt", label: "Shorts" },
-  { href: "/mensagem", iconClassName: "fi fi-rr-comments", label: "Mensagem" },
+  { href: "/short", icon: "short", label: "Shorts" },
+  { href: "/mensagem", icon: "message", label: "Mensagem" },
   {
     href: "/notificacao",
-    iconClassName: "fi fi-rr-bell",
+    icon: "notificacao",
     label: "Notificação",
     rightSlot: <span className={`${styles.notificacao} f-12`}>5</span>,
   },
-  { href: "/live", iconClassName: "fi fi-rr-camera", label: "Live" },
+  { href: "/live", icon: "live", label: "Live" },
 ];
 
 const settingsItems: NavItem[] = [
   {
     href: "/configuracao",
-    iconClassName: "fi fi-rr-settings",
+    icon: "settings",
     label: "Configuração",
   },
-  { href: "/login", iconClassName: "fi fi-rr-sign-out-alt", label: "login" },
+  { href: "/login", icon: "logout", label: "login" },
 ];
 
 function getLinkClassName(href: string, activeHref: string): string {
@@ -68,7 +69,7 @@ export function Sidenav({ activeHref, variant = "default" }: SidenavProps) {
                 className={styles.searchInput}
               />
               <button type="button" className={styles.searchBtn}>
-                <i className="fi fi-rr-search"></i>
+                <Icon name="search" size={16} />
               </button>
             </div>
           ) : (
@@ -83,7 +84,7 @@ export function Sidenav({ activeHref, variant = "default" }: SidenavProps) {
         </div>
         <button type="button" className={styles.close} onClick={close}>
           <span>
-            <i className="fi fi-rr-cross"></i>
+            <Icon name="close" size={20} />
           </span>
         </button>
       </div>
@@ -96,7 +97,7 @@ export function Sidenav({ activeHref, variant = "default" }: SidenavProps) {
                   className={getLinkClassName(item.href, activeHref)}
                   href={item.href}
                 >
-                  <i className={item.iconClassName}></i>
+                  <Icon name={item.icon} size={24} />
                   <h2 className="f-14 c8">{item.label}</h2>
                   {item.rightSlot}
                 </Link>
@@ -109,7 +110,7 @@ export function Sidenav({ activeHref, variant = "default" }: SidenavProps) {
                   className={getLinkClassName(item.href, activeHref)}
                   href={item.href}
                 >
-                  <i className={item.iconClassName}></i>
+                  <Icon name={item.icon} size={24} />
                   <h2 className="f-14 c8">{item.label}</h2>
                 </Link>
               </li>
@@ -125,7 +126,7 @@ export function Sidenav({ activeHref, variant = "default" }: SidenavProps) {
               <p className="f-10 c7">on-line</p>
             </div>
             <Link href="/perfil">
-              <i className="fi fi-rr-caret-down"></i>
+              <Icon name="chevronDown" size={16} />
             </Link>
           </div>
         </div>

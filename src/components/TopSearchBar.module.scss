@@ -8,203 +8,353 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
   gap: 14px;
-  padding-left: 0;
-  padding-right: 0;
+  width: 100%;
+  min-width: 0;
+}
+
+.menuAndSearch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
   min-width: 0;
 }
 
 .menu {
   display: none;
-  gap: 8px;
-  padding-right: 16px;
-  transition: all 300ms ease-in-out;
-}
-
-.menuButton {
-  padding: 10px;
-  border-radius: 50%;
-  transition: all 300ms ease;
-  background: transparent;
-  max-width: 40px;
-  max-height: 40px;
-  cursor: pointer;
-}
-
-.menuButton:hover {
-  background: var(--cor-b1);
-}
-
-.menuButton i {
-  font-size: 20px;
-  color: var(--cor-b5);
-  width: 20px;
-  height: 20px;
-}
-
-.menuAndSearch {
-  display: grid;
-  grid-template-columns: auto minmax(48px, 1fr);
   align-items: center;
-  min-width: 0;
-  flex: 1;
-}
-
-.itemCheck {
-  display: none;
-}
-
-.searchConversa {
-  display: flex;
-  background: var(--surface-glass);
-  border-radius: 999px;
-  border: 1px solid var(--line-soft);
-  width: min(100%, 320px);
-  max-width: 100%;
-  transition: all 300ms ease-in-out;
-}
-
-.searchInput {
-  transition: all 300ms ease-in;
-  transform: none;
-  padding: 12px 10px;
-  opacity: 1;
-  width: 100%;
-  min-width: 0;
-  border: none;
-  outline: none;
-  background: transparent;
-  color: var(--text-main);
-}
-
-.searchLabel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  min-width: 48px;
-  min-height: 48px;
-  padding: 8px;
-  background: rgba(91, 134, 229, 0.14);
-  transition: all 250ms ease-in;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.searchLabel i {
-  color: var(--cor-b4);
-  font-size: 16px;
-  width: 16px;
-  height: 16px;
-}
-
-.itemCheck:checked + .searchConversa .searchInput {
-  border-radius: 50px;
-  transform: translate(0%);
-  background: var(--cor-b0);
-  padding-left: 8px;
-  opacity: 1;
-  max-width: 100%;
-}
-
-.itemCheck:checked + .searchConversa {
-  max-width: 100%;
-}
-
-.modoNoturno {
-  display: flex;
-  gap: 8px;
-  padding-left: 0;
   flex-shrink: 0;
 }
 
-.themeButton,
+.menuButton,
+.actionButton,
 .messageButton {
-  display: flex;
-  padding: 10px;
-  border-radius: 50%;
-  transition: all 300ms ease;
-  background: var(--surface-glass);
-  border: 1px solid var(--line-soft);
-  color: var(--accent);
-  max-width: 40px;
-  max-height: 40px;
-  cursor: pointer;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid var(--line-soft);
+  border-radius: 14px;
+  background: var(--surface-glass);
+  color: var(--text-soft);
+  box-shadow: var(--shadow-xs);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
 }
 
-.themeButton i,
-.messageButton i {
-  font-size: 20px;
-  color: var(--accent);
+.menuButton svg,
+.actionButton svg,
+.messageButton svg {
   width: 20px;
   height: 20px;
+  color: currentColor;
 }
 
-.themeButtonSun i {
+.menuButton:hover,
+.actionButton:hover,
+.messageButton:hover {
+  color: var(--accent);
+  background: var(--surface-hover);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.menuButton:active,
+.actionButton:active,
+.messageButton:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.menuButton:focus-visible,
+.actionButton:focus-visible,
+.messageButton:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.searchConversa {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: min(100%, 360px);
+  height: 50px;
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-pill);
+  background: var(--surface-glass);
+  box-shadow: var(--shadow-xs);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.searchConversa:hover {
+  background: var(--surface-1);
+  border-color: var(--line-main);
+}
+
+.searchConversa:focus-within {
+  background: var(--surface-1);
+  border-color: var(--line-strong);
+  box-shadow:
+    0 0 0 4px var(--accent-soft),
+    var(--shadow-sm);
+}
+
+.searchLabel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  color: var(--text-soft);
+  cursor: text;
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.searchLabel svg {
+  width: 17px;
+  height: 17px;
+  color: currentColor;
+}
+
+.searchConversa:hover .searchLabel,
+.searchConversa:focus-within .searchLabel {
+  color: var(--accent);
+}
+
+.searchConversa:focus-within .searchLabel {
+  background: var(--accent-soft);
+}
+
+.searchInput {
+  width: 100%;
+  min-width: 0;
+  height: 48px;
+  padding: 0 18px 0 2px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--text-main);
+  font-size: 0.9375rem;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.searchInput::placeholder {
+  color: var(--text-soft);
+  opacity: 1;
+}
+
+.searchInput::-webkit-search-decoration,
+.searchInput::-webkit-search-cancel-button,
+.searchInput::-webkit-search-results-button,
+.searchInput::-webkit-search-results-decoration {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.sunButton svg {
   color: var(--accent-2);
 }
 
-.themeButton:hover,
-.messageButton:hover {
-  background: var(--line-strong);
-  border-radius: 15px;
-  transform: scale(1.1);
+.moonButton svg {
+  color: var(--text-soft);
 }
 
-.themeButton:focus,
-.messageButton:focus {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-}
-
-.themeButtonSun:hover {
-  background: var(--cor-c2);
+.messageButton {
+  text-decoration: none;
 }
 
 .activeLight {
+  color: var(--accent-2);
+  border-color: rgba(6, 182, 212, 0.28);
   background: var(--cor-c2);
+  box-shadow: 0 8px 20px rgba(6, 182, 212, 0.1);
+}
+
+.activeLight:hover {
+  color: var(--accent-2);
+  background: var(--cor-c3);
 }
 
 .activeDark {
-  background: var(--cor-b1);
+  color: var(--accent);
+  border-color: var(--line-strong);
+  background: var(--accent-soft);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.12);
 }
 
-@media (max-width: 800px) {
-  .root {
-    width: 100%;
-    padding: 10px 12px 6px;
-  }
-  .container {
-    gap: 10px;
-    width: 100%;
-  }
-  .modoNoturno {
-    padding-left: 0px;
-  }
-  .menu {
-    display: flex;
-    padding-right: 8px;
-  }
+.activeDark svg {
+  color: var(--accent);
+}
 
-  .searchConversa {
-    width: 48px;
-  }
-
-  .itemCheck:checked + .searchConversa {
-    position: absolute;
-    left: 64px;
-    right: 12px;
-    z-index: 5;
-    width: auto;
-  }
+.activeDark:hover {
+  color: var(--accent-hover);
+  background: var(--accent-soft);
 }
 
 @media (max-width: 1200px) {
   .menu {
     display: flex;
+  }
+}
+
+@media (max-width: 800px) {
+  .root {
+    width: 100%;
+    padding: 10px 12px 8px;
+  }
+
+  .container {
+    gap: 10px;
+  }
+
+  .menuAndSearch {
+    gap: 8px;
+  }
+
+  .menuButton,
+  .actionButton,
+  .messageButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+  }
+
+  .searchConversa {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+
+  .searchLabel {
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+  }
+
+  .searchInput {
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      width var(--transition-base),
+      opacity var(--transition-fast),
+      padding var(--transition-base);
+  }
+
+  .searchConversa:focus-within {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    width: 100%;
+    box-shadow:
+      0 0 0 4px var(--accent-soft),
+      var(--shadow-md);
+  }
+
+  .searchConversa:focus-within .searchInput {
+    width: 100%;
+    padding: 0 16px 0 2px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .actions {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 420px) {
+  .root {
+    padding-inline: 10px;
+  }
+
+  .container {
+    gap: 8px;
+  }
+
+  .menuAndSearch {
+    gap: 6px;
+  }
+
+  .menuButton,
+  .actionButton,
+  .messageButton {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+  }
+
+  .menuButton svg,
+  .actionButton svg,
+  .messageButton svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .searchConversa {
+    width: 42px;
+    height: 42px;
+  }
+
+  .searchLabel {
+    width: 40px;
+    height: 40px;
+  }
+
+  .searchLabel svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .actions {
+    gap: 5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menuButton,
+  .actionButton,
+  .messageButton,
+  .searchConversa,
+  .searchLabel,
+  .searchInput {
+    transition: none;
+  }
+
+  .menuButton:hover,
+  .actionButton:hover,
+  .messageButton:hover {
+    transform: none;
   }
 }

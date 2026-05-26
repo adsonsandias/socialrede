@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <link href="/css/uicons-regular-rounded.css" rel="stylesheet" />
       </head>
-      <body>
+      <body className="dark">
         <ThemeProvider>
           <SidenavProvider>{children}</SidenavProvider>
         </ThemeProvider>

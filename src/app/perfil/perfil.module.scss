@@ -43,7 +43,7 @@
   transition: all 300ms ease;
 }
 
-.root:global(#perfil-home .add-publicacao.btn-blur i) {
+.root:global(#perfil-home .add-publicacao.btn-blur svg) {
   transition: all 300ms ease;
 }
 
@@ -93,7 +93,7 @@
   width: 100%;
   height: 1px;
   opacity: 0.2;
-  background: var(--cor-w-2);
+  background: var(--line-soft);
 }
 
 .root:global(#perfil-home .add-publicacao-aberto h1::before) {
@@ -110,7 +110,7 @@
 
 .root:global(#perfil-home .add-publicacao-aberto h1),
 .root:global(#perfil-home .add-publicacao-aberto h2) {
-  color: var(--cor-w-2);
+  color: var(--text-main);
 }
 
 .root:global(#perfil-home input[type="checkbox"]) {
@@ -122,7 +122,7 @@
     input[type="checkbox"]#checkbox-add-publicacao:checked
     + .add-publicacao.btn-blur
     label
-    > i
+    > svg
 ) {
   transform: rotate(45deg);
 }
@@ -132,7 +132,7 @@
     input[type="checkbox"]#checkbox-add-publicacao:checked
     + .add-publicacao.btn-blur
     label
-    i
+    svg
 ) {
   color: var(--cor-b8);
 }
@@ -193,7 +193,8 @@
 .root:global(#perfil-home .perfil-home-bg) {
   width: min(calc(100% - 32px), 1120px);
   padding: 16px;
-  background: var(--cor-w);
+  background: var(--surface-1);
+  border: 1px solid var(--line-soft);
   margin: 16px auto 32px;
   position: relative;
   border-radius: 15px;
@@ -343,7 +344,7 @@
 .root:global(#perfil-home .links-perfil-home > a) {
   padding: 8px 16px;
   background: var(--cor-gradiente);
-  color: var(--cor-w);
+  color: var(--text-on-accent);
   border-radius: 10px;
   transition: all 300ms ease;
 }
@@ -418,7 +419,8 @@
 
 .root:global(#perfil-home .perfil-galeria-home) {
   padding: 16px;
-  background: var(--cor-b0);
+  background: var(--surface-2);
+  border: 1px solid var(--line-soft);
   box-shadow: var(--sobra-1);
   border-radius: 15px;
   display: flex;
@@ -440,7 +442,8 @@
 
 .root:global(#perfil-home .selecao-perfil-home span) {
   padding: 8px 16px;
-  background: var(--cor-b0);
+  background: var(--surface-1);
+  border: 1px solid var(--line-soft);
   border-radius: 5px;
   text-transform: uppercase;
   transition: all 300ms ease;
@@ -449,12 +452,13 @@
 
 .root:global(#perfil-home .selecao-perfil-home span:hover) {
   transform: scale(1.1);
-  background: var(--cor-b1);
+  background: var(--surface-hover);
   color: var(--cor-b8);
 }
 
 .root:global(#perfil-home .selecao-perfil-home span.ativo) {
-  background: var(--cor-b1);
+  background: var(--accent-soft);
+  border-color: var(--line-strong);
   color: var(--cor-b8);
 }
 

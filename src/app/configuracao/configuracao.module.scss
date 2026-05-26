@@ -42,7 +42,7 @@
   box-shadow: var(--sobra-1);
 }
 
-.root:global(#configuracao) :global(.conta a i) {
+.root:global(#configuracao) :global(.conta a svg) {
   color: var(--cor-b8);
   font-size: 20px;
   line-height: 20px;

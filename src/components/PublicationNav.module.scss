@@ -11,6 +11,7 @@
   gap: 8px;
   align-items: center;
   background: transparent;
+  color: var(--cor-b8);
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
@@ -20,23 +21,15 @@
   font-weight: 600;
 }
 
-.item_button svg path {
-  fill: var(--cor-b8);
-  transition: all 300ms ease-in-out;
-}
-
-.item_button:hover svg path {
-  fill: url(#paint0_linear_41_5452);
-}
-
-.active svg path {
-  fill: url(#paint0_linear_41_5452);
-  transition: all 300ms ease-in;
-}
-
-.item_button i {
-  font-size: 20px;
-  color: var(--cor-b8);
+.item_button svg {
+  width: 20px;
   height: 20px;
 }
 
+.item_button:hover {
+  color: var(--cor-c6);
+}
+
+.active {
+  color: var(--cor-c6);
+}

@@ -20,10 +20,10 @@
   min-width: 0;
 }
 
-.root:global(#mensagem) :global(.publicacao-bg) {
-  margin: 0 auto;
-  max-width: 1000px;
-}
+// .root:global(#mensagem) :global(.publicacao-bg) {
+// margin: 0 auto;
+// max-width: 1000px;
+// }
 
 .root:global(#mensagem) :global(.pesquisa-bg) {
   display: none;
@@ -119,7 +119,7 @@
   cursor: pointer;
 }
 
-.root:global(#mensagem) :global(.search-conversa label i) {
+.root:global(#mensagem) :global(.search-conversa label svg) {
   color: var(--cor-b4);
   font-size: 16px;
   width: 16px;
@@ -248,7 +248,7 @@
     .pagina-inicial-mensagem.ativo
       .volta-mensagem-container
       a.volta-mensagem-desktop
-      i
+      svg
   ) {
   transform: rotate(180deg);
   transition: all 300ms ease;
@@ -259,7 +259,7 @@
     .pagina-inicial-mensagem
       .volta-mensagem-container
       a.volta-mensagem-desktop
-      i
+      svg
   ) {
   transform: rotate(0deg);
   transition: all 300ms ease;
@@ -271,7 +271,7 @@
   border-radius: 10px;
 }
 
-.root:global(#mensagem) :global(.menu-mensagem a i) {
+.root:global(#mensagem) :global(.menu-mensagem a svg) {
   font-size: 18px;
   max-width: 18px;
   max-height: 18px;
@@ -321,14 +321,14 @@
   align-items: center;
 }
 
-.root:global(#mensagem) :global(.visto-mensagem-aberta i) {
+.root:global(#mensagem) :global(.visto-mensagem-aberta svg) {
   font-size: 0.75rem;
   color: var(--cor-c5);
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.root:global(#mensagem) :global(.visto-mensagem-aberta i:last-child) {
+.root:global(#mensagem) :global(.visto-mensagem-aberta svg:last-child) {
   color: var(--cor-c6);
 }
 
@@ -360,7 +360,7 @@
   margin-right: 8px;
 }
 
-.root:global(#mensagem) :global(.input-container i) {
+.root:global(#mensagem) :global(.input-container svg) {
   font-size: 20px;
   width: 20px;
   height: 20px;
@@ -428,7 +428,7 @@
   transform: scale(1.1);
 }
 
-.root:global(#mensagem) :global(.input-container button i) {
+.root:global(#mensagem) :global(.input-container button svg) {
   width: 20px;
   height: 20px;
 }
@@ -520,9 +520,9 @@
   .root:global(#mensagem) :global(.pesquisa-conversas) {
     top: -17px;
   }
-  .root:global(#mensagem) :global(.container-mensagem) {
-    height: 100dvh;
-  }
+  // .root:global(#mensagem) :global(.container-mensagem) {
+  // height: 100dvh;
+  // }
   .root:global(#mensagem) :global(.content) {
     padding: 0px;
     margin: 0px;

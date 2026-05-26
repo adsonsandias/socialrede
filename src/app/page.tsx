@@ -8,6 +8,7 @@ import { Spinner } from "../components/Spinner";
 import { TopSearchBar } from "../components/TopSearchBar";
 import { AppContainer } from "../components/AppContainer";
 import { PublicationNav } from "../components/PublicationNav";
+import { Icon } from "../components/Icon";
 
 export const metadata: Metadata = {
   title: "Feed",
@@ -23,7 +24,7 @@ function PublicacaoComentar() {
       />
       <input type="text" id="texto" placeholder="Escreva um comentário..." />
       <button className="btn">
-        <i className="fi fi-rr-paper-plane"></i>
+        <Icon name="send" size={20} />
       </button>
     </div>
   );
@@ -53,10 +54,10 @@ function Publicacao(props: PublicacaoProps) {
         </div>
         <div className="menu-publicacao">
           <a href="#">
-            <i className="fi fi-rr-bookmark"></i>
+            <Icon name="bookmark" size={20} />
           </a>
           <a href="#">
-            <i className="fi fi-rr-menu-dots-vertical"></i>
+            <Icon name="more" size={20} />
           </a>
         </div>
       </div>
@@ -99,19 +100,19 @@ export default function Page() {
               <div>
                 <div>
                   <a href="#">
-                    <i className="fi fi-rr-camera"></i>
+                    <Icon name="camera" size={20} />
                     <p className="f-12 b5">Live Video</p>
                   </a>
                   <a href="#">
-                    <i className="fi fi-rr-picture"></i>
+                    <Icon name="image" size={20} />
                     <p className="f-12 b5">Fotos</p>
                   </a>
                   <a href="#">
-                    <i className="fi fi-rr-play-alt"></i>
+                    <Icon name="play" size={20} />
                     <p className="f-12 b5">Video</p>
                   </a>
                   <a href="#">
-                    <i className="fi fi-rr-users-alt"></i>
+                    <Icon name="users" size={20} />
                     <p className="f-12 b5">Grupos</p>
                   </a>
                 </div>

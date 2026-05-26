@@ -5,8 +5,8 @@
 .root:global(#notificacao) :global(.publicacao-bg) {
   padding: 0px;
   margin: 26px auto;
-  width: min(100%, 900px);
-  max-width: 900px;
+  // width: min(100%, 900px);
+  // max-width: 900px;
 }
 
 .root:global(#notificacao) :global(.container-notificacao),
@@ -26,7 +26,7 @@
   margin-bottom: 8px;
 }
 
-.root:global(#notificacao) :global(.topo-notificacao i) {
+.root:global(#notificacao) :global(.topo-notificacao svg) {
   color: var(--cor-b8);
   font-size: 20px;
   line-height: 20px;
@@ -131,7 +131,7 @@
 .root:global(#notificacao) :global(.bg-confirmacao p) {
   grid-column: 1 /-1;
   font-size: 0.775rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   max-width: 40ch;
   min-height: 36px;
 }
@@ -145,7 +145,7 @@
 }
 .root:global(#notificacao) :global(.btn-c) {
   background: var(--cor-gradiente);
-  color: var(--cor-w);
+  color: var(--text-on-accent);
   transition: all 200ms ease-in;
 }
 .root:global(#notificacao) :global(.btn-c:hover) {
@@ -153,7 +153,8 @@
   transform: scale(1.1);
 }
 .root:global(#notificacao) :global(.btn-e) {
-  background: var(--cor-w);
+  background: var(--surface-1);
+  border: 1px solid var(--line-soft);
   color: var(--cor-b8);
   transition: all 200ms ease-in;
 }

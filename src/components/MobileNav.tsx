@@ -1,49 +1,70 @@
-import Link from "next/link";
+"use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+import { Icon, type IconName } from "./Icon";
 import styles from "./MobileNav.module.scss";
 
 type MobileNavItem = {
   href: string;
-  iconClassName: string;
+  icon: IconName;
   label: string;
 };
 
 type MobileNavProps = {
-  activeHref: string;
+  activeHref?: string;
 };
 
 const items: MobileNavItem[] = [
-  { href: "/", iconClassName: "fi fi-rr-layout-fluid", label: "Feed" },
-  { href: "/explorar", iconClassName: "fi fi-rr-navigation", label: "Explo" },
-  { href: "/short", iconClassName: "fi fi-rr-play-alt", label: "Short" },
-  { href: "/notificacao", iconClassName: "fi fi-rr-bell", label: "Noti" },
-  { href: "/perfil", iconClassName: "fi fi-rr-user", label: "User" },
+  { href: "/", icon: "feed", label: "Feed" },
+  { href: "/explorar", icon: "explorar", label: "Explorar" },
+  { href: "/short", icon: "short", label: "Shorts" },
+  { href: "/notificacao", icon: "notificacao", label: "Alertas" },
+  { href: "/perfil", icon: "perfil", label: "Perfil" },
 ];
 
+function checkActiveRoute(currentPath: string, href: string) {
+  if (href === "/") {
+    return currentPath === "/";
+  }
+
+  return currentPath === href || currentPath.startsWith(`${href}/`);
+}
+
 export function MobileNav({ activeHref }: MobileNavProps) {
+  const pathname = usePathname();
+  const currentPath = activeHref ?? pathname;
+
   return (
-    <div className={styles.root}>
+    <nav className={styles.root} aria-label="Navegação principal">
       <div className={styles.navigation}>
-        <ul>
-          {items.map((item) => (
-            <li
-              key={item.href}
-              className={[
-                styles.list,
-                item.href === activeHref ? styles.active : "",
-              ].join(" ")}
-            >
-              <Link className={styles.link} href={item.href}>
-                <span className={styles.icon}>
-                  <i className={item.iconClassName}></i>
-                </span>
-                <span className={styles.text}>{item.label}</span>
-              </Link>
-              <div className={styles.indicator}></div>
-            </li>
-          ))}
+        <ul className={styles.listContainer}>
+          {items.map((item) => {
+            const isActive = checkActiveRoute(currentPath, item.href);
+
+            return (
+              <li key={item.href} className={styles.list}>
+                <Link
+                  className={[styles.link, isActive ? styles.active : ""].join(
+                    " ",
+                  )}
+                  href={item.href}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  <span className={styles.indicator} aria-hidden="true" />
+
+                  <span className={styles.icon} aria-hidden="true">
+                    <Icon name={item.icon} size={22} />
+                  </span>
+
+                  <span className={styles.text}>{item.label}</span>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
-    </div>
+    </nav>
   );
 }

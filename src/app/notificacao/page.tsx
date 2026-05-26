@@ -6,6 +6,7 @@ import { Spinner } from "../../components/Spinner";
 import { RightSidebar } from "../../components/RightSidebar";
 import { TopSearchBar } from "../../components/TopSearchBar";
 import { AppContainer } from "../../components/AppContainer";
+import { Icon } from "../../components/Icon";
 
 import styles from "./notificacao.module.scss";
 
@@ -28,7 +29,7 @@ export default function Page() {
             <div className="container-notificacao">
               <div className="topo-notificacao">
                 <h2 className="f-18 b8">Notificação</h2>
-                <i className="fi fi-rr-settings"></i>
+                <Icon name="settings" size={20} />
               </div>
               <div className="notificacao-container">
                 <div className="info-notificacao">

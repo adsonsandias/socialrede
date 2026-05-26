@@ -6,6 +6,7 @@ import { MobileNav } from "../../components/MobileNav";
 import { Spinner } from "../../components/Spinner";
 import { RightSidebar } from "../../components/RightSidebar";
 import { AppContainer } from "../../components/AppContainer";
+import { Icon } from "../../components/Icon";
 
 import styles from "./mensagem.module.scss";
 
@@ -26,7 +27,7 @@ export default function Page() {
             <div className="pesquisa-cotainer">
               <div className="menu">
                 <a data-sidenav-open="" href="#">
-                  <i className="fi fi-rr-menu-burger"></i>
+                  <Icon name="menu" size={20} />
                 </a>
               </div>
               <div id="pesquisa">
@@ -34,13 +35,13 @@ export default function Page() {
               </div>
               <div className="modo-noturno">
                 <a className="btn-light" href="#">
-                  <i className="fi fi-rr-sun"></i>
+                  <Icon name="sun" size={20} />
                 </a>
                 <a className="btn-dark" href="#">
-                  <i className="fi fi-rr-moon"></i>
+                  <Icon name="moon" size={20} />
                 </a>
                 <Link href="/mensagem">
-                  <i className="fi fi-rr-comments"></i>
+                  <Icon name="message" size={20} />
                 </Link>
               </div>
             </div>
@@ -54,13 +55,13 @@ export default function Page() {
                     <div className="pesquisa-menu-e-ps">
                       <div className="menu">
                         <a data-sidenav-open="" href="#">
-                          <i className="fi fi-rr-menu-burger"></i>
+                          <Icon name="menu" size={20} />
                         </a>
                       </div>
                       <input type="checkbox" id="item-check" />
                       <div className="search-conversa">
                         <label htmlFor="item-check">
-                          <i className="fi fi-rr-search"></i>
+                          <Icon name="search" size={16} />
                         </label>
                         <input
                           type="search"
@@ -71,13 +72,13 @@ export default function Page() {
                     </div>
                     <div className="modo-noturno">
                       <a className="btn-light" href="#">
-                        <i className="fi fi-rr-sun"></i>
+                        <Icon name="sun" size={20} />
                       </a>
                       <a className="btn-dark" href="#">
-                        <i className="fi fi-rr-moon"></i>
+                        <Icon name="moon" size={20} />
                       </a>
                       <a href="#">
-                        <i className="fi fi-rr-comments"></i>
+                        <Icon name="message" size={20} />
                       </a>
                     </div>
                   </div>
@@ -100,8 +101,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">Agora</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -126,8 +127,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">17:00</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -152,8 +153,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">16:58</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -179,8 +180,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">16:55</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -205,8 +206,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">16:32</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -231,8 +232,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">16:12</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -257,8 +258,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">15:30</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -284,8 +285,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">15:22</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -310,8 +311,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">15:10</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -336,8 +337,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">15:00</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -362,8 +363,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">14:46</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -389,8 +390,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">14:38</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -415,8 +416,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">14:30</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -442,8 +443,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">14:25</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -468,8 +469,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">14:00</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -495,8 +496,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">14:02</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -522,8 +523,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">13:54</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -548,8 +549,8 @@ export default function Page() {
                             <div className="mensagem-visto">
                               <p className="f-12">13:36</p>
                               <div className="visto-mensagem">
-                                <i className="fi fi-rr-check"></i>
-                                <i className="fi fi-rr-check"></i>
+                                <Icon name="check" size={14} />
+                                <Icon name="check" size={14} />
                               </div>
                             </div>
                           </div>
@@ -564,26 +565,26 @@ export default function Page() {
                     <div className="menu-mensagem">
                       <div className="volta-mensagem-container">
                         <a className="volta-mensagem-desktop" href="#">
-                          <i className="fi fi-rr-angle-left"></i>
+                          <Icon name="chevronLeft" size={20} />
                         </a>
                       </div>
                       <div className="menu-interna-mensagem">
                         <div className="modo-noturno interna-modo-n">
                           <a className="btn-light" href="#">
-                            <i className="fi fi-rr-sun"></i>
+                            <Icon name="sun" size={20} />
                           </a>
                           <a className="btn-dark" href="#">
-                            <i className="fi fi-rr-moon"></i>
+                            <Icon name="moon" size={20} />
                           </a>
                           <a href="#">
-                            <i className="fi fi-rr-comments"></i>
+                            <Icon name="message" size={20} />
                           </a>
                         </div>
                         <a href="#">
-                          <i className="fi fi-rr-apps"></i>
+                          <Icon name="apps" size={20} />
                         </a>
                         <a href="#">
-                          <i className="fi fi-rr-menu-dots-vertical"></i>
+                          <Icon name="more" size={20} />
                         </a>
                       </div>
                     </div>
@@ -603,8 +604,8 @@ export default function Page() {
                         <div className="info-mensagem-aberta">
                           <span className="h-recebida f-12-n">09:15</span>
                           <div className="visto-mensagem-aberta">
-                            <i className="fi fi-rr-check"></i>
-                            <i className="fi fi-rr-check"></i>
+                            <Icon name="check" size={12} />
+                            <Icon name="check" size={12} />
                           </div>
                         </div>
                       </div>
@@ -631,8 +632,8 @@ export default function Page() {
                         <div className="info-mensagem-aberta">
                           <span className="h-recebida f-12-n">09:15</span>
                           <div className="visto-mensagem-aberta">
-                            <i className="fi fi-rr-check"></i>
-                            <i className="fi fi-rr-check"></i>
+                            <Icon name="check" size={12} />
+                            <Icon name="check" size={12} />
                           </div>
                         </div>
                       </div>
@@ -653,8 +654,8 @@ export default function Page() {
                         <div className="info-mensagem-aberta">
                           <span className="h-recebida f-12-n">09:15</span>
                           <div className="visto-mensagem-aberta">
-                            <i className="fi fi-rr-check"></i>
-                            <i className="fi fi-rr-check"></i>
+                            <Icon name="check" size={12} />
+                            <Icon name="check" size={12} />
                           </div>
                         </div>
                       </div>
@@ -681,8 +682,8 @@ export default function Page() {
                         <div className="info-mensagem-aberta">
                           <span className="h-recebida f-12-n">09:15</span>
                           <div className="visto-mensagem-aberta">
-                            <i className="fi fi-rr-check"></i>
-                            <i className="fi fi-rr-check"></i>
+                            <Icon name="check" size={12} />
+                            <Icon name="check" size={12} />
                           </div>
                         </div>
                       </div>
@@ -692,7 +693,7 @@ export default function Page() {
                       <div className="input-container">
                         <div className="input-mensagem-emoji">
                           <button>
-                            <i className="fi fi-rr-grin-hearts"></i>
+                            <Icon name="smileHearts" size={20} />
                           </button>
                           <input
                             type="text"
@@ -704,10 +705,10 @@ export default function Page() {
                         <div className="enviar-anexo">
                           <input type="file" name="file" id="file" />
                           <label htmlFor="file" id="file">
-                            <i className="fi fi-rr-clip"></i>
+                            <Icon name="clip" size={20} />
                           </label>
                           <button>
-                            <i className="fi fi-rr-paper-plane"></i>
+                            <Icon name="send" size={20} />
                           </button>
                         </div>
                       </div>

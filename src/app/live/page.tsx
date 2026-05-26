@@ -5,6 +5,7 @@ import { Sidenav } from "../../components/Sidenav";
 import { MobileNav } from "../../components/MobileNav";
 import { Spinner } from "../../components/Spinner";
 import { AppContainer } from "../../components/AppContainer";
+import { Icon } from "../../components/Icon";
 
 import styles from "./live.module.scss";
 
@@ -26,13 +27,13 @@ export default function Page() {
               <div className="live-on">
                 <div className="live">
                   <span className="btn-live">
-                    <i className="fi fi-rr-arrow-from-right"></i>
+                    <Icon name="chevronRight" size={20} />
                   </span>
                   <span className="redimencionar">
-                    <i className="fi fi-rr-resize"></i>
+                    <Icon name="minimize" size={20} />
                   </span>
                   <span className="menu btn-menu-live">
-                    <i className="fi fi-rr-menu-burger"></i>
+                    <Icon name="menu" size={20} />
                   </span>
                   <video
                     src="/img/live/God of War_ Ragnarok - Official Gameplay Trailer (4K) _ PlayStation Showcase 2021.mp4"
@@ -43,24 +44,24 @@ export default function Page() {
                   <div className="player-live">
                     <div className="play-pause-volume">
                       <span className="play">
-                        <i className="fi fi-rr-play"></i>
+                        <Icon name="play" size={20} />
                       </span>
                       <span className="pause">
-                        <i className="fi fi-rr-pause"></i>
+                        <Icon name="pause" size={20} />
                       </span>
                       <span className="volume">
-                        <i className="fi fi-rr-signal-alt-2"></i>
+                        <Icon name="volume" size={20} />
                       </span>
                     </div>
                     <div className="config-redimencionar-expandir">
                       <span className="redimencionar">
-                        <i className="fi fi-rr-resize"></i>
+                        <Icon name="minimize" size={20} />
                       </span>
                       <span className="expandir">
-                        <i className="fi fi-rr-expand"></i>
+                        <Icon name="maximize" size={20} />
                       </span>
                       <span className="configuracao-play-live">
-                        <i className="fi fi-rr-settings"></i>
+                        <Icon name="settings" size={20} />
                       </span>
                     </div>
                   </div>
@@ -89,13 +90,13 @@ export default function Page() {
                     <div className="pessoas-vendo">
                       <span className="c7">15.203</span>
                       <span>
-                        <i className="c7 fi fi-rr-users-alt"></i>
+                        <Icon name="users" className="c7" size={20} />
                       </span>
                       <span>
-                        <i className="b8 fi fi-rr-share"></i>
+                        <Icon name="share" className="b8" size={20} />
                       </span>
                       <span>
-                        <i className="b8 fi fi-rr-menu-dots-vertical"></i>
+                        <Icon name="more" className="b8" size={20} />
                       </span>
                     </div>
                   </div>
@@ -128,7 +129,7 @@ export default function Page() {
                   </p>
                 </div>
                 <span className="btn-texto-expandir">
-                  <i className="fi fi-rr-angle-square-down"></i>
+                  <Icon name="chevronDown" size={20} />
                 </span>
               </div>
 
@@ -332,7 +333,7 @@ export default function Page() {
         <div className="chat">
           <div className="chat-btn-titulo">
             <span>
-              <i className="fi fi-rr-arrow-from-left"></i>
+              <Icon name="chevronLeft" size={20} />
             </span>
             <h2>Chat</h2>
           </div>
@@ -550,7 +551,7 @@ export default function Page() {
                 <div className="input-container">
                   <div className="input-mensagem-emoji">
                     <button>
-                      <i className="fi fi-rr-grin-hearts"></i>
+                      <Icon name="smileHearts" size={20} />
                     </button>
                     <input
                       type="text"
@@ -562,10 +563,10 @@ export default function Page() {
                   <div className="enviar-anexo">
                     <input type="file" name="file" id="file" />
                     <label htmlFor="file" id="file">
-                      <i className="fi fi-rr-clip"></i>
+                      <Icon name="clip" size={20} />
                     </label>
                     <button>
-                      <i className="fi fi-rr-paper-plane"></i>
+                      <Icon name="send" size={20} />
                     </button>
                   </div>
                 </div>
@@ -577,7 +578,7 @@ export default function Page() {
         <div className="canal-recomendado ativo">
           <div className="canais">
             <span>
-              <i className="fi fi-rr-arrow-from-left"></i>
+              <Icon name="chevronLeft" size={20} />
             </span>
             <h2 className="b5">recomendado</h2>
           </div>
